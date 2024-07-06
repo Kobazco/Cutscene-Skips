@@ -1737,26 +1737,26 @@ evt_npc_spider_1_39:
 	.interact  43.d, *evt_npc_spider_1_43
 evt_npc_spider_1_43:
 	select	speed(0.b),
-		"ジャンクＯＮ\v",
+		"Scrap ON\v",
 		speed(0.b),
-		"ＯＦＦ"
+		"OFF"
 	case	eq(result, 0.w), else *loc_496
 	call	-100.d, 13.w, 1.d
 	break	*loc_475
 loc_475:
 	select	speed(0.b),
-		"表示\v",
+		"Timer Display\v",
 		speed(0.b),
-		"カウント\v",
+		"Timer\v",
 		speed(0.b),
-		"値"
+		"Value"
 	case	eq(result, 0.w), else *loc_482
 	select	speed(0.b),
 		"OFF\v",
 		speed(0.b),
 		"ON"
 	case	eq(result, 0.w), else *loc_480
-	call	-100.d, 7.w, 0.d
+	call	-100.d, 7.w, 0.d	; 7 is display timer. 0 is off 1 is on
 	break	*loc_478
 loc_478:
 	break	*loc_479
@@ -1769,11 +1769,11 @@ loc_480:
 loc_482:
 	case	eq(result, 1.w), else *loc_488
 	select	speed(0.b),
-		"スタート\v",
+		"Start\v",
 		speed(0.b),
-		"ストップ"
+		"Stop"
 	case	eq(result, 0.w), else *loc_486
-	call	-100.d, 8.w, 1.d
+	call	-100.d, 8.w, 1.d	; 8 is timer start/stop, 1 is start 0 is stop
 	break	*loc_485
 loc_485:
 	break	*loc_479
@@ -1784,11 +1784,11 @@ loc_486:
 loc_488:
 	case	eq(result, 2.w), else *loc_479
 	select	speed(0.b),
-		"０をセット\v",
+		"Set to 0\v",
 		speed(0.b),
-		"値を取得\v",
+		"Get current time\v",
 		speed(0.b),
-		"９９：５０をセット"
+		"Set to 99:50"
 	case	eq(result, 0.w), else *loc_492
 	call	-100.d, 9.w, 1.w, 0.w
 	break	*loc_491
@@ -1796,17 +1796,18 @@ loc_491:
 	break	*loc_479
 loc_492:
 	case	eq(result, 1.w), else *loc_494
-	call	-100.d, 9.w, 0.w
+	call	-100.d, 9.w, 0.w	; 9 is timer read/write (2nd value). final value is setting the timer in seconds::minutes::ms(?)
+					; 3rd value is reading/setting? 0 is read, 1 is set.
 	pushbp
 	setsp	result
 	msg	speed(1.b),
 		rgba(2164228351.d),
 		speed(0.b),
-		"タイム",
+		"Timer",
 		color(0.b),
 		speed(0.b),
 		format("%d"),
-		"秒です！",
+		"Seconds!",
 		wait(255.b)
 	popbp
 	break	*loc_491

@@ -19,6 +19,7 @@ evt_startup:
 	wait	@read, 20001.d
 	wait	@read, 20003.d
 	wait	@read, 20005.d
+	call	-100, 7, 1
 	run	*sub_2
 	return
 
@@ -149,6 +150,7 @@ loc_6:
 	lib	111.w
 	set	flag(31.d), 1.w
 	call	-38.d
+	;call	-100, 9, 1403950
 	return
 loc_7:
 	moveto	20000.d, -1766.d, 4690.w, 5221.w, 300.w, -1.d, -2.d
@@ -750,19 +752,19 @@ sub_24:
 	call	20003.d, 1.d, 0.d, 0.w, 0.w
 	call	20002.d, 1.d, 0.d, 0.w, 0.w
 	call	20005.d, 1.d, 0.d
-	camera	@pos, -15604.d, 14119.w, -2762.d, 3.d, 0.w
+	/*camera	@pos, -15604.d, 14119.w, -2762.d, 3.d, 0.w
 	camera	@unk227, -2616.d, 8179.w, 826.w, 3.d, 0.w
 	camera	@unk229, 20.w, 3.d, 0.w
 	camera	@distance, 147.w, 3.d, 0.w
 	pos	20000.d, 2240.w, 3989.w, 3172.w
 	dir	20000.d, 88.w
 	wait	@time, 1.w
-	wait	@cam
+	wait	@cam*/
 	lib	13.w
 	wait	@time, 10.w
 	lib	110.w
 	if	eq(var(62.d), 23.d), else *loc_40
-	anim	20003.d, 1044.d
+	/*anim	20003.d, 1044.d
 	wait	@anim, 20003.d, -1.d
 	anim	20003.d, 38.d
 	anim	20003.d, 1041.d
@@ -783,7 +785,7 @@ sub_24:
 		speed(0.b),
 		"Give the rose to Jenny!",
 		wait(255.b)
-	popbp
+	popbp*/
 	lib	3.w
 	if	eq(result, 0.w), else *loc_39
 	menu	2.d
@@ -800,14 +802,14 @@ loc_33:
 	if	result, else *loc_32
 	break	*loc_30
 loc_30:
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	attach	20003.d, *sub_41
 	lib	75.w
 	attach	67.d, *sub_42
-	msg	voice(14.b),
+	/*msg	voice(14.b),
 		speed(0.b),
 		"Ribbit ribbit ribbit!",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	1.d
 	setsp	120.w
@@ -815,7 +817,7 @@ loc_30:
 	setsp	0.w
 	lib	6.w
 	popbp
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"Earn Happy Points and Moolah\n",
 		speed(0.b),
@@ -922,10 +924,10 @@ loc_30:
 	camera	@pos, -24517.d, 25003.w, -2668.d, 1.d, 1000.w
 	camera	@unk227, -12855.d, 16416.w, -3.d, 1.d, 1000.w
 	camera	@unk229, 32.w, 1.d, 1000.w
-	camera	@distance, 147.w, 1.d, 1000.w
+	camera	@distance, 147.w, 1.d, 1000.w*/
 	call	20004.d, 1.d, 0.d, 0.w, 0.w
 	attach	20005.d, *sub_43
-	sfx	65542.d, 1.d
+	/*sfx	65542.d, 1.d
 	msg	voice(3.b),
 		anim(0.b, 20001.w, 1025.d),
 		speed(0.b),
@@ -936,11 +938,11 @@ loc_30:
 		anim(0.b, 20003.w, 1046.d)
 	wait	@time, 800.w
 	sfx	-65526.d, 4.d, 350.w, 0.w
-	sfx	65542.d, 4.d, 350.w, 0.w
+	sfx	65542.d, 4.d, 350.w, 0.w*/
 	lib	7.w
 	detach	20005.d
 	set	flag(313.d), 1.w
-	sfx	65542.d, 0.d
+	;sfx	65542.d, 0.d
 	wait	@time, 50.w
 	run	*sub_31
 	return
@@ -1023,7 +1025,7 @@ sub_31:
 	set	flag(1195.d), 1.w
 	set	flag(1196.d), 0.w
 	lib	12.w
-	wait	@fade
+	/*wait	@fade
 	wait	@time, 150.w
 	win	@pos, 320.w, 220.w
 	msg	speed(8.b),
@@ -1033,7 +1035,7 @@ sub_31:
 	msg	speed(8.b),
 		speed(0.b),
 		"Until late into the night...",
-		wait(8.b)
+		wait(8.b)*/
 	lib	53.w
 	sfx	284.d, 1.d
 	wait	@time, 100.w
@@ -1204,7 +1206,7 @@ sub_62:
 	call	20001.d, 1.d, 0.d
 	call	20002.d, 1.d, 0.d
 	lib	110.w
-	camera	@pos, -7400.d, 4695.w, -10445.d, 1.d, 100.w
+	/*camera	@pos, -7400.d, 4695.w, -10445.d, 1.d, 100.w
 	camera	@unk227, -3251.d, 7608.w, 3384.w, 1.d, 100.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 147.w, 3.d, 0.w
@@ -1246,23 +1248,23 @@ sub_62:
 		speed(0.b),
 		"Ribbit!",
 		anim(0.b, 20003.w, 38.d),
-		wait(255.b)
+		wait(255.b)*/
 	camera	@reset, 2.d, 100.w
 	call	20003.d, 1.d, 1.d
 	call	20004.d, 1.d, 1.d
-	mdir	20003.d, @dir, 270.w, 50.w, -1.d
-	anim	20003.d, 1042.d
-	anim	20002.d, 1025.d
-	wait	@anim, 20003.d, -1.d
-	anim	20002.d, 1034.d
-	anim	20003.d, 1043.d
+	;mdir	20003.d, @dir, 270.w, 50.w, -1.d
+	;anim	20003.d, 1042.d
+	;anim	20002.d, 1025.d
+	;wait	@anim, 20003.d, -1.d
+	;anim	20002.d, 1034.d
+	;anim	20003.d, 1043.d
 	lib	111.w
 	return
 
 
 sub_63:
 	lib	110.w
-	call	20001.d, 1.d, 0.d
+	/*call	20001.d, 1.d, 0.d
 	anim	20001.d, 8.d
 	call	20002.d, 1.d, 0.d
 	scrn	@fade, 0.w, 0.w, 0.w, 0.w, 255.w, 255.w, 255.w, 255.w, 10.w
@@ -1359,7 +1361,7 @@ sub_63:
 	msg	voice(4.b),
 		speed(0.b),
 		"Wow...",
-		wait(254.b)
+		wait(254.b)*/
 	run	*sub_64
 	sfx	-65526.d, 4.d, 0.w, 230.w
 	camera	@reset, 2.d, 100.w
@@ -1372,7 +1374,7 @@ sub_63:
 
 
 sub_64:
-	call	20005.d, 1.d, 0.d
+	/*call	20005.d, 1.d, 0.d
 	sfx	-65526.d, 4.d, 100.w, 120.w
 	camera	@pos, -4413.d, 7249.w, -7103.d, 3.d, 0.w
 	camera	@unk227, -2917.d, 5935.w, -1462.d, 3.d, 0.w
@@ -1427,10 +1429,10 @@ sub_64:
 		"You can use it to slowly fall from high\n",
 		speed(0.b),
 		"places. That way, you won't hurt yourself!",
-		wait(255.b)
+		wait(255.b)*/
 	menu	1001.d, 4.w, -1.d
 	menu	1000.d, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"Press ",
 		icon(8.b),
@@ -1445,10 +1447,10 @@ sub_64:
 		"Chibi-Copter, then press ",
 		icon(5.b),
 		" to equip it!",
-		wait(255.b)
+		wait(255.b)*/
 	menu	1000.d, -1.d
 	set	cur_atc, 1.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"Oh, and if you hold down ",
 		icon(5.b),
@@ -1502,7 +1504,7 @@ sub_64:
 		"Copter away, just press ",
 		icon(6.b),
 		"!",
-		wait(255.b)
+		wait(255.b)*/
 	attach	20005.d, *sub_65
 	return
 
