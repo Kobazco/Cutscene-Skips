@@ -25746,12 +25746,12 @@ loc_3318:
 	set	flag(44.d), 1.d
 	read	@anim, 20005.d, *loc_3292
 	lib	14.w
-	wait	@read, 20005.d
+	;wait	@read, 20005.d
 	lib	12.w
 	lib	142.w
 	run	*sub_2529
 	dir	20017.d, 140.w
-	camera	@pos, -15906.d, 9194.w, -15574.d, 3.d, 0.w
+	/*camera	@pos, -15906.d, 9194.w, -15574.d, 3.d, 0.w
 	camera	@unk227, -21761.d, 11408.w, -10519.d, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 80.w, 3.d, 0.w
@@ -25805,17 +25805,17 @@ loc_3318:
 	msg	voice(0.b),
 		speed(0.b),
 		"Chibi-Robo!",
-		wait(5.b)
+		wait(5.b)*/
 	camera	@pos, -20781.d, 2248.w, -33259.d, 3.d, 0.w
 	camera	@unk227, -15877.d, 11.w, -38874.d, 3.d, 0.w
 	camera	@unk229, 23.w, 3.d, 0.w
 	camera	@distance, 77.w, 3.d, 0.w
 	mdir	20000.d, @obj, 20005.d, 80.w, -1.d
-	wait	@dir, 20000.d
+	;wait	@dir, 20000.d
 	if	ne(hold, -1.d), else *loc_3320
 	lib	67.w
 loc_3320:
-	wait	@move, 20005.d
+	/*wait	@move, 20005.d
 	msg	voice(0.b),
 		speed(0.b),
 		"I can't believe my electronic\n",
@@ -25857,7 +25857,7 @@ loc_3320:
 		"Between you and me, I'm a little scared.\n",
 		speed(0.b),
 		"But I think we'd better go investigate.",
-		wait(254.b)
+		wait(254.b)*/
 	call	20000.d, 701.d
 	call	20005.d, 1.d, 1.d
 	moveto	20000.d, -18548.d, 0.w, -46218.d, 300.w, -1.d, -2.d
