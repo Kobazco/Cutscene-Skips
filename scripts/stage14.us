@@ -779,13 +779,13 @@ sub_24:
 		speed(0.b),
 		"Chibi-Robo! Chibi-Robo!",
 		wait(254.b)
-	pushbp
+	pushbp*/
 	setsp	actor_name(20003.d)
 	msg	voice(0.b),
 		speed(0.b),
 		"Give the rose to Jenny!",
 		wait(255.b)
-	popbp*/
+	popbp
 	lib	3.w
 	if	eq(result, 0.w), else *loc_39
 	menu	2.d
