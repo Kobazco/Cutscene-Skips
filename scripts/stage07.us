@@ -5864,7 +5864,7 @@ sub_1403:
 	camera	@unk227, -25212.d, 13864.w, 2728.w, 3.d, 0.w
 	camera	@distance, 100.w, 3.d, 0.w
 	wait	@time, 40.w
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		speed(5.b),
 		anim(0.b, 20008.w, 1012.d),
 		speed(0.b),
@@ -5872,7 +5872,7 @@ sub_1403:
 		anim(0.b, 20008.w, 1.d),
 		wait(255.b) */
 	wait	@time, 50.w
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		speed(5.b),
 		anim(0.b, 20008.w, 1012.d),
 		speed(0.b),
@@ -5891,7 +5891,7 @@ sub_1403:
 	scrn	@fade, 255.w, 255.w, 255.w, 255.w, 0.w, 0.w, 0.w, 0.w, 10.w
 	wait	@fade
 	sfx	325.d, 1.d
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		speed(1.b),
 		size(28.b),
 		speed(0.b),
@@ -5910,7 +5910,7 @@ sub_1403:
 	scrn	@fade, 255.w, 255.w, 255.w, 255.w, 0.w, 0.w, 0.w, 0.w, 10.w
 	wait	@fade
 	sfx	325.d, 1.d
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		speed(1.b),
 		size(28.b),
 		speed(0.b),
@@ -5927,7 +5927,7 @@ sub_1403:
 	scrn	@fade, 255.w, 255.w, 255.w, 255.w, 0.w, 0.w, 0.w, 0.w, 10.w
 	wait	@fade
 	sfx	325.d, 1.d
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		speed(1.b),
 		size(30.b),
 		speed(0.b),
@@ -5940,14 +5940,14 @@ sub_1403:
 	camera	@unk229, 25.w, 2.d, 500.w
 	camera	@distance, 124.w, 2.d, 500.w
 	wait	@time, 150.w
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"NO! I fight on the side of JUSTICE!",
 		anim(0.b, 20008.w, 1020.d),
 		wait(255.b) */
-;	wait	@time, 40.w
-	/* msg	voice(7.b),
+	wait	@time, 40.w
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"Those who think they can disturb the peace\n",
@@ -6060,12 +6060,12 @@ sub_1403:
 	anim	20008.d, 15.d
 	wait	@anim, 20008.d, -1.d
 	anim	20008.d, 1.d
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 24.d),
 		speed(0.b),
 		"Ah, Drake Redcrest, you devil.",
 		anim(0.b, 20008.w, -1.d) */
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1003.d),
 		speed(0.b),
 		"You're still as sharp as ever.",
@@ -7015,16 +7015,16 @@ loc_1454:
 
 sub_1468:
 	disp	10106.d, 0.d
-	lib	12.w
+;	lib	12.w
 	lib	38.w
-/* 	camera	@unk236, 3.w */	; locks camera
+/* 	camera	@unk236, 3.w
 	mdir	20000.d, @obj, 133.d, 30.w, 3.d
-/* 	wait	@dir, 20000.d */
-/* 	camera	@obj, 133.d, 2.d, 150.w */	; zooms camera on toothbrush
-/* 	wait	@cam
-	sfx	288.d, 1.d */
-/* 	camera	@unk229, 8.w, 2.d, 120.w
- */	/* wait	@cam
+	wait	@dir, 20000.d
+	camera	@obj, 133.d, 2.d, 150.w
+	wait	@cam
+	sfx	288.d, 1.d
+	camera	@unk229, 8.w, 2.d, 120.w
+	wait	@cam
 	wait	@sfx, 288.d
 	sfx	138.d, 1.d
 	wait	@sfx, 138.d */
@@ -7032,7 +7032,7 @@ sub_1468:
 		speed(0.b),
 		"What's that?",
 		wait(3.b) */
-/* 	camera	@unk237, 3.w */	; unlocks camera from toothbrush
+;	camera	@unk237, 3.w
 	lib	55.w
 	lib	96.w
 	return
@@ -16393,8 +16393,8 @@ sub_485:
 		"Something fell!",
 		wait(254.b)
 	wait	@time, 30.w
-/* 	lib	254.w
- */	msg	voice(0.b),
+;	lib	254.w
+	msg	voice(0.b),
 		speed(0.b),
 		"Hey, look! It's the Chibi-Robo Chibi-Manual!",
 		wait(254.b)
@@ -16438,15 +16438,15 @@ sub_488:
 /* 	wait	@time, 1.w
 	camera	@unk230 */
 	set	flag(31.d), 1.d
-	/* read	@anim, 20005.d, *loc_1320
+/* 	read	@anim, 20005.d, *loc_1320
 	anim	20008.d, 8.d
 	dir	20000.d, 0.w
 	disp	16.d, 0.d */
 	set	flag(1.d), 1.d
-/* 	lib	12.w
- */	/* anim	10.d, 0.w */
-/* 	lib	54.w
- */	/* pos	20000.d, -4369.d, 700.w, -32925.d
+	lib	12.w
+	anim	10.d, 0.w
+	lib	54.w
+	pos	20000.d, -4369.d, 700.w, -32925.d
 	dir	20000.d, 0.w
 	call	20000.d, -1.d
 	call	20005.d, 1.d, 0.d
@@ -16459,31 +16459,31 @@ sub_488:
 	anim	20001.d, 20.d
 	disp	20004.d, 1.d
 	pos	20004.d, 12913.w, 3964.w, -6835.d
-	dir	20004.d, 255.w */
+	dir	20004.d, 255.w
 	pushbp
 	setsp	497.d
-/* 	lib	26.w
- */	popbp
-	/* anim	20004.d, 1.d
-	camera	@pos, -20751.d, 24440.w, -27712.d, 3.d, 0.w
+	lib	26.w
+	popbp
+	anim	20004.d, 1.d
+/* 	camera	@pos, -20751.d, 24440.w, -27712.d, 3.d, 0.w
 	camera	@unk227, -11442.d, 17061.w, -17331.d, 3.d, 0.w
 	camera	@unk229, 20.w, 3.d, 0.w
 	camera	@distance, 157.w, 3.d, 0.w
 	camera	@unk229, 30.w, 2.d, 2400.w
-	sfx	284.d, 1.d */
-/* 	lib	8.w
- */	/* sfx	65541.d, 1.d
+	sfx	284.d, 1.d
+	lib	8.w
+	sfx	65541.d, 1.d
 	wait	@time, 300.w
 	sfx	65541.d, 1.d
 	wait	@time, 100.w */
-	pushbp
+/* 	pushbp
 	setsp	80.w
-/* 	lib	64.w
- */	popbp
+	lib	64.w
+	popbp */
 	camera	@pos, -5912.d, 1692.w, -25527.d, 3.d, 0.w
 	camera	@unk227, -641.d, -1174.d, -40282.d, 3.d, 0.w
-/* 	camera	@unk229, 26.w, 3.d, 0.w
- */	camera	@distance, 159.w, 3.d, 0.w
+	camera	@unk229, 26.w, 3.d, 0.w
+	camera	@distance, 159.w, 3.d, 0.w
 	disp	16.d, 0.d
 	call	20000.d, 701.d
 	if	eq(hold, 1000.d), else *loc_494
@@ -16514,11 +16514,11 @@ loc_492:
 	setsp	1.w
 	lib	93.w
 	popbp
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"Oh, Mr. Sanderson. Tsk tsk tsk.",
-		wait(255.b)
-	msg	voice(0.b),
+		wait(255.b) */
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"He had a little too much fun at the party.\n",
 		speed(0.b),
@@ -16526,10 +16526,10 @@ loc_492:
 		wait(255.b) */
 	wait	@time, 30.w
 	mdir	20005.d, @obj, 20000.d, 20.w, -1.d
-/* 	lib	254.w
- */	scrn	@hud, 1.d, 3.d
+;	lib	254.w
+	scrn	@hud, 1.d, 3.d
 	anim	20005.d, 1017.d
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"But right now, I need you to look\n",
 		speed(0.b),
@@ -16543,13 +16543,13 @@ loc_492:
 	mdir	20000.d, @dir, 275.w, 30.w, -1.d
 	scrn	@hud, 1.d, 7.d
 	anim	20005.d, 1002.d
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"You'll see a sun symbol during the day\n",
 		speed(0.b),
 		"and the moon symbol at night. ",
-		wait(255.b)
-	msg	voice(0.b),
+		wait(255.b) */
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"The moon is out right now,\n",
 		speed(0.b),
@@ -16573,7 +16573,7 @@ loc_492:
 	popbp
 	mdir	20005.d, @dir, 0.w, 40.w, -1.d
 	wait	@dir, 20005.d
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"Let's collect those Happy Points and try\n",
 		speed(0.b),
@@ -16613,8 +16613,8 @@ loc_492:
 sub_2123:
 	win	@letterbox
 	win	@color, 255.w, 255.w, 255.w, 0.w
-/* 	lib	373.w
- */	win	@reset
+;	lib	373.w
+	win	@reset
 	return
 
 
@@ -19572,22 +19572,22 @@ sub_2513:
 
 sub_2560:
 ;	lib	247.w
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		size(30.b),
 		speed(0.b),
 		"Good morning, Chibi-Robo.",
 		wait(255.b),
-		anim(0.b, 20008.w, 1020.d)
-	wait	@time, 80.w
-	msg	voice(7.b),
+		anim(0.b, 20008.w, 1020.d) */
+;	wait	@time, 80.w
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"What's this? No answer, eh? ",
 		wait(255.b),
 		anim(0.b, 20008.w, 1020.d) */
-	lib	12.w
-	anim	20008.d, 4.d
+/*	lib	12.w
+ 	anim	20008.d, 4.d
 	wait	@time, 16.w
 	sfx	851978.d, 1.d
 	wait	@time, 61.w
@@ -19603,20 +19603,20 @@ sub_2560:
 	set	var(1.d), add(obj(@pos_x, 20008.d), mul(sin(mul(var(0.d), 100.w)), 20.w))
 	set	var(2.d), obj(@pos_y, 20008.d)
 	set	var(3.d), add(obj(@pos_z, 20008.d), mul(cos(mul(var(0.d), 100.w)), 20.w))
-	ptcl	35.d, @pos, var(1.d), var(2.d), var(3.d), 150.w, 150.w, 150.w, add(var(0.d), 180.w)
-	/* msg	voice(7.b),
+	ptcl	35.d, @pos, var(1.d), var(2.d), var(3.d), 150.w, 150.w, 150.w, add(var(0.d), 180.w) */
+/* 	msg	voice(7.b),
 		size(28.b),
 		speed(0.b),
 		"Space Hunter Code, Part One:\n",
 		speed(0.b),
 		"Greet everyone by yelling!",
 		wait(255.b) */
-	/* wait	@time, 60.w */
-	lib	96.w
-	anim	20008.d, 6.d
-	/* wait	@anim, 20008.d, -1.d */
-	anim	20008.d, 1020.d
-	/* msg	voice(7.b),
+;	wait	@time, 60.w
+;	lib	96.w
+/* 	anim	20008.d, 6.d
+	wait	@anim, 20008.d, -1.d
+	anim	20008.d, 1020.d */
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"Mmm... Perhaps you have been shocked into\n",
@@ -19640,9 +19640,9 @@ sub_2560:
 		speed(0.b),
 		"Let us be friends, O diminutive one!",
 		anim(0.b, 20008.w, 1020.d),
-		wait(255.b)
-	wait	@time, 50.w */
-	/* msg	voice(7.b),
+		wait(255.b) */
+;	wait	@time, 50.w
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"As a friend, it is my duty to inform you that\n",
@@ -19668,26 +19668,26 @@ sub_2560:
 		speed(0.b),
 		"HA HA HA HAAAAAAAAAA!!!",
 		anim(0.b, 20008.w, -1.d),
-		anim(0.b, 20008.w, 1.d)
-	wait	@time, 1.w */
+		anim(0.b, 20008.w, 1.d) */
+;	wait	@time, 1.w
 	pushbp
 	setsp	24.d
 	lib	79.w
 	popbp
-	;wait	@time, 1.w
+;	wait	@time, 1.w
 	lib	67.w
-	;wait	@time, 1.w
+;	wait	@time, 1.w
 	lib	105.w
-	/* msg	voice(7.b),
+	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"Shall I show you how to don it, friend?",
 		anim(0.b, 20008.w, 1020.d),
 		wait(255.b),
-		stay */
+		stay
 	run	*sub_2564
 	if	ne(cur_suit, 1.d), else *loc_2563
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"Put it on! Do not keep Drake Redcrest waiting!\n",
@@ -19697,7 +19697,7 @@ sub_2560:
 		wait(255.b) */
 	endif	*loc_2562
 loc_2563:
-	/* msg	voice(7.b),
+/* 	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"If you are ever interested in achieving\n",
@@ -19720,7 +19720,7 @@ sub_2564:
 	lib	3.w
 	case	eq(result, 0.w), else *loc_2570
 	set	flag(1666.d), 1.w
-/* 	msg	voice(7.b),
+	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"Your honesty is noble and must be rewarded!\n",
@@ -19768,8 +19768,8 @@ sub_2564:
 		speed(0.b),
 		"want by pressing Left or Right. ",
 		anim(0.b, 20008.w, 1020.d),
-		wait(255.b) 
-	menu	1000.d, -1.d*/
+		wait(255.b)
+	menu	1000.d, -1.d
 	if	ne(cur_suit, 1.d), else *loc_2569
 	set	cur_suit, 1.d
 	endif	*loc_2567
@@ -19797,8 +19797,8 @@ loc_2570:
 		wait(255.b) */
 	endif	*loc_2572
 loc_2573:
-/*	msg	voice(7.b),
- 		anim(0.b, 20008.w, 1019.d),
+/* 	msg	voice(7.b),
+		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"HA HA HA HAAAAA!! Cleverness becomes you!\n",
 		speed(0.b),
@@ -20543,7 +20543,7 @@ sub_2590:
 
 sub_2607:
 ;	lib	247.w
-	/* msg	voice(7.b),
+	msg	voice(7.b),
 		speed(0.b),
 		"HA HA HA HAAAAAAAA!!",
 		wait(255.b)
@@ -20561,7 +20561,7 @@ sub_2607:
 		"Don't lie! Drake Redcrest knows these things!",
 		anim(0.b, 20008.w, 1.d),
 		wait(255.b),
-		stay */
+		stay
 	lib	3.w
 	case	eq(result, 0.w), else *loc_2642
 	lib	105.w
@@ -20581,7 +20581,7 @@ loc_2609:
 loc_2642:
 	case	eq(result, 1.w), else *loc_2645
 	lib	105.w
-	/* msg	voice(7.b),
+	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(0.b),
 		"What?! Oh, friend! Why would you lie like that?\n",
@@ -20597,7 +20597,7 @@ loc_2642:
 		"fight for justice. Drake Redcrest knows it.",
 		anim(0.b, 20008.w, 1.d),
 		wait(255.b),
-		stay */
+		stay
 	lib	3.w
 	case	eq(result, 0.w), else *loc_2646
 	run	*sub_2610
@@ -20613,7 +20613,7 @@ loc_2642:
 	break	*loc_2645
 loc_2646:
 	case	eq(result, 1.w), else *loc_2648
-/* 	msg	voice(7.b),
+	msg	voice(7.b),
 		anim(0.b, 20008.w, 1019.d),
 		speed(4.b),
 		speed(0.b),
@@ -20621,7 +20621,7 @@ loc_2646:
 		speed(0.b),
 		"evil, don't come crying to Drake Redcrest!",
 		anim(0.b, 20008.w, 1.d),
-		wait(254.b) */
+		wait(254.b)
 	return
 loc_2648:
 	return
@@ -20631,7 +20631,7 @@ loc_2645:
 
 
 sub_2610:
-	/* msg	voice(7.b),
+	msg	voice(7.b),
 		anim(0.b, 20008.w, 24.d),
 		speed(0.b),
 		"HA HA HA HAAAAAAA!",
@@ -20645,7 +20645,7 @@ sub_2610:
 		speed(0.b),
 		"You just sit back and enjoy the ride!",
 		anim(0.b, 20008.w, 1.d),
-		wait(255.b) */
+		wait(255.b)
 	return
 
 
@@ -22342,37 +22342,37 @@ evt_item_brush_133:
 	set	flag(395.d), 0.w
 	run	*sub_880
 loc_3083:
-	wait	@time, 60.w
-	/* msg	voice(0.b),
+;	wait	@time, 60.w
+/* 	msg	voice(0.b),
 		size(30.b),
 		speed(0.b),
 		"Hey, look at that!",
 		wait(255.b) */
 	pushbp
 	setsp	item_name(16.d)
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"It's Mr. Sanderson's toothbrush...but let's\n",
 		speed(0.b),
 		"take it anyway! I bet he won't miss it.",
 		wait(255.b) */
 	popbp
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"And now that we have this nifty device, I bet\n",
 		speed(0.b),
 		"you can clean all sorts of stains. Lucky you!",
 		wait(255.b) */
-	call	-26.d, 133.d, 46.d
+ 	call	-26.d, 133.d, 46.d
 	mdir	20000.d, @cam, 30.w, -1.d
-	sfx	-65536.d, 4.d, 50.w, 0.w
+/*	sfx	-65536.d, 4.d, 50.w, 0.w
 	anim	20000.d, 213.d
 	anim	133.d, 5.w
 	wait	@anim, 20000.d, -1.d
 	wait	@time, 40.w
-	sfx	-65536.d, 4.d, 100.w, 255.w
-	/* menu	1000.d, 0.w
-	msg	voice(0.b),
+	sfx	-65536.d, 4.d, 100.w, 255.w */
+;	menu	1000.d, 0.w
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"Press ",
 		icon(8.b),
@@ -22380,7 +22380,7 @@ loc_3083:
 		wait(255.b) */
 	pushbp
 	setsp	item_name(16.d)
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"Select the toothbrush with\n",
 		speed(0.b),
@@ -22390,10 +22390,10 @@ loc_3083:
 		" to hold it!",
 		wait(255.b) */
 	popbp
-	/* menu	1000.d, -1.d */
+;	menu	1000.d, -1.d
 	pushbp
 	setsp	item_name(16.d)
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"If you want to put the toothbrush\n",
 		speed(0.b),
@@ -22402,14 +22402,14 @@ loc_3083:
 		"!",
 		wait(255.b) */
 	popbp
-	/* lib	254.w */
-	/* msg	voice(0.b),
+;	lib	254.w
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"And look! There's a stain right by your foot.\n",
 		speed(0.b),
 		"Why don't you give it a good scrub?",
-		wait(255.b)
-	printf	"歯ブラシＧＥＴ！\n" */
+		wait(255.b) */
+	printf	"歯ブラシＧＥＴ！\n"
 	lib	39.w
 	return
 
@@ -22570,13 +22570,13 @@ sub_3105:
 	lib	38.w
 	set	flag(1063.d), 1.d
 	if	eq(var(107.d), 0.w), else *loc_3108
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"Yes, that's it! You've got the hang of it.",
 		wait(254.b) */
 	endif	*loc_3107
 loc_3108:
-	/* msg	voice(0.b),
+/* 	msg	voice(0.b),
 		speed(0.b),
 		"You're quite the cleaner, Chibi-Robo!",
 		wait(254.b) */
@@ -22586,44 +22586,44 @@ loc_3107:
 
 
 sub_3103:
-;	lib	14.w
-;	lib	54.w
+/* 	lib	14.w
+	lib	54.w */
 	set	flag(433.d), 1.d
-	/* camera	@unk236, 3.w
+/* 	camera	@unk236, 3.w
 	camera	@pos, -12559.d, -764.d, -3112.d, 3.d, 0.w
 	camera	@unk227, -22776.d, 9350.w, 3741.w, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
-	camera	@distance, 159.w, 3.d, 0.w */
-	/* wait	@time, 5.w */
-;	lib	13.w
-	/* wait	@time, 80.w */
-;	sfx	65549.d, 1.d
-	/* wait	@time, 1.w */
-;	sfx	65549.d, 4.d, 0.w, 255.w
+	camera	@distance, 159.w, 3.d, 0.w
+	wait	@time, 5.w
+	lib	13.w
+	wait	@time, 80.w
+	sfx	65549.d, 1.d
+	wait	@time, 1.w
+	sfx	65549.d, 4.d, 0.w, 255.w */
 	disp	487.d, 1.d
-;	anim	487.d, 1.w
+	anim	487.d, 1.w
 	disp	273.d, 1.d
-	/* wait	@time, 200.w */
-/* 	camera	@unk237, 3.w
- */	sfx	65549.d, 4.d, 0.w, 96.w
-	/* wait	@time, 30.w */
+/* 	wait	@time, 200.w
+	camera	@unk237, 3.w
+	sfx	65549.d, 4.d, 0.w, 96.w
+	wait	@time, 30.w
 	pushbp
 	setsp	10.d
 	setsp	1.w
-;	lib	93.w
+	lib	93.w
 	popbp
-;	lib	94.w
-	/* wait	@time, 60.w */
+	lib	94.w
+	wait	@time, 60.w */
 /* 	msg	voice(0.b),
 		speed(0.b),
 		"Huh. That's odd. I think the TV\n",
 		speed(0.b),
 		"just turned on all by itself.",
 		wait(254.b) */
-	/* wait	@time, 30.w */
-;	lib	95.w
-;	sfx	65549.d, 4.d, 100.w, 64.w
-	lib	38
+	wait	@time, 30.w
+	lib	95.w
+	sfx	65549.d, 4.d, 100.w, 64.w
+	lib	38.w
 	lib	39.w
 	born	10155.d, 1.d, -13200.d, 0.w, 2636.w, 90.w, 8000.w, 1000.w, 7000.w, *sub_1403
 	return
@@ -23220,8 +23220,8 @@ sub_3203:
 		speed(0.b),
 		"You saw that too, right?",
 		wait(255.b)
-/* 	lib	254.w
- */	pushbp
+;	lib	254.w
+	pushbp
 	setsp	actor_name(20006.d)
 	msg	voice(0.b),
 		speed(0.b),
