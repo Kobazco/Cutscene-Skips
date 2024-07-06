@@ -930,7 +930,7 @@ sub_576:
 	wait	@cam
 	lib	110.w
 	lib	8.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"Good work, Chibi-Robo.",
 		wait(255.b)
@@ -949,7 +949,7 @@ sub_576:
 	msg	voice(0.b),
 		speed(0.b),
 		"OK then...",
-		wait(255.b)
+		wait(255.b)*/
 	camera	@pos, 1488.w, 2999.w, 5377.w, 1.d, 200.w
 	camera	@unk229, 40.w, 1.d, 200.w
 	camera	@distance, 64.w, 1.d, 200.w
@@ -957,7 +957,7 @@ sub_576:
 	run	*sub_252
 	run	*sub_376
 	anim	20005.d, 1002.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"Get out there, earn a ton of Happy Points,\n",
 		speed(0.b),
@@ -977,18 +977,18 @@ sub_576:
 		speed(0.b),
 		"You'll be upgraded to Super Chibi-Robo!!",
 		wait(255.b)
-	wait	@time, 50.w
+	wait	@time, 50.w*/
 	anim	20005.d, 1002.d
 	pushbp
 	setsp	actor_name(20005.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"Take it from me, Telly Vision. I'll do what\n",
 		speed(0.b),
 		"I can to lend you a hand.",
-		wait(255.b)
+		wait(255.b)*/
 	popbp
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		size(26.b),
 		speed(0.b),
 		"You can count on me!",
@@ -996,11 +996,11 @@ sub_576:
 	anim	20005.d, 1023.d
 	wait	@anim, 20005.d, -1.d
 	anim	20005.d, 1.d
-	anim	20005.d, 1014.d, 1.d
+	anim	20005.d, 1014.d, 1.d*/
 	lib	254.w
 	run	*sub_43
 	anim	20005.d, 1002.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(0.b),
 		"I'm sure you know you can save anywhere\n",
 		speed(0.b),
@@ -1018,7 +1018,7 @@ sub_576:
 		"So, get out there and grab some Happy Points!\n",
 		speed(0.b),
 		"Maybe you'll make Super Chibi-Robo yet!",
-		wait(5.b)
+		wait(5.b)*/
 	attach	11.d, *sub_698
 	wait	@time, 16.w
 	pushbp
