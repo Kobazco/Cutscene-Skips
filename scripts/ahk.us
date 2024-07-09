@@ -1,14 +1,21 @@
 	.stage	"ahk"
 
 
+loc_12:
+	.db	"cb_robo_5.dat"
+
+
+loc_13:
+	.db	"npc/jenny_0.dat"
+
+
 	.prologue  *evt_prologue
 evt_prologue:
 	pushbp
 	setsp	flag(-2.d)
 	printf	"prologue: mcload=%d\n"
 	popbp
-	msg	speed(0.b),
-		"prologue"
+	msg	"prologue"
 	return
 
 
@@ -48,6 +55,10 @@ evt_startup:
 	call	-11.d, 20005.d, or(or(1.d, 2.d), 16.d)
 	if	0.w, else *loc_9
 	set	var(0.w), 0.w
+	endif	*loc_3
+loc_9:
+	elif	0.w, else *loc_11
+	set	var(0.w), 1.w
 	endif	*loc_3
 loc_11:
 	set	var(0.w), 1.w
@@ -146,49 +157,6 @@ loc_7:
 	set	adda(item(131.w), 1.w)
 	born	10001.w, 1.d, 9428.w, 1200.w, 15945.w, 45.w, 1000.w, 400.w, 1000.w, *evt_pushobj_1_5
 	return
-loc_9:
-	elif	0.w, else *loc_11
-	set	var(0.w), 1.w
-	endif	*loc_3
-
-
-loc_12:
-	.db	"cb_robo_5.dat"
-
-
-loc_13:
-	.db	"npc/jenny_0.dat"
-
-
-sub_14:
-	while	1.w, else *loc_16
-	move	16.d, 500.w, 100.w, -1.d, 180.w
-	wait	@move, 16.d
-	move	16.d, 500.w, 100.w, -1.d, 90.w
-	wait	@move, 16.d
-	move	16.d, 500.w, 100.w, -1.d, 0.w
-	wait	@move, 16.d
-	move	16.d, 500.w, 100.w, -1.d, 270.w
-	wait	@move, 16.d
-	goto	*sub_14
-loc_16:
-	return
-
-
-	.interact  5.d, *evt_pushobj_1_5
-evt_pushobj_1_5:
-	call	20000.d, 501.d
-loc_22:
-	while	1.w, else *loc_20
-	wait	@time, 1.w
-	call	20000.d, 514.d
-	if	result, else *loc_21
-	break	*loc_20
-loc_20:
-	msg	wait(254.b)
-	return
-loc_21:
-	goto	*loc_22
 
 
 	.dead	*evt_dead
@@ -219,7 +187,6 @@ evt_time_up:
 	scrn	@fade, 0.w, 0.w, 0.w, 0.w, 0.w, 0.w, 0.w, 128.w, 50.w
 	wait	@fade
 	msg	speed(0.b),
-		speed(0.b),
 		"タイムアップ",
 		wait(254.b)
 	scrn	@wipe, 0.d, 1.d, 320.w, 240.w, 700.w, 700.w, 0.w, 0.w, 0.w, 255.w, 0.w, 0.w, 0.w, 0.w, 0.w, 255.w, 100.w
@@ -229,66 +196,43 @@ evt_time_up:
 	return
 
 
-	.interact  4.d, *evt_npc_tonpy_4
-evt_npc_tonpy_4:
-	read	@anim, 20005.d, *loc_30
-	lib	38.w
-	wait	@read, 20005.d
-	anim	20005.d, 1002.d
-	msg	voice(0.b),
-		speed(0.b),
-		"はやく！はやく！　ちびロボさん！",
-		wait(254.b)
-	lib	39.w
-	return
-
-
-loc_30:
-	.db	"npc/tonpy_2.dat"
-
-
-	.interact  7.d, *evt_living_happy_box_7
-	.interact  99.d, *evt_living_happy_box_7
-evt_living_happy_box_7:
-	set	adda(var(1000.w), 5.w)
-	set	adda(exp, var(1000.w))
-	msg	speed(0.b),
-		"get!!!",
-		wait(254.b)
-	return
-
-
-	.interact  9.d, *evt_test_box_4_9
-	.interact  10.d, *evt_test_box_4_9
-evt_test_box_4_9:
+	.interact  25.d, *evt_item_frog_ring_25
+evt_item_frog_ring_25:
+	wait	@anim, 20000.d, -1.d
+	if	ge(item(hold), 10.d), else *loc_46
 	pushbp
-	setsp	use
-	msg	speed(0.b),
-		"use=",
-		format("%d"),
+	setsp	item_name(hold)
+	msg	"「",
+		format("%s"),
+		"」はこれ以上持てません",
 		wait(254.b)
 	popbp
+	endif	*loc_45
+loc_46:
+	pushbp
+	setsp	item(hold)
+	setsp	hold
+	msg	"hold=",
+		format("%d"),
+		"(",
+		format("%d"),
+		")",
+		wait(254.b)
+	popbp
+loc_45:
 	return
 
 
-	.interact  13.d, *evt_coin_c_13
-evt_coin_c_13:
+	.interact  26.d, *evt_item_mag_cup_26
+evt_item_mag_cup_26:
+	wait	@anim, 20000.d, -1.d
+	msg	"get!",
+		wait(254.b)
 	return
 
 
-	.interact  14.d, *evt_coin_g_14
-evt_coin_g_14:
-	return
-
-
-	.interact  15.d, *evt_coin_s_15
-evt_coin_s_15:
-	return
-
-
-	.interact  17.d, *evt_house_r_chibi_h_main_17
-evt_house_r_chibi_h_main_17:
-	lib	2.w
+sub_41:
+	printf	"tttt\n"
 	return
 
 
@@ -304,8 +248,35 @@ loc_39:
 	return
 
 
-sub_41:
-	printf	"tttt\n"
+sub_14:
+	while	1.w, else *loc_16
+	move	16.d, 500.w, 100.w, -1.d, 180.w
+	wait	@move, 16.d
+	move	16.d, 500.w, 100.w, -1.d, 90.w
+	wait	@move, 16.d
+	move	16.d, 500.w, 100.w, -1.d, 0.w
+	wait	@move, 16.d
+	move	16.d, 500.w, 100.w, -1.d, 270.w
+	wait	@move, 16.d
+	goto	*sub_14
+loc_16:
+	return
+
+
+loc_30:
+	.db	"npc/tonpy_2.dat"
+
+
+	.interact  4.d, *evt_npc_tonpy_4
+evt_npc_tonpy_4:
+	read	@anim, 20005.d, *loc_30
+	lib	38.w
+	wait	@read, 20005.d
+	anim	20005.d, 1002.d
+	msg	voice(0.b),
+		"はやく！はやく！　ちびロボさん！",
+		wait(254.b)
+	lib	39.w
 	return
 
 
@@ -315,41 +286,9 @@ evt_chibi_house_chi_pc_24:
 	return
 
 
-	.interact  25.d, *evt_item_frog_ring_25
-evt_item_frog_ring_25:
-	wait	@anim, 20000.d, -1.d
-	if	ge(item(hold), 10.d), else *loc_46
-	pushbp
-	setsp	item_name(hold)
-	msg	speed(0.b),
-		"「",
-		format("%s"),
-		"」はこれ以上持てません",
-		wait(254.b)
-	popbp
-	endif	*loc_45
-loc_46:
-	pushbp
-	setsp	item(hold)
-	setsp	hold
-	msg	speed(0.b),
-		"hold=",
-		format("%d"),
-		"(",
-		format("%d"),
-		")",
-		wait(254.b)
-	popbp
-loc_45:
-	return
-
-
-	.interact  26.d, *evt_item_mag_cup_26
-evt_item_mag_cup_26:
-	wait	@anim, 20000.d, -1.d
-	msg	speed(0.b),
-		"get!",
-		wait(254.b)
+	.interact  17.d, *evt_house_r_chibi_h_main_17
+evt_house_r_chibi_h_main_17:
+	lib	2.w
 	return
 
 
@@ -377,6 +316,40 @@ evt_npc_mama_33:
 evt_npc_jenny_34:
 	wait	@time, 500.w
 	msg	wait(254.b)
+	return
+
+
+	.interact  100.d, *evt_npc_tao_100
+evt_npc_tao_100:
+	anim	20004.d, 1.w
+	msg	wait(254.b)
+	return
+
+
+	.interact  14.d, *evt_coin_g_14
+evt_coin_g_14:
+	return
+
+
+	.interact  15.d, *evt_coin_s_15
+evt_coin_s_15:
+	return
+
+
+	.interact  13.d, *evt_coin_c_13
+evt_coin_c_13:
+	return
+
+
+	.interact  9.d, *evt_test_box_4_9
+	.interact  10.d, *evt_test_box_4_9
+evt_test_box_4_9:
+	pushbp
+	setsp	use
+	msg	"use=",
+		format("%d"),
+		wait(254.b)
+	popbp
 	return
 
 
@@ -408,8 +381,7 @@ evt_living_asiato_35:
 	printf	"ヨゴレ=%d\n"
 	popbp
 	if	ge(var(1022.w), 16.w), else *loc_55
-	msg	speed(0.b),
-		"ヨゴレ掃除完了",
+	msg	"ヨゴレ掃除完了",
 		wait(254.b)
 loc_55:
 	endif	*loc_54
@@ -481,18 +453,24 @@ evt_test_dust_0_51:
 	printf	"ホコリ=%d\n"
 	popbp
 	if	ge(var(1023.w), 48.w), else *loc_61
-	msg	speed(0.b),
-		"ホコリ掃除完了",
+	msg	"ホコリ掃除完了",
 		wait(254.b)
 loc_61:
 	return
 
 
-	.interact  100.d, *evt_npc_tao_100
-evt_npc_tao_100:
-	anim	20004.d, 1.w
-	msg	wait(254.b)
+	.interact  7.d, *evt_living_happy_box_7
+	.interact  99.d, *evt_living_happy_box_7
+evt_living_happy_box_7:
+	set	adda(var(1000.w), 5.w)
+	set	adda(exp, var(1000.w))
+	msg	"get!!!",
+		wait(254.b)
 	return
+
+
+loc_64:
+	.db	"npc/bb_1.dat"
 
 
 	.interact  101.d, *evt_npc_bb_101
@@ -502,11 +480,22 @@ evt_npc_bb_101:
 	anim1	20012.d, 1011.d
 	wait	@anim, 20012.d, -1.d
 	anim1	20012.d, 1004.d
-	msg	speed(0.b),
-		"@",
+	msg	"@",
 		wait(254.b)
 	return
 
 
-loc_64:
-	.db	"npc/bb_1.dat"
+	.interact  5.d, *evt_pushobj_1_5
+evt_pushobj_1_5:
+	call	20000.d, 501.d
+loc_22:
+	while	1.w, else *loc_20
+	wait	@time, 1.w
+	call	20000.d, 514.d
+	if	result, else *loc_21
+	break	*loc_20
+loc_21:
+	goto	*loc_22
+loc_20:
+	msg	wait(254.b)
+	return

@@ -4,8 +4,7 @@
 	.startup  *evt_startup
 evt_startup:
 	anim	3.d, 13.w
-	msg	speed(0.b),
-		"プリモオフします",
+	msg	"プリモオフします",
 		wait(254.b)
 	disp	5.d, 0.d
 	return
@@ -31,14 +30,12 @@ evt_npc_primo_467_1:
 	lib	38.w
 	anim	1.d, 1.w
 	msg	voice(15.b),
-		speed(0.b),
 		"プリモプエル！",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
 		wait(254.b)
 	anim	1.d, 1.w
 	msg	voice(15.b),
-		speed(0.b),
 		"もしも～し",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
@@ -46,7 +43,6 @@ evt_npc_primo_467_1:
 	anim	1.d, 1.w
 	msg	voice(15.b),
 		speed(6.b),
-		speed(0.b),
 		"あの～　わすれてませんか？",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
@@ -54,9 +50,7 @@ evt_npc_primo_467_1:
 	anim	1.d, 1.w
 	msg	voice(15.b),
 		speed(6.b),
-		speed(0.b),
 		"ごほっ　ごほっ\n",
-		speed(0.b),
 		"おねつかな～？",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
@@ -64,7 +58,6 @@ evt_npc_primo_467_1:
 	anim	1.d, 1.w
 	msg	voice(15.b),
 		speed(6.b),
-		speed(0.b),
 		"は～い",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
@@ -72,7 +65,6 @@ evt_npc_primo_467_1:
 	anim	1.d, 1.w
 	msg	voice(15.b),
 		speed(6.b),
-		speed(0.b),
 		"ちゅう　して～",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
@@ -80,7 +72,6 @@ evt_npc_primo_467_1:
 	anim	1.d, 1.w
 	msg	voice(15.b),
 		speed(6.b),
-		speed(0.b),
 		"ラブラブ",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
@@ -88,7 +79,6 @@ evt_npc_primo_467_1:
 	anim	1.d, 1.w
 	msg	voice(15.b),
 		speed(6.b),
-		speed(0.b),
 		"めちゃくちゃ　あいをかんじるぜ！",
 		anim(0.b, 1.w, -1.d),
 		anim(0.b, 1.w, 0.d),
