@@ -10987,7 +10987,7 @@ sub_3203:
 		speed(7.b),
 		"You saw that too, right?",
 		wait(255.b)
-	lib	254.w
+;	lib	254.w
 	pushbp
 	setsp	actor_name(20006.d)
 	msg	voice(0.b),
@@ -11670,32 +11670,33 @@ sub_1685:
 
 	.interact  133.d, *evt_item_brush_133
 evt_item_brush_133:
-	lib	38.w
 	set	flag(476.d), 1.d
 	set	var(108.d), var(107.d)
 	if	flag(395.d), else *loc_3083
 	set	flag(395.d), 0.w
 	run	*sub_880
 loc_3083:
-	wait	@time, 60.w
+	lib	38.w
+	lib	39.w
+/*	wait	@time, 60.w
 	msg	voice(0.b),
 		size(30.b),
 		"Hey, look at that!",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	item_name(16.d)
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"It's Mr. Sanderson's toothbrush...but let's\n",
 		"take it anyway! I bet he won't miss it.",
-		wait(255.b)
+		wait(255.b) */
 	popbp
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"And now that we have this nifty device, I bet\n",
 		"you can clean all sorts of stains. Lucky you!",
-		wait(255.b)
+		wait(255.b) */
 	call	-26.d, 133.d, 46.d
-	mdir	20000.d, @cam, 30.w, -1.d
-	sfx	-65536.d, 4.d, 50.w, 0.w
+/*	mdir	20000.d, @cam, 30.w, -1.d
+ 	sfx	-65536.d, 4.d, 50.w, 0.w
 	anim	20000.d, 213.d
 	anim	133.d, 5.w
 	wait	@anim, 20000.d, -1.d
@@ -11706,42 +11707,42 @@ loc_3083:
 		"Press ",
 		icon(8.b),
 		" to open the equipment menu.",
-		wait(255.b)
+		wait(255.b) */
 	pushbp
 	setsp	item_name(16.d)
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"Select the toothbrush with\n",
 		icon(0.b),
 		" and use ",
 		icon(5.b),
 		" to hold it!",
-		wait(255.b)
+		wait(255.b) */
 	popbp
 	menu	1000.d, -1.d
 	pushbp
 	setsp	item_name(16.d)
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"If you want to put the toothbrush\n",
 		"away, just press ",
 		icon(6.b),
 		"!",
-		wait(255.b)
+		wait(255.b) */
 	popbp
-	lib	254.w
+/* ;	lib	254.w
 	msg	voice(0.b),
 		"And look! There's a stain right by your foot.\n",
 		"Why don't you give it a good scrub?",
 		wait(255.b)
-	printf	"歯ブラシＧＥＴ！\n"
-	lib	39.w
+	printf	"歯ブラシＧＥＴ！\n" */
+
 	return
 
 
 sub_1686:
 	disp	10106.d, 0.d
-	lib	12.w
+;	lib	12.w
 	lib	38.w
-	camera	@unk236, 3.w
+/* 	camera	@unk236, 3.w
 	mdir	20000.d, @obj, 133.d, 30.w, 3.d
 	wait	@dir, 20000.d
 	camera	@obj, 133.d, 2.d, 150.w
@@ -11755,9 +11756,10 @@ sub_1686:
 	msg	voice(0.b),
 		"What's that?",
 		wait(3.b)
-	camera	@unk237, 3.w
+	camera	@unk237, 3.w */
 	lib	55.w
 	lib	96.w
+	lib	39.w ; Added line
 	return
 
 
@@ -12601,10 +12603,10 @@ loc_317:
 
 
 sub_488:
-	wait	@time, 1.w
-	camera	@unk230
+/* 	wait	@time, 1.w
+	camera	@unk230 */
 	set	flag(31.d), 1.d
-	read	@anim, 20005.d, *loc_1089
+/* 	read	@anim, 20005.d, *loc_1089
 	anim	20008.d, 8.d
 	dir	20000.d, 0.w
 	disp	16.d, 0.d
@@ -12614,23 +12616,23 @@ sub_488:
 	lib	54.w
 	pos	20000.d, -4369.d, 700.w, -32925.d
 	dir	20000.d, 0.w
-	call	20000.d, -1.d
+	call	20000.d, -1.d */
 	call	20005.d, 1.d, 0.d
 	pos	20005.d, -3142.d, 1100.w, -31094.d
 	dir	20005.d, 20.w
 	anim	20005.d, 1.d
-	disp	20001.d, 1.d
+/* 	disp	20001.d, 1.d
 	pos	20001.d, 10706.w, 3964.w, 1043.w
 	dir	20001.d, 270.w
 	anim	20001.d, 20.d
-	disp	20004.d, 1.d
+ 	disp	20004.d, 1.d
 	pos	20004.d, 12913.w, 3964.w, -6835.d
-	dir	20004.d, 255.w
+	dir	20004.d, 255.w */
 	pushbp
 	setsp	497.d
-	lib	26.w
+;	lib	26.w
 	popbp
-	anim	20004.d, 1.d
+/* 	anim	20004.d, 1.d
 	camera	@pos, -20751.d, 24440.w, -27712.d, 3.d, 0.w
 	camera	@unk227, -11442.d, 17061.w, -17331.d, 3.d, 0.w
 	camera	@unk229, 20.w, 3.d, 0.w
@@ -12638,15 +12640,15 @@ sub_488:
 	camera	@unk229, 30.w, 2.d, 2400.w
 	sfx	284.d, 1.d
 	lib	8.w
-	sfx	65541.d, 1.d
+ 	sfx	65541.d, 1.d
 	wait	@time, 300.w
 	sfx	65541.d, 1.d
-	wait	@time, 100.w
+	wait	@time, 100.w */
 	pushbp
 	setsp	80.w
-	lib	64.w
+;	lib	64.w
 	popbp
-	camera	@pos, -5912.d, 1692.w, -25527.d, 3.d, 0.w
+ 	camera	@pos, -5912.d, 1692.w, -25527.d, 3.d, 0.w
 	camera	@unk227, -641.d, -1174.d, -40282.d, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 159.w, 3.d, 0.w
@@ -12680,23 +12682,23 @@ loc_492:
 	setsp	1.w
 	lib	93.w
 	popbp
-	msg	voice(0.b),
+/*  	msg	voice(0.b),
 		"Oh, Mr. Sanderson. Tsk tsk tsk.",
 		wait(255.b)
 	msg	voice(0.b),
 		"He had a little too much fun at the party.\n",
 		"I think he passed out from excitement.",
-		wait(255.b)
+		wait(255.b)  */
 	wait	@time, 30.w
 	mdir	20005.d, @obj, 20000.d, 20.w, -1.d
-	lib	254.w
+;	lib	254.w
 	scrn	@hud, 1.d, 3.d
 	anim	20005.d, 1017.d
-	msg	voice(0.b),
+/*  	msg	voice(0.b),
 		"But right now, I need you to look\n",
 		"at the top of the screen.",
-		wait(255.b)
-	color	-2.d, @modulate, 70.w, 70.w, 70.w, 100.w
+		wait(255.b) */
+ 	color	-2.d, @modulate, 70.w, 70.w, 70.w, 100.w
 	color	20000.d, @modulate, 150.w, 150.w, 230.w, 100.w
 	color	20005.d, @modulate, 150.w, 150.w, 230.w, 100.w
 	lib	95.w
@@ -12704,14 +12706,14 @@ loc_492:
 	mdir	20000.d, @dir, 275.w, 30.w, -1.d
 	scrn	@hud, 1.d, 7.d
 	anim	20005.d, 1002.d
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"You'll see a sun symbol during the day\n",
 		"and the moon symbol at night. ",
 		wait(255.b)
 	msg	voice(0.b),
 		"The moon is out right now,\n",
 		"so that means it's nighttime.",
-		wait(255.b)
+		wait(255.b) */
 	anim	20005.d, 1.d
 	color	-2.d, @modulate, 150.w, 150.w, 230.w, 100.w
 	color	86.d, @modulate, 255.w, 255.w, 255.w, 100.w
@@ -12730,10 +12732,10 @@ loc_492:
 	popbp
 	mdir	20005.d, @dir, 0.w, 40.w, -1.d
 	wait	@dir, 20005.d
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"Let's collect those Happy Points and try\n",
 		"to get to Super Chibi-Robo status!",
-		wait(3.b)
+		wait(3.b) */
 	attach	15.d, *sub_1688
 	wait	@time, 16.w
 	pushbp
@@ -12768,7 +12770,7 @@ loc_492:
 sub_1688:
 	win	@letterbox
 	win	@color, 255.w, 255.w, 255.w, 0.w
-	lib	373.w
+;	lib	373.w
 	win	@reset
 	return
 
@@ -12777,14 +12779,14 @@ sub_3103:
 	lib	14.w
 	lib	54.w
 	set	flag(433.d), 1.d
-	camera	@unk236, 3.w
+/* 	camera	@unk236, 3.w
 	camera	@pos, -12559.d, -764.d, -3112.d, 3.d, 0.w
 	camera	@unk227, -22776.d, 9350.w, 3741.w, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 159.w, 3.d, 0.w
-	wait	@time, 5.w
+	wait	@time, 5.w */
 	lib	13.w
-	wait	@time, 80.w
+/* 	wait	@time, 80.w
 	sfx	65549.d, 1.d
 	wait	@time, 1.w
 	sfx	65549.d, 4.d, 0.w, 255.w
@@ -12794,19 +12796,19 @@ sub_3103:
 	wait	@time, 200.w
 	camera	@unk237, 3.w
 	sfx	65549.d, 4.d, 0.w, 96.w
-	wait	@time, 30.w
+	wait	@time, 30.w */
 	pushbp
 	setsp	10.d
 	setsp	1.w
 	lib	93.w
 	popbp
 	lib	94.w
-	wait	@time, 60.w
-	msg	voice(0.b),
+/*	wait	@time, 60.w
+ 	msg	voice(0.b),
 		"Huh. That's odd. I think the TV\n",
 		"just turned on all by itself.",
 		wait(254.b)
-	wait	@time, 30.w
+	wait	@time, 30.w */
 	lib	95.w
 	sfx	65549.d, 4.d, 100.w, 64.w
 	lib	39.w
@@ -12818,14 +12820,14 @@ sub_3105:
 	lib	38.w
 	set	flag(1063.d), 1.d
 	if	eq(var(107.d), 0.w), else *loc_3108
-	msg	voice(0.b),
+	/* msg	voice(0.b),
 		"Yes, that's it! You've got the hang of it.",
-		wait(254.b)
+		wait(254.b) */
 	endif	*loc_3107
 loc_3108:
-	msg	voice(0.b),
+/* 	msg	voice(0.b),
 		"You're quite the cleaner, Chibi-Robo!",
-		wait(254.b)
+		wait(254.b) */
 loc_3107:
 	lib	55.w
 	return
@@ -16992,7 +16994,7 @@ sub_485:
 		"Something fell!",
 		wait(254.b)
 	wait	@time, 30.w
-	lib	254.w
+;	lib	254.w
 	msg	voice(0.b),
 		"Hey, look! It's the Chibi-Robo Chibi-Manual!",
 		wait(254.b)
