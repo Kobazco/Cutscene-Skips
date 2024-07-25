@@ -409,6 +409,8 @@ sub_576:
 	wait	@cam
 	lib	110.w
 	lib	8.w
+	set     flag(429)	; Chibi-Door flags
+	set     flag(430)
 	/*msg	voice(0.b),
 		"Good work, Chibi-Robo.",
 		wait(255.b)

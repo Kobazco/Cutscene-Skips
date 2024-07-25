@@ -3028,19 +3028,19 @@ evt_map_jump_box_20:
 	endif	*loc_3312
 loc_3318:
 	set	flag(44.d), 1.d
-	read	@anim, 20005.d, *loc_3278
+	;read	@anim, 20005.d, *loc_3278
 	lib	14.w
-	wait	@read, 20005.d
+	;wait	@read, 20005.d
 	lib	12.w
 	lib	142.w
 	run	*sub_2529
-	dir	20017.d, 140.w
+	/*dir	20017.d, 140.w
 	camera	@pos, -15906.d, 9194.w, -15574.d, 3.d, 0.w
 	camera	@unk227, -21761.d, 11408.w, -10519.d, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
-	camera	@distance, 80.w, 3.d, 0.w
+	camera	@distance, 80.w, 3.d, 0.w*/
 	lib	13.w
-	wait	@time, 60.w
+	/*wait	@time, 60.w
 	msg	voice(13.b),
 		size(30.b),
 		speed(8.b),
@@ -3079,22 +3079,22 @@ loc_3318:
 	disp	20005.d, 1.d
 	pos	20005.d, -17854.d, 10000.w, -35176.d
 	dir	20005.d, 180.w
-	call	20005.d, 1.d, 0.d
+	call	20005.d, 1.d, 0.d*/
 	lib	13.w
-	moveto	20005.d, -17151.d, 900.w, -36765.d, 250.w, -1.d, -2.d
+	/*moveto	20005.d, -17151.d, 900.w, -36765.d, 250.w, -1.d, -2.d
 	msg	voice(0.b),
 		"Chibi-Robo!",
 		wait(5.b)
 	camera	@pos, -20781.d, 2248.w, -33259.d, 3.d, 0.w
 	camera	@unk227, -15877.d, 11.w, -38874.d, 3.d, 0.w
 	camera	@unk229, 23.w, 3.d, 0.w
-	camera	@distance, 77.w, 3.d, 0.w
-	mdir	20000.d, @obj, 20005.d, 80.w, -1.d
-	wait	@dir, 20000.d
+	camera	@distance, 77.w, 3.d, 0.w*/
+	;mdir	20000.d, @obj, 20005.d, 80.w, -1.d
+	;wait	@dir, 20000.d
 	if	ne(hold, -1.d), else *loc_3320
 	lib	67.w
 loc_3320:
-	wait	@move, 20005.d
+	/*wait	@move, 20005.d
 	msg	voice(0.b),
 		"I can't believe my electronic\n",
 		"eyes! That was truly amazing!",
@@ -3126,7 +3126,7 @@ loc_3320:
 	msg	voice(0.b),
 		"Between you and me, I'm a little scared.\n",
 		"But I think we'd better go investigate.",
-		wait(254.b)
+		wait(254.b)*/
 	call	20000.d, 701.d
 	call	20005.d, 1.d, 1.d
 	moveto	20000.d, -18548.d, 0.w, -46218.d, 300.w, -1.d, -2.d
