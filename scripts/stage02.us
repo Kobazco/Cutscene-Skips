@@ -6269,7 +6269,7 @@ loc_1142:
 
 sub_1169:
 	set	flag(422.d), 1.d
-	msg	voice(13.b),
+	/*msg	voice(13.b),
 		anim(0.b, 20017.w, 20.d),
 		"Hmmm...\n",
 		"Not bad!",
@@ -6286,7 +6286,7 @@ sub_1169:
 		anim(0.b, 20017.w, 20.d),
 		"Just look how Lewis and Tito shine!",
 		anim(0.b, 20017.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	pushbp
 	setsp	20017.d
 	setsp	0.d
@@ -14304,7 +14304,7 @@ sub_556:
 	attach	20033.d, *sub_1850
 	set	flag(427.d), 1.d
 	lib	38.w
-	dir	20018.d, 90.w
+	/*dir	20018.d, 90.w
 	dir	20019.d, 90.w
 	camera	@pos, -2304.d, 4913.w, 1037.w, 3.d, 0.w
 	camera	@unk227, 3253.w, 1383.w, -1290.d, 3.d, 0.w
@@ -14593,7 +14593,7 @@ sub_556:
 	sfx	-65499.d, 2.d, 100.w
 	mdir	20028.d, @dir, 270.w, 40.w, 1.d
 	mdir	20033.d, @dir, 180.w, 40.w, 1.d
-	mdir	20035.d, @dir, 0.w, 40.w, 1.d
+	mdir	20035.d, @dir, 0.w, 40.w, 1.d*/
 	if	flag(-2.d), else *loc_558
 	camera	@unk230
 loc_558:

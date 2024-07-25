@@ -3606,7 +3606,7 @@ evt_item_deka_denchi_6:
 	set	flag(337.d), 1.d
 	set	flag(344.d), 1.d
 	lib	38.w
-	disp	20005.d, 1.d
+	/*disp	20005.d, 1.d
 	pos	20005.d, 9952.w, 4000.w, -3000.d
 	camera	@pos, 3478.w, 865.w, -7639.d, 3.d, 0.w
 	camera	@unk227, 8433.w, 705.w, -4586.d, 3.d, 0.w
@@ -4076,7 +4076,7 @@ evt_item_deka_denchi_6:
 		"$Never make a promise ye can't keep.$\n",
 		"That's the Pirate's Code!",
 		anim(0.b, 20009.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	msg	voice(8.b),
 		size(28.b),
 		speed(4.b),
@@ -4087,7 +4087,7 @@ evt_item_deka_denchi_6:
 		wait(255.b),
 		stay
 	lib	3.w
-	anim	20005.d, 1012.d
+	/*anim	20005.d, 1012.d
 	msg	voice(0.b),
 		"I won't forget them. Even if I die,\n",
 		"I'll come back.",
@@ -4155,7 +4155,7 @@ evt_item_deka_denchi_6:
 		wait(254.b)
 	anim	20005.d, 1.d
 	moveto	20005.d, 4738.w, 6000.w, -6463.d, 200.w, 1004.d, -1.d
-	wait	@time, 100.w
+	wait	@time, 100.w*/
 	lib	95.w
 	call	-27.d, 20009.d, 17.d
 	call	-27.d, 20007.d, 17.d
@@ -4355,7 +4355,7 @@ loc_1225:
 	sfx	138.d, 1.d
 	lib	38.w
 	wait	@sfx, 138.d
-	pushbp
+	/*pushbp
 	setsp	item_name(48.d)
 	msg	voice(0.b),
 		"Way to go, Chibi-Robo!\n",
@@ -4411,17 +4411,17 @@ loc_1225:
 	msg	voice(0.b),
 		"It would have to be pretty big for\n",
 		"Giga-Robo's leg to fit inside.",
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 loc_1227:
 	wait	@time, 40.w
-	pushbp
+	/*pushbp
 	setsp	item_name(48.d)
 	msg	voice(0.b),
 		"Anyway, let's take the Giga-Charger\n",
 		"back to the Chibi-House!",
 		wait(255.b)
-	popbp
+	popbp*/
 loc_1222:
 	camera	@reset, 2.d, 100.w
 	lib	55.w
@@ -4841,7 +4841,7 @@ loc_1129:
 
 
 sub_1110:
-	read	@anim, 20000.d, *loc_1133
+	/*read	@anim, 20000.d, *loc_1133
 	call	-26.d, 20007.d, 17.d
 	camera	@pos, 5824.w, 27.w, -9960.d, 3.d, 0.w
 	camera	@unk227, 16207.w, 2964.w, -6908.d, 3.d, 0.w
@@ -4881,7 +4881,7 @@ sub_1110:
 	lib	259.w
 	popbp
 	anim	26.d, 2.w
-	sfx	326.d, 1.d
+	sfx	326.d, 1.d*/
 	call	20000.d, 110.d
 	camera	@pos, 5336.w, -33.d, -10327.d, 2.d, 30.w
 	camera	@unk227, 14959.w, 3140.w, -5531.d, 2.d, 30.w
@@ -4905,9 +4905,9 @@ sub_1110:
 	camera	@unk227, 8710.w, 1537.w, 6153.w, 3.d, 0.w
 	camera	@unk229, 35.w, 3.d, 0.w
 	camera	@distance, 112.w, 3.d, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"CH-CHIBI-ROBO!",
-		wait(254.b)
+		wait(254.b)*/
 	camera	@pos, 7901.w, 712.w, -10971.d, 3.d, 0.w
 	camera	@unk227, 3756.w, 1263.w, 9571.w, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
@@ -4935,7 +4935,7 @@ loc_1112:
 	if	eq(result, -1.d), else *loc_1113
 loc_1113:
 	anim	20005.d, 1002.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Stop fooling around!",
 		wait(254.b)
 	anim	20005.d, 1.d
@@ -4965,18 +4965,18 @@ loc_1113:
 	sfx	-65522.d, 2.d, 150.w
 	lib	254.w
 	wait	@anim, 20005.d, -1.d
-	anim	20005.d, 1012.d
+	anim	20005.d, 1012.d*/
 	if	eq(cur_suit, 6.d), else *loc_1128
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		size(28.b),
 		"Those...birdies!",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_1115
 loc_1128:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		size(28.b),
 		"Y-your eyes!",
-		wait(254.b)
+		wait(254.b)*/
 loc_1115:
 	disp	20005.d, 0.d
 	ptcl	5.d, @obj, 20000.d, 0.w, 1000.w, 0.w, 100.w, 100.w, 100.w, 0.w
@@ -4991,12 +4991,12 @@ loc_1115:
 	camera	@unk229, 25.w, 2.d, 500.w
 	camera	@distance, 209.w, 2.d, 500.w
 	wait	@time, 250.w
-	anim	20005.d, 1012.d
+	/*anim	20005.d, 1012.d
 	msg	voice(0.b),
 		size(30.b),
 		"You've fried a circuit!",
 		wait(254.b)
-	wait	@time, 50.w
+	wait	@time, 50.w*/
 	anim	20000.d, 67.d
 	ptcl	5.d, @unk210
 	wait	@anim, 20000.d, -1.d
@@ -5006,13 +5006,13 @@ loc_1115:
 	popbp
 	scrn	@shake, 0.w, 5.w, 0.w, 0.w, 0.w, 0.w, 50.w
 	wait	@time, 20.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(10.b),
 		size(20.b),
 		"N-no...don't...",
-		wait(6.b)
+		wait(6.b)*/
 	disp	20005.d, 1.d
-	camera	@unk230
+	/*camera	@unk230
 	camera	@obj, 20000.d, 3.d, 1.w
 	scrn	@fade, 0.w, 0.w, 0.w, 0.w, 255.w, 255.w, 255.w, 255.w, 500.w
 	read	@anim, 20000.d, 0.d
@@ -5025,14 +5025,14 @@ loc_1115:
 	setsp	40000.d
 	setsp	20000.d
 	lib	44.w
-	popbp
+	popbp*/
 	sfx	-65522.d, 0.d
 	sfx	-65521.d, 1.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(7.b),
 		size(40.b),
 		"Don't diiieee! NOOOOOO!",
-		wait(10.b)
+		wait(10.b)*/
 	wait	@fade
 	anim	20005.d, 1.d
 	wait	@time, 1.w
@@ -5042,7 +5042,7 @@ loc_1115:
 	camera	@distance, 259.w, 3.d, 0.w
 	wait	@cam
 	wait	@time, 200.w
-	movie	*loc_1135, 320.w, 210.w, 640.w, 480.w, 2.d
+	;movie	*loc_1135, 320.w, 210.w, 640.w, 480.w, 2.d
 	wait	@time, 100.w
 	scrn	@fade, 255.w, 255.w, 255.w, 255.w, 0.w, 0.w, 0.w, 0.w, 300.w
 	wait	@fade
@@ -5067,15 +5067,15 @@ loc_1115:
 	camera	@distance, 52.w, 3.d, 0.w
 	wait	@time, 80.w
 	anim	20005.d, 1016.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(10.b),
 		"Chibi-Robo...",
-		wait(254.b)
+		wait(254.b)*/
 	anim	20005.d, 1015.d
 	wait	@time, 60.w
 	anim	20005.d, 1016.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(10.b),
 		"You...d-died...",
@@ -5097,7 +5097,7 @@ loc_1115:
 	msg	voice(0.b),
 		"Huh?",
 		wait(254.b)
-	wait	@time, 100.w
+	wait	@time, 100.w*/
 	camera	@pos, 6184.w, 1362.w, -6260.d, 2.d, 500.w
 	camera	@unk227, 9564.w, 2917.w, -9900.d, 2.d, 500.w
 	camera	@unk229, 43.w, 2.d, 500.w
@@ -5113,12 +5113,12 @@ loc_1115:
 	camera	@unk229, 59.w, 2.d, 500.w
 	camera	@distance, 52.w, 2.d, 500.w
 	wait	@time, 200.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(7.b),
 		size(37.b),
 		"Aaaaaugh!",
-		wait(10.b)
+		wait(10.b)*/
 	pushbp
 	setsp	0.w
 	lib	244.w
@@ -5161,7 +5161,7 @@ loc_1115:
 	anim	20005.d, 1.d
 	wait	@time, 30.w
 	anim	20005.d, 1017.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Whew...",
 		wait(254.b)
 	msg	voice(0.b),
@@ -5174,10 +5174,10 @@ loc_1115:
 	camera	@unk229, 26.w, 1.d, 100.w
 	camera	@distance, 52.w, 1.d, 100.w
 	mdir	20005.d, @pos, 10815.w, -3712.d, 50.w, 1.d
-	wait	@dir, 20005.d
+	wait	@dir, 20005.d*/
 	disp	12.d, 0.d
 	disp	6.d, 1.d
-	camera	@pos, 12548.w, 355.w, -712.d, 3.d, 0.w
+	/*camera	@pos, 12548.w, 355.w, -712.d, 3.d, 0.w
 	camera	@unk227, 9664.w, 363.w, -5041.d, 3.d, 0.w
 	camera	@unk229, 23.w, 3.d, 0.w
 	camera	@distance, 52.w, 3.d, 0.w
@@ -5212,35 +5212,35 @@ loc_1115:
 		wait(254.b)
 	anim	20005.d, 1015.d
 	wait	@time, 40.w
-	anim	20000.d, 54.d
+	anim	20000.d, 54.d*/
 	disp	28.d, 1.d
 	disp	29.d, 1.d
 	disp	30.d, 1.d
 	sfx	249.d, 3.d, 200.w
-	anim1	20005.d, 1019.d
+	/*anim1	20005.d, 1019.d
 	camera	@pos, 7601.w, 1429.w, -8129.d, 3.d, 0.w
 	camera	@unk227, 3070.w, -362.d, -6302.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
-	camera	@distance, 52.w, 3.d, 0.w
+	camera	@distance, 52.w, 3.d, 0.w*/
 	wait	@anim, 20005.d, -1.d
 	anim	20005.d, 1019.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(10.b),
 		"We were just getting used to this house!",
 		wait(254.b)
-	wait	@time, 40.w
+	wait	@time, 40.w*/
 	camera	@pos, 5916.w, 1643.w, -4619.d, 3.d, 0.w
 	camera	@unk227, 7624.w, 408.w, -9376.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 52.w, 3.d, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(10.b),
 		"And now you die and leave me all alone!\n",
 		"ALONE! ALOOOOOOONNNE! NOOOOOO! ",
 		wait(254.b)
-	wait	@time, 40.w
+	wait	@time, 40.w*/
 loc_1127:
 	while	1.d, else *loc_1118
 	if	or(or(and(pad(1.d), 256.d), and(pad(1.d), 512.d)), gt(pad(5.d), 30.w)), else *loc_1126
@@ -5262,7 +5262,7 @@ loc_1118:
 	anim	20005.d, 1014.d, 1015.d
 	lib	254.w
 	anim	20005.d, 1012.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Y-you're alive!",
 		wait(254.b)
 	anim	20005.d, 1.d
@@ -5282,11 +5282,11 @@ loc_1118:
 	msg	voice(0.b),
 		"But I suppose I shouldn't have worried...",
 		wait(254.b)
-	wait	@anim, 20005.d, -1.d
+	wait	@anim, 20005.d, -1.d*/
 	if	eq(flag(906.d), 0.d), else *loc_1125
 	disp	113.d, 0.d
 loc_1125:
-	camera	@pos, 2720.w, 2190.w, -12707.d, 3.d, 0.w
+	/*camera	@pos, 2720.w, 2190.w, -12707.d, 3.d, 0.w
 	camera	@unk227, 6311.w, 1025.w, -9128.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 52.w, 3.d, 0.w
@@ -5297,7 +5297,7 @@ loc_1125:
 		wait(254.b)
 	anim	20005.d, 1.d
 	wait	@time, 30.w
-	anim	20005.d, 1012.d
+	anim	20005.d, 1012.d*/
 	msg	voice(0.b),
 		"So tell me...did you dream?",
 		wait(254.b),
@@ -5309,11 +5309,11 @@ loc_1125:
 		wait(254.b)
 	endif	*loc_1121
 loc_1124:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You didn't dream, right?",
-		wait(254.b)
+		wait(254.b)*/
 loc_1121:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"It's quite possible that you downloaded\n",
 		"data from Giga-Robo's memory banks.",
 		wait(254.b)
@@ -5325,7 +5325,7 @@ loc_1121:
 		wait(254.b)
 	msg	voice(0.b),
 		"I'll see you later, Chibi-Robo!",
-		wait(254.b)
+		wait(254.b)*/
 	moveto	20005.d, 6676.w, 6000.w, -7615.d, 150.w, 1007.d, -1.d
 	wait	@time, 100.w
 	disp	5.d, 0.d

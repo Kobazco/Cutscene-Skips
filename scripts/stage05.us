@@ -409,8 +409,8 @@ sub_576:
 	wait	@cam
 	lib	110.w
 	lib	8.w
-	set     flag(429)	; Chibi-Door flags
-	set     flag(430)
+	set     flag(429), 1	; Chibi-Door flags
+	set     flag(430), 1
 	/*msg	voice(0.b),
 		"Good work, Chibi-Robo.",
 		wait(255.b)
@@ -1230,12 +1230,12 @@ sub_564:
 sub_61:
 	pushbp
 	setsp	item_name(8.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"You know what that means? You can finally\n",
 		"recharge the Giga-Battery!",
 		wait(254.b),
-		anim(0.b, 20005.w, 1.d)
+		anim(0.b, 20005.w, 1.d)*/
 	popbp
 	return
 
@@ -1303,7 +1303,7 @@ loc_50:
 
 sub_84:
 	if	ge(item(8.d), 1.w), else *loc_86
-	anim	20005.d, 1006.d
+	/*anim	20005.d, 1006.d
 	msg	voice(0.b),
 		"Whew... Well, that's done.",
 		wait(255.b)
@@ -1397,7 +1397,7 @@ sub_84:
 		"Hmmmm hmmm... La la la la...",
 		anim(0.b, 20005.w, -1.d),
 		wait(5.b)
-	anim	20005.d, 1.d
+	anim	20005.d, 1.d*/
 	set	var(138.d), 2.d
 	set	flag(1689.d), 1.w
 loc_86:
@@ -1405,7 +1405,7 @@ loc_86:
 
 
 sub_64:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"Yes, that's it. Look at that! It's already\n",
 		"bigger than you are, Chibi-Robo!",
@@ -1413,7 +1413,7 @@ sub_64:
 	msg	voice(0.b),
 		"It's pretty heavy. Let's set it over there.",
 		wait(255.b),
-		anim(0.b, 20005.w, 1.d)
+		anim(0.b, 20005.w, 1.d)*/
 	return
 
 
@@ -1423,7 +1423,7 @@ sub_55:
 	pushbp
 	setsp	item_name(48.d)
 	setsp	item_name(8.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"Now, just take out the Giga-Battery\n",
 		"and Giga-Charger you're carrying.",
@@ -1432,7 +1432,7 @@ sub_55:
 	popbp
 	camera	@unk211, 1.w, 0.w, 1.d, 200.w
 	pushbp
-	setsp	8.d
+	setsp	8.d*/
 	lib	65.w
 	popbp
 	anim	20005.d, 1002.d
@@ -1481,11 +1481,11 @@ loc_63:
 	lib	65.w
 	popbp
 	anim	20005.d, 1002.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"Yeah, that's the way.",
 		wait(255.b),
-		anim(0.b, 20005.w, 1.d)
+		anim(0.b, 20005.w, 1.d)*/
 	anim	20005.d, 1.d
 	lib	75.w
 	pushbp
@@ -1630,7 +1630,7 @@ sub_77:
 	lib	65.w
 	popbp
 	anim	20005.d, 1002.d
-	run	*sub_64
+	;run	*sub_64
 	anim	20005.d, 1.d
 	camera	@unk211, 1.w, 1.w, 1.d, 200.w
 	lib	95.w
@@ -1906,13 +1906,13 @@ loc_31:
 	camera	@unk227, -1041.d, -1805.d, -3112.d, 3.d, 0.w
 	camera	@unk229, 34.w, 3.d, 0.w
 	camera	@distance, 64.w, 3.d, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Oh, Chibi-Robo! Look at the state you're in!",
 		wait(255.b)
 	msg	voice(0.b),
 		"And I'd thought maybe we could make it to\n",
 		"the top of the Chibi-Ranking together.",
-		wait(255.b)
+		wait(255.b)*/
 	endif	*loc_33
 loc_502:
 	msg	voice(0.b),
@@ -1942,7 +1942,7 @@ loc_36:
 	if	eq(flag(301.d), 0.d), else *loc_498
 	set	flag(301.d), 1.d
 	lib	254.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You're alive!",
 		wait(255.b)
 	anim	20005.d, 1002.d
@@ -1961,7 +1961,7 @@ loc_36:
 		wait(255.b)
 	msg	voice(0.b),
 		"And use an outlet if you have to recharge.",
-		wait(254.b)
+		wait(254.b)*/
 	anim	20005.d, 1.d
 	color	-2.d, @modulate, 255.w, 255.w, 255.w, 60.w
 	scrn	@hud, 0.d, 6.d
@@ -2033,7 +2033,7 @@ loc_42:
 
 
 sub_497:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Oh, and you should know, if you ever pass\n",
 		"out like that again, don't get too worried.",
 		wait(255.b)
@@ -2061,7 +2061,7 @@ sub_497:
 		"you'll change out of your Trauma Suit.",
 		wait(254.b)
 	anim	20005.d, 1.d
-	menu	1000.d, -1.d
+	menu	1000.d, -1.d*/
 	return
 
 
@@ -3835,20 +3835,20 @@ loc_169:
 	sfx	196611.d, 1.d
 	wait	@sfx, 196611.d
 	lib	24.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You can buy Chibi-Batteries from the online\n",
 		"shop now. They'll come in handy, I think.",
-		wait(255.b)
+		wait(255.b)*/
 	call	20005.d, 1.d, 1.d
 	attach	2.d, *sub_660
 	wait	@time, 50.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"If you get one of these, you can recover just\n",
 		"enough energy to go and recharge yourself.",
 		wait(255.b)
 	msg	voice(0.b),
 		"Pick one up and try it out!",
-		wait(255.b)
+		wait(255.b)*/
 	lib	95.w
 	return
 
