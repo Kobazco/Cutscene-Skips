@@ -464,7 +464,7 @@ sub_576:
 	wait	@anim, 20005.d, -1.d
 	anim	20005.d, 1.d
 	anim	20005.d, 1014.d, 1.d*/
-	lib	254.w
+	;lib	254.w
 	run	*sub_43
 	anim	20005.d, 1002.d
 	/*msg	voice(0.b),
@@ -1242,7 +1242,7 @@ sub_61:
 
 sub_46:
 	run	*sub_84
-	lib	254.w
+	;lib	254.w
 	mdir	20000.d, @obj, 20005.d, 30.w, -1.d
 	wait	@dir, 20000.d
 	if	and(not(flag(29.d)), not(flag(30.d))), else *loc_80
@@ -1380,9 +1380,9 @@ sub_84:
 		"Tossed aside like so much trash... Poor guy.",
 		wait(255.b)
 	anim	20005.d, 1015.d
-	wait	@time, 60.w
+	wait	@time, 60.w*/
 	lib	349.w
-	wait	@time, 30.w
+	/*wait	@time, 30.w
 	camera	@pos, -891.d, 797.w, 1959.w, 1.d, 50.w
 	camera	@unk227, 3490.w, 977.w, -761.d, 1.d, 50.w
 	camera	@unk229, 40.w, 1.d, 50.w
@@ -1696,9 +1696,9 @@ loc_60:
 
 
 sub_920:
-	pos	20000.d, -30.d, 29.w, 2258.w
+	;pos	20000.d, -30.d, 29.w, 2258.w
 	set	flag(333.d), 1.d
-	camera	@pos, -539.d, 863.w, 3908.w, 3.d, 0.w
+	/*camera	@pos, -539.d, 863.w, 3908.w, 3.d, 0.w
 	camera	@unk227, 728.w, 704.w, 365.w, 3.d, 0.w
 	camera	@unk229, 52.w, 3.d, 0.w
 	camera	@distance, 37.w, 3.d, 0.w
@@ -1724,9 +1724,9 @@ sub_920:
 	setsp	-50.d
 	setsp	0.w
 	lib	93.w
-	popbp
+	popbp*/
 	lib	94.w
-	wait	@time, 80.w
+	/*wait	@time, 80.w
 	wait	@time, 360.w
 	anim	20005.d, 1024.d, 1020.d
 	msg	voice(0.b),
@@ -1737,7 +1737,7 @@ sub_920:
 	anim	20005.d, 1021.d
 	msg	voice(0.b),
 		"It came from outside...",
-		wait(254.b)
+		wait(254.b)*/
 	lib	95.w
 	return
 
@@ -1941,7 +1941,7 @@ loc_36:
 	anim	20005.d, 1014.d, 1.d
 	if	eq(flag(301.d), 0.d), else *loc_498
 	set	flag(301.d), 1.d
-	lib	254.w
+	;lib	254.w
 	/*msg	voice(0.b),
 		"You're alive!",
 		wait(255.b)
@@ -1971,7 +1971,7 @@ loc_36:
 	endif	*loc_38
 loc_498:
 	if	eq(flag(32.d), 1.w), else *loc_500
-	lib	254.w
+	;lib	254.w
 	msg	voice(0.b),
 		"Hey, don't forget to recharge!",
 		wait(254.b)
@@ -1982,7 +1982,7 @@ loc_500:
 		wait(255.b)
 loc_38:
 	if	flag(33.d), else *loc_496
-	lib	254.w
+	;lib	254.w
 	msg	voice(0.b),
 		"Oh, uh... It looks like you lost some Moolah.\n",
 		"What!? Don't look at me!",
@@ -2108,7 +2108,7 @@ loc_525:
 	wait	@real, 1.d
 	anim	9.d, 0.w
 	anim	20000.d, 1.d
-	lib	254.w
+	;lib	254.w
 	msg	voice(0.b),
 		size(30.b),
 		"Good morning!",
@@ -3644,7 +3644,7 @@ loc_164:
 	set	flag(37.d), 1.d
 loc_163:
 	anim	9.d, 2.w
-	lib	254.w
+	;lib	254.w
 	call	20005.d, 1.d, 0.d
 	moveto	20005.d, 0.w, 900.w, -500.d, 100.w, 1004.d, -2.d
 	wait	@move, 20005.d
@@ -3689,7 +3689,7 @@ loc_157:
 	run	*sub_95
 	set	flag(37.d), 1.d
 loc_156:
-	lib	254.w
+	;lib	254.w
 	call	20005.d, 1.d, 0.d
 	moveto	20005.d, 0.w, 900.w, -500.d, 100.w, 1004.d, -2.d
 	wait	@move, 20005.d
@@ -3780,7 +3780,7 @@ sub_541:
 	wait	@time, 50.w
 	sfx	196611.d, 1.d
 	wait	@sfx, 196611.d
-	lib	254.w
+	;lib	254.w
 	pushbp
 	setsp	item_name(62.d)
 	msg	voice(0.b),
@@ -3825,7 +3825,7 @@ loc_170:
 	run	*sub_95
 	set	flag(37.d), 1.d
 loc_169:
-	lib	254.w
+	;lib	254.w
 	call	20005.d, 1.d, 0.d
 	moveto	20005.d, 0.w, 900.w, -500.d, 100.w, 1004.d, -2.d
 	wait	@move, 20005.d
@@ -3854,7 +3854,7 @@ loc_169:
 
 
 sub_538:
-	lib	254.w
+	;lib	254.w
 	pushbp
 	setsp	actor_name(20054.d)
 	msg	voice(0.b),
@@ -3961,7 +3961,7 @@ loc_906:
 loc_838:
 	if	eq(flag(658.d), 0.d), else *loc_905
 	set	flag(658.d), 1.d
-	lib	254.w
+	;lib	254.w
 	msg	voice(0.b),
 		"I think you can probably charge it if\n",
 		"you're willing to shell out the Moolah.",

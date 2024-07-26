@@ -15089,18 +15089,18 @@ loc_474:
 	dir	20005.d, 0.w
 	disp	20005.d, 1.d
 	if	eq(time(0.d), 0.d), else *loc_481
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(5.b),
 		"Hmmm... Everything looks normal...",
-		wait(255.b)
+		wait(255.b)*/
 loc_481:
 	if	eq(time(0.d), 1.d), else *loc_480
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(5.b),
 		"Hmmm... It's just Mr. Redcrest stomping around.",
-		wait(255.b)
+		wait(255.b)*/
 loc_480:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		speed(5.b),
 		"What do you think that noise was?",
 		wait(255.b)
@@ -15154,7 +15154,7 @@ loc_480:
 		wait(254.b)
 	msg	voice(0.b),
 		"Let's do a little investigating.",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_478
 loc_479:
 	msg
@@ -15181,7 +15181,7 @@ sub_1694:
 	if	eq(flag(419.d), 0.w), else *loc_1706
 	attach	20005.d, *sub_1757
 loc_1706:
-	read	@anim, 20005.d, *loc_1089
+	/*read	@anim, 20005.d, *loc_1089
 	camera	@pos, -2055.d, 1807.w, -18830.d, 2.d, 200.w
 	camera	@unk227, -6488.d, -1168.d, -34636.d, 2.d, 200.w
 	camera	@unk229, 26.w, 2.d, 200.w
@@ -15235,7 +15235,7 @@ loc_1706:
 	msg	voice(0.b),
 		size(32.b),
 		"GYYYYAAAAAAAAAHHHHHH!!!",
-		wait(3.b)
+		wait(3.b)*/
 	disp	182.d, 1.d
 	disp	183.d, 1.d
 	disp	184.d, 1.d
@@ -15280,7 +15280,7 @@ loc_1706:
 	anim	190.d, 8.d
 	anim	191.d, 8.d
 	anim	192.d, 8.d
-	camera	@anim, 0.w, 3.d, 0.w
+	;camera	@anim, 0.w, 3.d, 0.w
 	color	-2.d, @modulate, 70.w, 70.w, 70.w, 300.w
 	color	182.d, @modulate, 255.w, 255.w, 255.w, 300.w
 	color	183.d, @modulate, 255.w, 255.w, 255.w, 300.w
@@ -15459,7 +15459,7 @@ loc_1697:
 		"Those are the things from the news!",
 		wait(254.b)
 loc_1704:
-	anim	20005.d, 1021.d
+	/*anim	20005.d, 1021.d
 	msg	voice(0.b),
 		size(24.b),
 		"The Spydorz are here!",
@@ -15483,7 +15483,7 @@ loc_1704:
 	wait	@time, 40.w
 	msg	voice(0.b),
 		"I know this move! It's... It's...",
-		wait(254.b)
+		wait(254.b)*/
 	run	*sub_1702
 	pushbp
 	setsp	182.d
@@ -15518,7 +15518,7 @@ loc_1704:
 	popbp
 	wait	@time, 100.w
 	anim	20005.d, 1007.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		size(32.b),
 		"Spydor Roulette!!",
 		wait(254.b)
@@ -15531,7 +15531,7 @@ loc_1704:
 		size(25.b),
 		"This is going to be bad. Really bad!\n",
 		"Quick! Get the Chibi-Blaster!",
-		wait(254.b)
+		wait(254.b)*/
 	set	cur_atc, 2.d
 	endif	*loc_1700
 loc_1701:
@@ -16942,12 +16942,12 @@ loc_406:
 
 
 sub_485:
-	wait	@time, 1.w
-	camera	@unk230
+	;wait	@time, 1.w
+	;camera	@unk230
 	set	flag(420.d), 1.d
 	disp	10107.d, 0.d
 	lib	38.w
-	camera	@pos, 3211.w, -724.d, 6779.w, 3.d, 0.w
+	/*camera	@pos, 3211.w, -724.d, 6779.w, 3.d, 0.w
 	camera	@unk227, 7962.w, 4705.w, 3835.w, 3.d, 0.w
 	camera	@unk229, 49.w, 3.d, 0.w
 	camera	@distance, 77.w, 3.d, 0.w
@@ -16975,14 +16975,14 @@ sub_485:
 	anim	274.d, 6.w
 	attach	274.d, *sub_1808
 	mdir	20000.d, @pos, 5670.w, -469.d, 40.w, 17.d
-	wait	@anim, 274.d, -1.d
+	wait	@anim, 274.d, -1.d*/
 	pos	274.d, 5700.w, 53.w, -526.d
 	dir	274.d, 296.w
-	camera	@pos, -1342.d, 35385.d, 9089.w, 3.d, 0.w
+	/*camera	@pos, -1342.d, 35385.d, 9089.w, 3.d, 0.w
 	camera	@unk227, 544.w, 28008.w, 7432.w, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 77.w, 3.d, 0.w
-	attach	20001.d, *sub_1807
+	attach	20001.d, *sub_1807*/
 	anim2	274.d, 7.w, 0.w, 150.w
 	wait	@time, 36.w
 	sfx	65552.d, 1.d
@@ -16990,7 +16990,7 @@ sub_485:
 	sfx	65551.d, 1.d
 	wait	@anim, 274.d, -1.d
 	anim	274.d, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Something fell!",
 		wait(254.b)
 	wait	@time, 30.w
@@ -16999,7 +16999,7 @@ sub_485:
 		"Hey, look! It's the Chibi-Robo Chibi-Manual!",
 		wait(254.b)
 	pushbp
-	setsp	100.w
+	setsp	100.w*/
 	lib	64.w
 	popbp
 	run	*sub_365

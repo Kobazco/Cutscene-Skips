@@ -11719,7 +11719,7 @@ lib_283:
 loc_3728:
 	if	and(eq(var(0.d), 0.w), not(flag(464.d))), else *loc_3727
 	run	*lib_38
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Hey! Is that what I think it is?",
 		wait(254.b)
 	pushbp
@@ -11735,7 +11735,7 @@ loc_3728:
 	msg	voice(0.b),
 		"Spydorz are good for something after all...\n",
 		"They're good for recycling! Tee hee hee!",
-		wait(254.b)
+		wait(254.b)*/
 	set	flag(464.d), 1.w
 	run	*lib_39
 loc_3727:
