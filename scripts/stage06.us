@@ -1909,12 +1909,12 @@ loc_701:
 	sfx	138.d, 1.d
 	wait	@sfx, 138.d
 loc_700:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You opened the peephole!",
 		wait(255.b)
 	msg	voice(0.b),
 		"Now you can pass through here at night!",
-		wait(255.b)
+		wait(255.b)*/
 	lib	96.w
 	call	-27.d, 53.d, 57.d
 	pushbp
@@ -11753,28 +11753,28 @@ loc_2153:
 
 sub_813:
 	set	flag(507.d), 1.w
-	read	@anim, 20005.d, *loc_819
+	/*read	@anim, 20005.d, *loc_819
 	wait	@read, 20005.d
 	sfx	-65531.d, 4.d, 100.w, 0.w
 	pushbp
 	setsp	1.d
 	setsp	1.d
-	setsp	0.w
+	setsp	0.w*/
 	lib	144.w
 	popbp
 	disp	10005.d, 0.d
-	camera	@pos, -3568.d, 3502.w, 11381.w, 2.d, 400.w
+	/*camera	@pos, -3568.d, 3502.w, 11381.w, 2.d, 400.w
 	camera	@unk227, 4106.w, 327.w, 11424.w, 2.d, 400.w
 	camera	@unk229, 45.w, 2.d, 400.w
-	camera	@distance, 83.w, 2.d, 400.w
+	camera	@distance, 83.w, 2.d, 400.w*/
 	lib	304.w
-	wait	@time, 300.w
+	/*wait	@time, 300.w
 	sfx	288.d, 1.d
 	wait	@time, 1.w
 	wait	@cam
 	camera	@unk229, 16.w, 2.d, 100.w
 	wait	@time, 1.w
-	wait	@cam
+	wait	@cam*/
 	pos	20000.d, -1200.d, 0.w, 11856.w
 	dir	20000.d, 90.w
 	wait	@time, 200.w
@@ -11793,7 +11793,7 @@ sub_813:
 	call	20000.d, 200.d, 205.d, -30.d
 	anim	20005.d, 1.d
 	wait	@anim, 20005.d, -1.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"What's wrong, Chibi-Robo?",
 		anim(0.b, 20005.w, 1.d),
@@ -11839,7 +11839,7 @@ sub_813:
 		"Let's go and have a closer look!",
 		anim(0.b, 20005.w, 1.d),
 		wait(255.b)
-	wait	@cam
+	wait	@cam*/
 	moveto	20005.d, 3052.w, 800.w, 12137.w, 100.w, 1004.d, 93.w
 	wait	@time, 10.w
 	moveto	20000.d, 2794.w, 0.w, 11333.w, 100.w, 3.d, -1.d
@@ -11854,7 +11854,7 @@ sub_813:
 	mdir	20000.d, @dir, 87.w, 30.w, 3.d
 	mdir	20005.d, @dir, 93.w, 30.w, 1.d
 	wait	@move, 20000.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		speed(15.b),
 		"It looks like a frog, but...",
@@ -11875,7 +11875,7 @@ sub_813:
 	call	20000.d, 200.d, 205.d, -40.d
 	wait	@time, 120.w
 	mdir	20005.d, @dir, 190.w, 50.w, 1.d
-	wait	@dir, 20005.d
+	wait	@dir, 20005.d*/
 	msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"You think it could've been Tao?",
@@ -11885,11 +11885,11 @@ sub_813:
 	lib	306.w
 	case	eq(result, 0.w), else *loc_816
 	call	20000.d, 200.d, 205.d, -40.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"What? Hey, c'mon, I'm just kidding!",
 		anim(0.b, 20005.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_815
 loc_816:
 	case	eq(result, 1.w), else *loc_818
@@ -11904,7 +11904,7 @@ loc_816:
 loc_818:
 	break	*loc_815
 loc_815:
-	mdir	20005.d, @dir, 93.w, 40.w, 1.d
+	/*mdir	20005.d, @dir, 93.w, 40.w, 1.d
 	wait	@move, 20000.d
 	call	20000.d, 201.d
 	wait	@time, 100.w
@@ -11988,12 +11988,12 @@ loc_815:
 	msg	voice(0.b),
 		size(28.b),
 		"Wait a minute!",
-		wait(255.b)
+		wait(255.b)*/
 	camera	@pos, 4513.w, 1765.w, 12878.w, 3.d, 0.w
 	camera	@unk227, -1952.d, -2593.d, 9410.w, 3.d, 0.w
 	camera	@unk229, 38.w, 3.d, 0.w
 	camera	@distance, 85.w, 3.d, 0.w
-	wait	@time, 1.w
+	/*wait	@time, 1.w
 	wait	@cam
 	mdir	20005.d, @dir, 190.w, 50.w, 1.d
 	wait	@dir, 20005.d
@@ -12012,7 +12012,7 @@ loc_815:
 		anim(0.b, 20005.w, 1012.d),
 		"I'm gonna go take a look.",
 		anim(0.b, 20005.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	moveto	20005.d, 7596.w, 10000.w, 15566.w, 300.w, 1016.d, -2.d
 	lib	105.w
 	wait	@time, 200.w
@@ -16336,9 +16336,9 @@ loc_860:
 sub_862:
 	set	flag(518.d), 1.w
 	disp	10009.d, 0.d
-	sfx	-65531.d, 4.d, 100.w, 0.w
+	;sfx	-65531.d, 4.d, 100.w, 0.w
 	lib	38.w
-	camera	@unk236, 3.w
+	/*camera	@unk236, 3.w
 	camera	@pos, -2551.d, 21867.w, 20586.w, 2.d, 700.w
 	camera	@unk227, -6868.d, 17919.w, 26515.w, 2.d, 700.w
 	camera	@unk229, 44.w, 2.d, 700.w
@@ -16360,10 +16360,10 @@ sub_862:
 	pushbp
 	setsp	1.d
 	setsp	1.d
-	setsp	0.w
+	setsp	0.w*/
 	lib	145.w
 	popbp
-	camera	@unk237, 3.w
+	;camera	@unk237, 3.w
 	lib	96.w
 	pushbp
 	setsp	20.w

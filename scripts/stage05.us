@@ -3502,9 +3502,9 @@ loc_741:
 	win	@letterbox
 	win	@color, 255.w, 255.w, 255.w, 0.w
 	sfx	196608.d, 3.d, 200.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You've upgraded! Keep it up, Chibi-Robo, and...",
-		wait(3.b)
+		wait(3.b)*/
 	attach	11.d, *sub_658
 	wait	@time, 16.w
 	pushbp
@@ -5465,32 +5465,32 @@ loc_800:
 sub_760:
 	win	@letterbox
 	win	@color, 255.w, 255.w, 255.w, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"Chibi-Robo! Put your Scrap\n",
 		"into the Recyclotron!",
 		anim(0.b, 20005.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	set	var(728.d), add(var(728.d), 1.w)
 	set	var(add(701.d, sp(0.b))), 1.d
-	camera	@pos, -1443.d, 3000.w, 5396.w, 2.d, 100.w
+	/*camera	@pos, -1443.d, 3000.w, 5396.w, 2.d, 100.w
 	camera	@unk227, 464.w, 1000.w, -68.d, 2.d, 100.w
 	camera	@unk229, 30.w, 2.d, 100.w
 	run	*sub_793
-	anim	20005.d, 1007.d
+	anim	20005.d, 1007.d*/
 	set	var(0.d), add(701.d, sp(0.b))
 	if	eq(var(0.d), 701.d), else *loc_788
 	set	flag(934.d), 1.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Look! Something came out!",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_762
 loc_788:
 	pushbp
 	setsp	actor_name(20056.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"It's a Utilibot!",
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 	run	*sub_789
 loc_762:
@@ -5509,29 +5509,29 @@ loc_764:
 
 
 sub_769:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"I'll set it up out in the living room!",
 		anim(0.b, 20005.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	return
 
 
 sub_772:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"I'll set it up out in the kitchen!",
 		anim(0.b, 20005.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	return
 
 
 sub_775:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"I'll set it up out in the foyer!",
 		anim(0.b, 20005.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	return
 
 
@@ -5561,20 +5561,20 @@ loc_780:
 	break	*loc_768
 loc_782:
 	case	eq(sp(0.b), 707.d), else *loc_784
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"I'll set it up somewhere near\n",
 		"the master bedroom!",
 		anim(0.b, 20005.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	break	*loc_768
 loc_784:
 	case	eq(sp(0.b), 708.d), else *loc_786
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"I'll set it up out in the basement!",
 		anim(0.b, 20005.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	break	*loc_768
 loc_786:
 	break	*loc_768

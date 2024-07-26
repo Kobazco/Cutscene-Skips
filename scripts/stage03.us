@@ -9586,14 +9586,14 @@ sub_517:
 	disp	10007.d, 0.d
 	disp	10016.d, 0.d
 	lib	38.w
-	msg	voice(8.b),
+	/*msg	voice(8.b),
 		size(28.b),
 		speed(4.b),
 		size(28.b),
 		anim(0.b, 20009.w, 1007.d),
 		"Gar! Belay yer foolish chatter!",
 		anim(0.b, 20009.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	lib	14.w
 	camera	@pos, -2061.d, 404.w, 4619.w, 3.d, 0.w
 	camera	@unk227, -10101.d, 1302.w, 2140.w, 3.d, 0.w
@@ -9607,17 +9607,17 @@ sub_517:
 	disp	20046.d, 0.d
 	disp	20047.d, 0.d
 loc_525:
-	sfx	-65441.d, 1.d
+	/*sfx	-65441.d, 1.d
 	sfx	-65441.d, 4.d, 0.w, 110.w
 	wait	@time, 1.w
 	wait	@cam
-	camera	@unk229, 33.w, 2.d, 3000.w
+	camera	@unk229, 33.w, 2.d, 3000.w*/
 	lib	13.w
 	wait	@move, 20000.d
 	mdir	20000.d, @dir, 180.w, 30.w, -1.d
 	wait	@dir, 20000.d
 	anim	20000.d, 17.d
-	wait	@time, 1.w
+	/*wait	@time, 1.w
 	attach	20000.d, *sub_530
 	msg	voice(8.b),
 		size(28.b),
@@ -9917,17 +9917,17 @@ loc_525:
 		"As certain as the tides do ebb and flow!\n",
 		"It'll open, I tell ye!",
 		anim(0.b, 20009.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	camera	@pos, -7371.d, 1169.w, 5243.w, 3.d, 0.w
 	camera	@unk227, 115.w, -185.d, 1543.w, 3.d, 0.w
 	camera	@unk229, 39.w, 3.d, 0.w
 	camera	@distance, 84.w, 3.d, 0.w
-	wait	@time, 1.w
+	/*wait	@time, 1.w
 	wait	@cam
 	mdir	20009.d, @obj, 20000.d, 50.w, 2.d
 	wait	@dir, 20009.d
 	wait	@time, 50.w
-	anim	20009.d, 4.d
+	anim	20009.d, 4.d*/
 	attach	20000.d, *sub_530
 	wait	@anim, 20009.d, -1.d
 	anim	20009.d, 1.d
@@ -9941,13 +9941,13 @@ loc_525:
 	lib	306.w
 	case	eq(result, 0.w), else *loc_523
 	attach	20000.d, *sub_530
-	msg	voice(8.b),
+	/*msg	voice(8.b),
 		size(28.b),
 		speed(4.b),
 		anim(0.b, 20009.w, 1007.d),
 		"Gahar! 'Course ye are!",
 		anim(0.b, 20009.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	break	*loc_520
 loc_523:
 	case	eq(result, 1.w), else *loc_520
@@ -9971,7 +9971,7 @@ loc_523:
 		wait(254.b)
 	break	*loc_520
 loc_520:
-	mdir	20009.d, @obj, 158.d, 50.w, 2.d
+	/*mdir	20009.d, @obj, 158.d, 50.w, 2.d
 	wait	@dir, 20009.d
 	camera	@pos, -2061.d, 404.w, 4619.w, 3.d, 0.w
 	camera	@unk227, -10101.d, 1302.w, 2140.w, 3.d, 0.w
@@ -10129,7 +10129,7 @@ loc_520:
 		anim(0.b, 20009.w, 1015.d),
 		wait(254.b)
 	wait	@anim, 20009.d, -1.d
-	anim	20009.d, 1015.d
+	anim	20009.d, 1015.d*/
 	camera	@pos, -5715.d, 2489.w, 7849.w, 3.d, 0.w
 	camera	@unk227, -5909.d, -271.d, -143.d, 3.d, 0.w
 	camera	@unk229, 43.w, 3.d, 0.w
@@ -10140,7 +10140,7 @@ loc_520:
 	wait	@time, 1.w
 	wait	@cam
 	wait	@anim, 20009.d, -1.d
-	msg	voice(8.b),
+	/*msg	voice(8.b),
 		size(22.b),
 		speed(4.b),
 		anim(0.b, 20009.w, 1007.d),
@@ -10155,7 +10155,7 @@ loc_520:
 		"Yer lucky I'm without me ship, ye great\n",
 		"blinkin' sea slug! I've had me fill of ye!",
 		anim(0.b, 20009.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	attach	20009.d, *sub_323
 	set	flag(360.d), 1.w
 	lib	14.w

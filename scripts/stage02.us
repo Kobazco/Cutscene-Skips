@@ -16592,10 +16592,10 @@ sub_1860:
 
 sub_504:
 	wait	@time, 1.w
-	camera	@unk230
+	;camera	@unk230
 	set	flag(455.d), 1.d
 	lib	38.w
-	disp	20017.d, 1.d
+	/*disp	20017.d, 1.d
 	pos	20017.d, -8200.d, 0.w, -33350.d
 	dir	20017.d, 30.w
 	anim	20017.d, 1.d
@@ -16635,7 +16635,7 @@ sub_504:
 		"Tears? On the battlefield?",
 		anim(0.b, 20017.w, 1.d),
 		wait(254.b)
-	pushbp
+	pushbp*/
 	setsp	100.w
 	lib	64.w
 	popbp

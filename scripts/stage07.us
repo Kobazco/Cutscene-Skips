@@ -16143,9 +16143,9 @@ sub_1763:
 	call	192.d, 7.d, 0.d
 	read	@anim, 20005.d, *loc_1089
 	lib	38.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"C'mon! Hurry up, Chibi-Robo!",
-		wait(254.b)
+		wait(254.b)*/
 	if	eq(time(0.d), 1.d), else *loc_1801
 	camera	@pos, -3936.d, 2960.w, -21682.d, 2.d, 100.w
 	camera	@unk227, -5279.d, 643.w, -28288.d, 2.d, 100.w
@@ -16166,7 +16166,7 @@ loc_1766:
 	anim	20005.d, 1007.d
 	pushbp
 	setsp	actor_name(20056.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Congratulations on building the Utilibot!!",
 		wait(254.b)
 	popbp
@@ -16177,7 +16177,7 @@ loc_1766:
 	msg	voice(0.b),
 		"I feel like we got a new partner! I'm so happy!",
 		wait(254.b)
-	wait	@time, 50.w
+	wait	@time, 50.w*/
 	if	eq(time(0.d), 1.d), else *loc_1800
 	msg	voice(7.b),
 		"Abnormal activity detected while on patrol!",
@@ -16245,7 +16245,7 @@ loc_1766:
 	popbp
 	endif	*loc_1768
 loc_1800:
-	mdir	20005.d, @obj, 20003.d, 60.w, 1.d
+	/*mdir	20005.d, @obj, 20003.d, 60.w, 1.d
 	pushbp
 	setsp	actor_name(20003.d)
 	msg	voice(0.b),
@@ -16275,7 +16275,7 @@ loc_1800:
 	camera	@unk227, -12459.d, -1591.d, -36201.d, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
-	mdir	20005.d, @obj, 20000.d, 60.w, 1.d
+	mdir	20005.d, @obj, 20000.d, 60.w, 1.d*/
 	lib	106.w
 	pushbp
 	setsp	20005.d
@@ -16294,7 +16294,7 @@ loc_1768:
 		wait(254.b)
 	goto	*loc_1768
 loc_1770:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Now then, everyone...",
 		wait(254.b)
 	camera	@pos, -5865.d, 3093.w, -23832.d, 1.d, 300.w
@@ -16312,19 +16312,19 @@ loc_1770:
 	wait	@dir, 20005.d
 	anim	20005.d, 1.d
 	wait	@time, 60.w
-	mdir	20000.d, @obj, 20005.d, 30.w, -1.d
+	mdir	20000.d, @obj, 20005.d, 30.w, -1.d*/
 	if	eq(time(0.d), 0.d), else *loc_1799
 	sfx	65542.d, 1.d
 	anim	20003.d, 1046.d
 loc_1799:
 	pushbp
 	setsp	actor_name(20056.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I will now unveil...the Utilibot!",
 		wait(254.b)
-	popbp
+	popbp*/
 	if	eq(time(0.d), 0.d), else *loc_1798
-	camera	@pos, -2114.d, 1130.w, -28093.d, 3.d, 0.w
+	/*camera	@pos, -2114.d, 1130.w, -28093.d, 3.d, 0.w
 	camera	@unk227, -15346.d, 7778.w, -17206.d, 3.d, 0.w
 	camera	@unk229, 40.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
@@ -16337,7 +16337,7 @@ loc_1799:
 	camera	@pos, -1715.d, 9877.w, -14168.d, 3.d, 0.w
 	camera	@unk227, -8491.d, 325.w, -28335.d, 3.d, 0.w
 	camera	@unk229, 30.w, 3.d, 0.w
-	camera	@distance, 183.w, 3.d, 0.w
+	camera	@distance, 183.w, 3.d, 0.w*/
 loc_1798:
 	lib	12.w
 	anim	20005.d, 1009.d
@@ -16348,7 +16348,7 @@ loc_1798:
 	ptcl	165.d, @lead, 69.d, 0.w
 	sfx	32.d, 1.d
 	disp	71.d, 1.d
-	camera	@pos, -2871.d, 1061.w, -27137.d, 3.d, 0.w
+	/*camera	@pos, -2871.d, 1061.w, -27137.d, 3.d, 0.w
 	camera	@unk227, -19683.d, -1676.d, -34041.d, 3.d, 0.w
 	camera	@unk229, 32.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
@@ -16429,7 +16429,7 @@ loc_1798:
 	ptcl	42.d, @pos, -5681.d, 1232.w, -27873.d, 100.w, 100.w, 100.w, 120.w
 	wait	@anim, 20005.d, -1.d
 	anim	20005.d, 1.d
-	wait	@cam
+	wait	@cam*/
 	camera	@pos, 82.w, 1052.w, -25066.d, 1.d, 400.w
 	camera	@unk227, -16160.d, -119.d, -33592.d, 1.d, 400.w
 	camera	@unk229, 25.w, 1.d, 400.w
@@ -16443,7 +16443,7 @@ loc_1798:
 	lib	131.w
 	popbp
 	wait	@cam
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"This nifty Ladder Utilibot will\n",
 		"let you do all sorts of things!",
 		wait(254.b)
@@ -16451,15 +16451,15 @@ loc_1798:
 	msg	voice(0.b),
 		"And you can push or pull it,\n",
 		"in addition to raising it up and down.",
-		wait(254.b)
+		wait(254.b)*/
 	if	eq(time(0.d), 0.d), else *loc_1797
 	anim	20003.d, 1040.d
 loc_1797:
-	anim	20005.d, 1025.d, 1.d
+	/*anim	20005.d, 1025.d, 1.d
 	msg	voice(0.b),
 		"Ahem! Isn't that something?!",
 		wait(254.b)
-	wait	@time, 30.w
+	wait	@time, 30.w*/
 	if	eq(time(0.d), 1.d), else *loc_1796
 	read	@anim, 20008.d, *loc_1408
 	wait	@read, 20008.d
@@ -16522,7 +16522,7 @@ loc_1797:
 	read	@anim, 20008.d, 0.d
 	endif	*loc_1775
 loc_1796:
-	camera	@pos, -3734.d, -336.d, -31187.d, 3.d, 0.w
+	/*camera	@pos, -3734.d, -336.d, -31187.d, 3.d, 0.w
 	camera	@unk227, -12490.d, 7057.w, -16817.d, 3.d, 0.w
 	camera	@unk229, 39.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
@@ -16550,12 +16550,12 @@ loc_1796:
 	mdir	20005.d, @obj, 20000.d, 60.w, -1.d
 	pushbp
 	setsp	20005.d
-	setsp	1.w
+	setsp	1.w*/
 	lib	93.w
 	popbp
 	lib	106.w
 loc_1775:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Now you can reach the high parts\n",
 		"of the house, Chibi-Robo!",
 		wait(254.b)
@@ -16570,7 +16570,7 @@ loc_1775:
 	msg	voice(0.b),
 		"I present to you...my new song.",
 		wait(254.b)
-	anim	20005.d, 1.d
+	anim	20005.d, 1.d*/
 	msg	voice(0.b),
 		"Are you ready to be amazed?!",
 		wait(254.b),
@@ -16610,7 +16610,7 @@ loc_1793:
 		wait(254.b)
 	goto	*loc_1794
 loc_1780:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I, Telly Vision, will now enthrall you with\n",
 		"the gift of song. This one is called...",
 		wait(254.b)
@@ -16632,16 +16632,16 @@ loc_1780:
 	moveto	20005.d, -7110.d, 2100.w, -28426.d, 1590.w, 1004.d, -2.d
 	wait	@time, 470.w
 	lib	105.w
-	wait	@time, 30.w
+	wait	@time, 30.w*/
 	if	eq(time(0.d), 0.d), else *loc_1791
-	camera	@pos, -2470.d, 9325.w, -12092.d, 3.d, 0.w
+	/*camera	@pos, -2470.d, 9325.w, -12092.d, 3.d, 0.w
 	camera	@unk227, -8437.d, 1245.w, -27417.d, 3.d, 0.w
 	camera	@unk229, 23.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
-	camera	@unk229, 26.w, 1.d, 1100.w
+	camera	@unk229, 26.w, 1.d, 1100.w*/
 	endif	*loc_1782
 loc_1791:
-	camera	@pos, -7464.d, 2937.w, -28610.d, 3.d, 0.w
+	/*camera	@pos, -7464.d, 2937.w, -28610.d, 3.d, 0.w
 	camera	@unk227, 4105.w, -10004.d, -20625.d, 3.d, 0.w
 	camera	@unk229, 22.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
@@ -16653,9 +16653,9 @@ loc_1791:
 	camera	@pos, 98.w, 537.w, -25100.d, 3.d, 0.w
 	camera	@unk227, -15948.d, 2414.w, -33864.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
-	camera	@distance, 183.w, 3.d, 0.w
+	camera	@distance, 183.w, 3.d, 0.w*/
 loc_1782:
-	wait	@move, 20005.d
+	/*wait	@move, 20005.d
 	anim	20005.d, 1005.d
 	wait	@anim, 20005.d, -1.d
 	anim	20005.d, 1.d
@@ -16740,7 +16740,7 @@ loc_1782:
 		"Nooooooooooooooo!!",
 		wait(254.b)
 	anim2	20005.d, 1013.d, 0.w, 200.w
-	wait	@anim, 20005.d, -1.d
+	wait	@anim, 20005.d, -1.d*/
 	camera	@pos, 98.w, 537.w, -25100.d, 3.d, 0.w
 	camera	@unk227, -15948.d, 2414.w, -33864.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
@@ -16748,7 +16748,7 @@ loc_1782:
 	if	eq(time(0.d), 0.d), else *loc_1790
 	anim	20003.d, 62.d
 loc_1790:
-	sfx	249.d, 3.d, 200.w
+	/*sfx	249.d, 3.d, 200.w
 	anim	20005.d, 1019.d
 	wait	@time, 30.w
 	msg	voice(0.b),
@@ -16800,28 +16800,28 @@ loc_1790:
 	camera	@unk227, -15948.d, 2414.w, -33864.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 183.w, 3.d, 0.w
-	mdir	20005.d, @obj, 20000.d, 60.w, -1.d
+	mdir	20005.d, @obj, 20000.d, 60.w, -1.d*/
 	lib	106.w
 	lib	95.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(8.b),
 		"Oh, this is so disappointing...",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_1785
 loc_1789:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(8.b),
 		"I'm s-sorry you couldn't hear the whole song.",
-		wait(254.b)
+		wait(254.b)*/
 loc_1785:
-	anim	69.d, 0.w
+	/*anim	69.d, 0.w
 	msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(8.b),
 		"Th-thanks anyway. You were a great audience.",
-		wait(254.b)
+		wait(254.b)*/
 	camera	@unk211, 1.w, 2.w, 2.d, 100.w
 	camera	@unk230
 	sfx	249.d, 2.d, 100.w

@@ -10158,14 +10158,14 @@ sub_1644:
 	anim	20005.d, 1.d
 	pushbp
 	setsp	actor_name(20000.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Are you all right, Chibi-Robo?!",
 		wait(254.b)
 	popbp
 	msg	voice(0.b),
 		"Hang in there! I'll take you to\n",
 		"the Chibi-House now!!",
-		wait(254.b)
+		wait(254.b)*/
 	set	battery(0.d), battery(1.d)
 	run	*lib_21
 	set	flag(661.d), 1.d
@@ -10233,9 +10233,9 @@ loc_180:
 	anim	20005.d, 1.d
 	if	eq(flag(963.d), 1.d), else *loc_169
 	set	flag(963.d), 0.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Whew! That was close.",
-		wait(254.b)
+		wait(254.b)*/
 loc_169:
 	if	ge(var(798.d), 10.w), else *loc_168
 	set	var(0.d), rand(2.w)
@@ -10244,15 +10244,15 @@ loc_168:
 	set	var(0.d), rand(1.w)
 loc_53:
 	if	eq(var(0.d), 0.w), else *loc_165
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You're fully recharged!",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_55
 loc_165:
 	elif	eq(var(0.d), 1.w), else *loc_167
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Your energy is full!",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_55
 loc_167:
 	pushbp
@@ -10674,13 +10674,13 @@ loc_3349:
 
 
 sub_3154:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Oh, you already know how to use it?",
 		wait(254.b)
 	msg	voice(0.b),
 		"Well, if you ever need a refresher,\n",
 		"check the Chibi-Manual.",
-		wait(254.b)
+		wait(254.b)*/
 	return
 
 
