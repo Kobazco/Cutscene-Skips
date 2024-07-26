@@ -3749,16 +3749,16 @@ loc_574:
 
 
 sub_541:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I could hardly believe my eye-bolts when\n",
 		"I saw those aliens! Shocking! Simply shocking!",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	20005.d
 	setsp	2.w
 	lib	93.w
 	popbp
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I couldn't quite figure out what they were\n",
 		"saying... They were speaking so softly.",
 		wait(255.b)
@@ -3803,7 +3803,7 @@ sub_541:
 		wait(255.b)
 	msg	voice(0.b),
 		"You have to try it out! You just have to!",
-		wait(255.b)
+		wait(255.b)*/
 	set	flag(474.d), 1.d
 	run	*sub_96
 	lib	95.w

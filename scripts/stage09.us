@@ -6914,7 +6914,7 @@ sub_1900:
 
 
 sub_796:
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		size(5.b),
 		anim(0.b, 20045.w, 5.d),
@@ -6934,7 +6934,7 @@ sub_796:
 	popbp
 	pushbp
 	setsp	actor_name(20055.d)
-	setsp	actor_name(20055.d)
+	setsp	actor_name(20055.d)*/
 	msg	voice(17.b),
 		speed(4.b),
 		size(5.b),
@@ -6983,7 +6983,7 @@ loc_786:
 	pos	36.d, 54636.d, 55439.d, 2417.w
 	anim	36.d, 0.w
 	disp	36.d, 1.d
-	camera	@pos, 54305.d, 2069.w, 2255.w, 3.d, 0.w
+	/*camera	@pos, 54305.d, 2069.w, 2255.w, 3.d, 0.w
 	camera	@unk227, 39327.d, -26641.d, -21389.d, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 400.w, 3.d, 0.w
@@ -7016,7 +7016,7 @@ loc_786:
 	anim	8.d, 1001.d
 	wait	@time, 100.w
 	wait	@anim, 36.d, -1.d
-	disp	36.d, 0.d
+	disp	36.d, 0.d*/
 	camera	@pos, add(44394.d, 1042.w), 1553.w, add(-37126.d, 19157.w), 1.d, 1400.w
 	camera	@unk227, add(59603.d, 1042.w), 2095.w, add(-26.d, 19157.w), 1.d, 1400.w
 	camera	@unk229, 21.w, 1.d, 1400.w
@@ -7080,7 +7080,7 @@ loc_786:
 	run	*sub_796
 	lib	3.w
 	pushbp
-	setsp	actor_name(20055.d)
+	/*setsp	actor_name(20055.d)
 	msg	voice(17.b),
 		speed(4.b),
 		size(5.b),
@@ -7096,7 +7096,7 @@ loc_786:
 	anim	20046.d, 7.d, 8.d
 	anim	20047.d, 7.d, 8.d
 	anim	20048.d, 7.d, 8.d
-	wait	@time, 200.w
+	wait	@time, 200.w*/
 	color	8.d, @modulate, 255.w, 255.w, 255.w, 300.w
 	sfx	-65528.d, 3.d, 10.w
 	moveto	20045.d, add(53594.d, 1042.w), 6439.w, add(-16740.d, 19157.w), 1200.w, -1.d, -1.d
@@ -7127,7 +7127,7 @@ loc_786:
 	disp	20046.d, 0.d
 	disp	20047.d, 0.d
 	disp	20048.d, 0.d
-	pos	20005.d, 46471.d, 800.w, 1488.w
+	/*pos	20005.d, 46471.d, 800.w, 1488.w
 	disp	20005.d, 1.d
 	call	20005.d, 1.d, 0.d
 	msg	voice(0.b),
@@ -7161,7 +7161,7 @@ loc_786:
 	anim	20005.d, 1012.d
 	msg	voice(0.b),
 		"Was that, uh...",
-		wait(255.b)
+		wait(255.b)*/
 	msg	voice(0.b),
 		size(28.b),
 		"Was that you, Chibi-Robo?!",
@@ -7194,16 +7194,16 @@ loc_795:
 	setsp	2.w
 	lib	93.w
 	popbp
-	anim	20005.d, 1012.d
+	/*anim	20005.d, 1012.d
 	msg	voice(0.b),
 		size(28.b),
 		"I thought so!!",
 		wait(255.b)
 	msg	voice(0.b),
 		"I knew they were aliens!",
-		wait(255.b)
+		wait(255.b)*/
 loc_788:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I've seen them on TV, but this is the\n",
 		"first time I've seen them in real life!",
 		wait(255.b)
@@ -7235,15 +7235,15 @@ loc_788:
 	msg	voice(0.b),
 		size(30.b),
 		"Oh! I know!",
-		wait(3.b)
+		wait(3.b)*/
 	camera	@pos, 51030.d, -759.d, 5903.w, 3.d, 0.w
 	camera	@unk227, 56884.d, 3868.w, -6957.d, 3.d, 0.w
 	camera	@unk229, 28.w, 3.d, 0.w
 	camera	@distance, 148.w, 3.d, 0.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I'll ask Citrusoft if they have a chip that\n",
 		"can help you hear their voices!!",
-		wait(255.b)
+		wait(255.b)*/
 	disp	95.d, 1.d
 	anim	95.d, 1.w
 	mdir	20005.d, @pos, 46471.d, 1488.w, 30.w, 1.d
@@ -7450,7 +7450,7 @@ sub_808:
 	anim	20048.d, 1.d
 	wait	@move, 20005.d
 	anim	20005.d, 1014.d, 1.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		size(32.b),
 		"Aliens!!",
 		wait(255.b)
@@ -7477,9 +7477,9 @@ sub_808:
 		anim(0.b, 20045.w, 5.d),
 		"We are aliens...",
 		anim(0.b, 20045.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	lib	95.w
-	wait	@time, 30.w
+	/*wait	@time, 30.w
 	camera	@pos, 53392.d, 439.w, -197.d, 3.d, 0.w
 	camera	@unk227, 59485.d, 2825.w, 16471.w, 3.d, 0.w
 	camera	@unk229, 24.w, 3.d, 0.w
@@ -7520,7 +7520,7 @@ sub_808:
 	camera	@unk229, 20.w, 3.d, 0.w
 	camera	@distance, 400.w, 3.d, 0.w
 	mdir	20005.d, @obj, 20000.d, 30.w, 1.d
-	wait	@dir, 20005.d
+	wait	@dir, 20005.d*/
 	anim	20005.d, 1012.d
 	lib	24.w
 	pushbp
@@ -7541,9 +7541,9 @@ loc_814:
 	lib	3.w
 	if	eq(result, 0.w), else *loc_813
 	anim	20005.d, 1007.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Way to go, Chibi-Robo!",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	20005.d
 	setsp	1.w
@@ -7559,7 +7559,7 @@ loc_814:
 	anim	20046.d, 1.d
 	anim	20047.d, 1.d
 	anim	20048.d, 1.d
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Keep this up and we'll be at the top of\n",
 		"the Chibi-Robo rankings in no time!",
 		wait(255.b)
@@ -7588,7 +7588,7 @@ loc_814:
 		anim(0.b, 20045.w, 4.d),
 		"You watch ship.",
 		anim(0.b, 20045.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	color	8.d, @modulate, 255.w, 255.w, 255.w, 300.w
 	anim	20048.d, 7.d
 	wait	@anim, 20048.d, -1.d
@@ -7603,12 +7603,12 @@ loc_814:
 	wait	@dir, 20045.d
 	anim	20046.d, 1.d
 	anim	20047.d, 1.d
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		anim(0.b, 20045.w, 4.d),
 		"We follow you. Thank you, thank you.",
 		anim(0.b, 20045.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	pushbp
 	setsp	20047.d
 	setsp	20046.d
@@ -7621,7 +7621,7 @@ loc_814:
 	setsp	0.w
 	lib	218.w
 	popbp
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Wow wow wow, Chibi-Robo!\n",
 		"The aliens gave you Happy Points!",
 		wait(254.b)
@@ -7661,7 +7661,7 @@ loc_814:
 	msg	voice(17.b),
 		speed(4.b),
 		"Nice to meetcha, nice to meetcha.",
-		wait(254.b)
+		wait(254.b)*/
 	anim	20045.d, 1.d
 	anim	20046.d, 1.d
 	anim	20047.d, 1.d
@@ -7847,7 +7847,7 @@ loc_851:
 	wait	@cam
 	pushbp
 	setsp	actor_name(20055.d)
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		anim(0.b, 20047.w, 11.d),
 		"Everybody saddened by death. Disappointed...",
@@ -7872,7 +7872,7 @@ loc_851:
 		anim(0.b, 20047.w, 11.d),
 		"Ganymede not well either...",
 		anim(0.b, 20047.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 	anim	20004.d, 5.d
 	mdir	20047.d, @pos, 53627.d, -1330.d, 30.w, 10.d
@@ -7892,7 +7892,7 @@ loc_851:
 	anim	20047.d, 12.d
 	wait	@anim, 20047.d, -1.d
 	anim	20047.d, 13.d
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(8.b),
 		anim(0.b, 20047.w, 14.d),
 		"Help me...",
@@ -7903,7 +7903,7 @@ loc_851:
 	msg	voice(0.b),
 		"This is terrible, Chibi-Robo! We need to\n",
 		"take Ganymede back to the UFO!",
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 	sfx	351.d, 1.d
 	run	*sub_854
@@ -7985,7 +7985,7 @@ loc_1312:
 	endif	*loc_1311
 loc_1314:
 	read	@anim, 20000.d, *loc_869
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		anim(0.b, 20047.w, 14.d),
 		"Hurry up. Save us. Bad air. Hot. Shivers. Death...",
@@ -8007,7 +8007,7 @@ loc_1314:
 	wait	@move, 20000.d
 	sfx	-65528.d, 3.d, 300.w
 	lib	105.w
-	wait	@time, 50.w
+	wait	@time, 50.w*/
 	if	and(eq(flag(5.d), 1.d), eq(flag(6.d), 0.d)), else *loc_1316
 	set	var(114.d), 200.d
 loc_1316:

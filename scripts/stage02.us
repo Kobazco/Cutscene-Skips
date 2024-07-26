@@ -12457,7 +12457,7 @@ sub_449:
 	setsp	100.w
 	lib	103.w
 	popbp
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		size(24.b),
 		"Huh?!",
 		wait(255.b)
@@ -12589,7 +12589,7 @@ sub_449:
 		"Let's do this.",
 		anim(0.b, 20001.w, -1.d),
 		anim(0.b, 20001.w, 1016.d),
-		wait(254.b)
+		wait(254.b)*/
 	sfx	-65469.d, 4.d, 200.w, 0.w
 	pushbp
 	setsp	100.w
@@ -13103,7 +13103,7 @@ sub_1839:
 	call	451.d, 5.d, 0.d
 	lib	12.w
 	lib	38.w
-	camera	@unk236, 3.w
+	/*camera	@unk236, 3.w
 	wait	@time, 1.w
 	camera	@pos, -14031.d, -2558.d, -16200.d, 3.d, 0.w
 	camera	@unk227, -9721.d, -832.d, -17571.d, 3.d, 0.w
@@ -13169,7 +13169,7 @@ sub_1839:
 	msg	voice(0.b),
 		"You better recharge and\n",
 		"hurry to the living room!",
-		wait(254.b)
+		wait(254.b)*/
 	lib	96.w
 	lib	55.w
 	set	var(76.d), 200.d
@@ -13329,7 +13329,7 @@ sub_1778:
 
 sub_1843:
 	set	flag(468.d), 0.d
-	sfx	-65467.d, 0.d
+	/*sfx	-65467.d, 0.d
 	camera	@unk230
 	run	*sub_1841
 	call	451.d, 1.d, 0.d
@@ -13385,7 +13385,7 @@ sub_1843:
 	msg	voice(3.b),
 		anim(0.b, 20001.w, 1017.d),
 		"Let's head to the living room!",
-		wait(254.b)
+		wait(254.b)*/
 	pushbp
 	setsp	100.w
 	lib	102.w

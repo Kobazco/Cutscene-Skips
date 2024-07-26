@@ -570,21 +570,21 @@ sub_20:
 	camera	@distance, 57.w, 2.d, 300.w
 	wait	@time, 1.w
 	wait	@cam
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1013.d),
 		speed(13.b),
 		"It looks like we've stopped.",
 		anim(0.b, 20005.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	attach	20000.d, *sub_50
-	mdir	20005.d, @dir, 190.w, 50.w, 1020.d
+	/*mdir	20005.d, @dir, 190.w, 50.w, 1020.d
 	wait	@dir, 20005.d
 	msg	voice(0.b),
 		anim(0.b, 20005.w, 1020.d),
 		speed(13.b),
 		"Let's get out, Chibi-Robo.",
 		anim(0.b, 20005.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	mdir	20005.d, @dir, 270.w, 50.w, 1.d
 	call	20000.d, 201.d
 	wait	@dir, 20005.d
@@ -598,13 +598,13 @@ sub_20:
 	wait	@move, 20000.d
 	moveto	20000.d, 20891.w, 0.w, 7765.w, 100.w, 3.d, -2.d
 	wait	@time, 70.w
-	camera	@pos, 23009.w, 568.w, 8425.w, 3.d, 0.w
+	/*camera	@pos, 23009.w, 568.w, 8425.w, 3.d, 0.w
 	camera	@unk227, 16722.w, 1270.w, 7937.w, 3.d, 0.w
 	camera	@unk229, 36.w, 3.d, 0.w
-	camera	@distance, 63.w, 3.d, 0.w
+	camera	@distance, 63.w, 3.d, 0.w*/
 	sfx	-65493.d, 1.d
 	sfx	-65493.d, 4.d, 0.w, 128.w
-	pos	116.d, 22969.w, 10000.w, 8764.w
+	/*pos	116.d, 22969.w, 10000.w, 8764.w
 	disp	121.d, 0.d
 	wait	@time, 1.w
 	wait	@cam
@@ -682,18 +682,18 @@ sub_20:
 		"Are we in the past?!",
 		anim(0.b, 20005.w, -1.d),
 		anim(0.b, 20005.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	camera	@pos, 18548.w, 1219.w, 10063.w, 3.d, 0.w
 	camera	@unk227, 23332.w, 626.w, 7017.w, 3.d, 0.w
 	camera	@unk229, 32.w, 3.d, 0.w
 	camera	@distance, 57.w, 3.d, 0.w
-	dir	20005.d, 160.w
+	/*dir	20005.d, 160.w
 	anim	20005.d, 1007.d
 	dir	20000.d, 300.w
 	wait	@time, 1.w
-	wait	@cam
+	wait	@cam*/
 	attach	20000.d, *sub_50
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		size(28.b),
 		"That's impossible!!!",
 		wait(255.b)
@@ -727,7 +727,7 @@ sub_20:
 		"Well, since we're here, we might\n",
 		"as well do a little exploring.",
 		wait(255.b)
-	anim	20005.d, 1.d
+	anim	20005.d, 1.d*/
 	call	20000.d, 201.d
 	set	flag(575.d), 1.w
 	pushbp

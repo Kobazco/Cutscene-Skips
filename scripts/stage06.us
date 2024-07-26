@@ -3663,7 +3663,7 @@ loc_1223:
 	set	flag(1657.d), 1.w
 	pushbp
 	setsp	actor_name(20063.d)
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1016.d),
 		"Oh, Cheebo! I finished making your pj's!",
 		anim(0.b, 20002.w, 1015.d),
@@ -3673,7 +3673,7 @@ loc_1223:
 		anim(0.b, 20002.w, 1016.d),
 		"Try them on for me. I want to see how they look!",
 		anim(0.b, 20002.w, 1015.d),
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	30.d
 	lib	79.w
@@ -3683,7 +3683,7 @@ loc_1223:
 	wait	@time, 1.w
 	set	cur_suit, 7.d
 	wait	@time, 210.w
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1016.d),
 		"Awwww...you are just TOO CUTE!",
 		anim(0.b, 20002.w, 1015.d),
@@ -3692,7 +3692,7 @@ loc_1223:
 		anim(0.b, 20002.w, 1016.d),
 		"When you're tired, make sure to get some sleep!",
 		anim(0.b, 20002.w, 1015.d),
-		wait(255.b)
+		wait(255.b)*/
 	endif	*loc_1226
 loc_1227:
 	pushbp
@@ -15704,7 +15704,7 @@ loc_854:
 sub_2165:
 	kill	332.d
 	lib	38.w
-	sfx	-65531.d, 4.d, 0.w, 0.w
+	/*sfx	-65531.d, 4.d, 0.w, 0.w
 	wait	@time, 10.w
 	anim	217.d, 1.w
 	moveto	183.d, 15955.w, 500.w, 6338.w, 20.w, 28.d, -95.d
@@ -15843,9 +15843,9 @@ sub_2165:
 	read	@anim, 20002.d, *loc_2170
 	wait	@read, 20002.d
 	read	@anim, 20001.d, *loc_2171
-	wait	@read, 20001.d
+	wait	@read, 20001.d*/
 	if	or(eq(time(0.d), 0.d), eq(time(0.d), 1.d)), else *loc_2169
-	disp	20002.d, 1.d
+	/*disp	20002.d, 1.d
 	pos	20002.d, -18615.d, 0.w, 7260.w
 	dir	20002.d, 81.w
 	disp	183.d, 1.d
@@ -15872,7 +15872,7 @@ sub_2165:
 		size(28.b),
 		shake(39.b, 5.b, 2.b),
 		"Wh-wh-what's going on?",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	15.w
 	lib	64.w
@@ -15891,7 +15891,7 @@ sub_2165:
 	disp	189.d, 0.d
 	disp	331.d, 0.d
 loc_2169:
-	disp	20001.d, 1.d
+	/*disp	20001.d, 1.d
 	disp	31.d, 0.d
 	pos	20001.d, -27798.d, 0.w, 75613.d
 	dir	20001.d, 180.w
@@ -16151,7 +16151,7 @@ loc_2169:
 		wait(8.b)
 	sfx	458769.d, 2.d, 100.w
 	sfx	458770.d, 2.d, 100.w
-	wait	@anim, 20001.d, -1.d
+	wait	@anim, 20001.d, -1.d*/
 loc_2168:
 	set	flag(10.d), 1.w
 	set	flag(11.d), 1.w

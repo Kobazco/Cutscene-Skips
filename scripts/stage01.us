@@ -3809,16 +3809,16 @@ loc_1719:
 loc_1722:
 	run	*sub_1723
 	lib	14.w
-	camera	@unk236, -1.w
+	/*camera	@unk236, -1.w
 	camera	@pos, 5699.w, 17166.w, -10469.d, 3.d, 0.w
 	camera	@unk227, 12057.w, 11412.w, -18465.d, 3.d, 0.w
 	camera	@unk229, 18.w, 3.d, 0.w
 	camera	@distance, 117.w, 3.d, 0.w
-	wait	@cam
+	wait	@cam*/
 	set	flag(447.d), 1.w
 	disp	10006.d, 1.d
 	lib	13.w
-	sfx	-65531.d, 4.d, 0.w, 0.w
+	/*sfx	-65531.d, 4.d, 0.w, 0.w
 	sfx	288.d, 1.d
 	wait	@time, 1.w
 	wait	@sfx, 288.d
@@ -3832,17 +3832,17 @@ loc_1722:
 	popbp
 	msg	voice(0.b),
 		"I bet you could use that as a shovel!",
-		wait(255.b)
+		wait(255.b)*/
 	lib	96.w
 	lib	14.w
-	camera	@unk237, -1.w
+	;camera	@unk237, -1.w
 	lib	13.w
-	anim	20002.d, 1028.d
+	/*anim	20002.d, 1028.d
 	wait	@time, 10.d
 	msg	voice(4.b),
 		"Isn't there a spoon around here somewhere?",
 		anim(0.b, 20002.w, 26.d),
-		wait(255.b)
+		wait(255.b)*/
 loc_1721:
 	return
 
@@ -16608,12 +16608,12 @@ loc_2740:
 
 	.interact  37.d, *evt_item_spoon_37
 evt_item_spoon_37:
-	camera	@pos, 5958.w, 17876.w, -9226.d, 2.d, 200.w
+	/*camera	@pos, 5958.w, 17876.w, -9226.d, 2.d, 200.w
 	camera	@unk227, 10867.w, 12846.w, -16795.d, 2.d, 200.w
 	camera	@unk229, 26.w, 2.d, 200.w
-	camera	@distance, 103.w, 2.d, 200.w
+	camera	@distance, 103.w, 2.d, 200.w*/
 	lib	38.w
-	wait	@time, 60.w
+	/*wait	@time, 60.w
 	pushbp
 	setsp	item_name(21.d)
 	msg	voice(0.b),
@@ -16646,7 +16646,7 @@ evt_item_spoon_37:
 		"I bet you can dig over there!",
 		wait(255.b)
 	camera	@unk237, 3.w
-	wait	@time, 30.w
+	wait	@time, 30.w*/
 	lib	67.w
 	set	flag(478.d), 1.d
 	sfx	-65536.d, 4.d, 100.w, 255.w

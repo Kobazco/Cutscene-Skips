@@ -5397,7 +5397,7 @@ loc_414:
 	detach	20045.d
 	detach	20046.d
 	detach	20047.d
-	pos	20045.d, 6884.w, 0.w, -1970.d
+	/*pos	20045.d, 6884.w, 0.w, -1970.d
 	dir	20045.d, 156.w
 	pos	20046.d, 5653.w, 0.w, -1678.d
 	dir	20046.d, 155.w
@@ -5409,12 +5409,12 @@ loc_414:
 	camera	@pos, 13409.w, 7733.w, -13843.d, 3.d, 0.w
 	camera	@unk227, 9260.w, 2585.w, -8367.d, 3.d, 0.w
 	camera	@unk229, 31.w, 3.d, 0.w
-	camera	@distance, 85.w, 3.d, 0.w
+	camera	@distance, 85.w, 3.d, 0.w*/
 	pushbp
 	setsp	100.w
 	lib	63.w
 	popbp
-	wait	@move, 20045.d
+	/*wait	@move, 20045.d
 	anim	20045.d, 6.d
 	wait	@move, 20046.d
 	anim	20046.d, 6.d
@@ -5485,7 +5485,7 @@ loc_414:
 		anim(0.b, 20047.w, 5.d),
 		"Thank YOU!",
 		anim(0.b, 20047.w, 1.d),
-		wait(254.b)
+		wait(254.b)*/
 	pushbp
 	setsp	20047.d
 	setsp	20046.d
@@ -5499,7 +5499,7 @@ loc_414:
 	lib	218.w
 	popbp
 	lib	254.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You got more Happy Points from the aliens!",
 		wait(254.b)
 	msg	voice(0.b),
@@ -5528,11 +5528,11 @@ loc_414:
 		anim(0.b, 20045.w, 6.d),
 		wait(255.b)
 	wait	@time, 80.w
-	sfx	-65493.d, 4.d, 0.w, 180.w
+	sfx	-65493.d, 4.d, 0.w, 180.w*/
 	if	eq(flag(932.d), 0.d), else *loc_413
 	read	@anim, 20009.d, *loc_311
 loc_413:
-	camera	@pos, 7041.w, 53.w, 1150.w, 3.d, 0.w
+	/*camera	@pos, 7041.w, 53.w, 1150.w, 3.d, 0.w
 	camera	@unk227, 8737.w, 1680.w, -7106.d, 3.d, 0.w
 	camera	@unk229, 40.w, 3.d, 0.w
 	camera	@distance, 85.w, 3.d, 0.w
@@ -5691,7 +5691,7 @@ loc_413:
 	camera	@unk227, 9229.w, 2730.w, -8257.d, 3.d, 0.w
 	camera	@unk229, 27.w, 3.d, 0.w
 	camera	@distance, 85.w, 3.d, 0.w
-	camera	@unk229, 31.w, 1.d, 600.w
+	camera	@unk229, 31.w, 1.d, 600.w*/
 	endif	*loc_394
 loc_412:
 	camera	@pos, 10642.w, 4321.w, -8389.d, 3.d, 0.w
@@ -5780,7 +5780,7 @@ loc_412:
 	camera	@distance, 85.w, 3.d, 0.w
 	camera	@unk229, 31.w, 1.d, 600.w
 loc_394:
-	wait	@time, 60.w
+	/*wait	@time, 60.w
 	mdir	20045.d, @dir, 156.w, 60.w, 2.d
 	mdir	20046.d, @dir, 155.w, 60.w, 2.d
 	mdir	20047.d, @dir, 162.w, 60.w, 2.d
@@ -5913,7 +5913,7 @@ loc_394:
 	mdir	20009.d, @dir, 295.w, 50.w, 2.d
 	wait	@dir, 20009.d
 	move	20009.d, 10000.w, 1000.w, 2.d, -1.d
-	wait	@time, 200.w
+	wait	@time, 200.w*/
 	if	eq(flag(360.d), 1.w), else *loc_409
 	attach	20009.d, *sub_323
 loc_409:
@@ -5951,7 +5951,7 @@ loc_397:
 	camera	@unk227, 4597.w, 801.w, -8639.d, 3.d, 0.w
 	camera	@unk229, 34.w, 3.d, 0.w
 	camera	@distance, 109.w, 3.d, 0.w
-	mdir	20045.d, @obj, 20000.d, 60.w, 19.d
+	/*mdir	20045.d, @obj, 20000.d, 60.w, 19.d
 	wait	@dir, 20045.d
 	anim	20045.d, 8.d
 	pushbp
@@ -5990,7 +5990,7 @@ loc_397:
 	move	20045.d, 5000.w, 300.w, 19.d, -1.d
 	move	20046.d, 5000.w, 350.w, 19.d, -1.d
 	move	20047.d, 5000.w, 380.w, 19.d, -1.d
-	wait	@time, 120.w
+	wait	@time, 120.w*/
 	lib	88.w
 	sfx	-65493.d, 2.d, 600.w
 	lib	14.w
@@ -6023,10 +6023,10 @@ loc_404:
 
 
 sub_410:
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		"No good!",
-		wait(255.b)
+		wait(255.b)*/
 	return
 
 
@@ -10412,7 +10412,7 @@ loc_636:
 
 sub_637:
 	run	*sub_638
-	pos	20000.d, 7373.w, 0.w, -5699.d
+	/*pos	20000.d, 7373.w, 0.w, -5699.d
 	dir	20000.d, 142.w
 	pos	20009.d, 5893.w, 0.w, -3106.d
 	dir	20009.d, 141.w
@@ -10451,7 +10451,7 @@ sub_637:
 		anim(0.b, 20009.w, 1017.d),
 		"When that day comes, I'll count\n",
 		"meself one lucky pirate. Yar!",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	20009.d
 	setsp	1.d
@@ -10461,14 +10461,14 @@ sub_637:
 	lib	210.w
 	popbp
 	pushbp
-	setsp	actor_name(20000.d)
+	/*setsp	actor_name(20000.d)
 	msg	voice(8.b),
 		size(28.b),
 		speed(4.b),
 		anim(0.b, 20009.w, 1007.d),
 		"I'm counting on ye, Chibi-Robo!",
 		anim(0.b, 20009.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 	anim	20009.d, 4.d
 	wait	@anim, 20009.d, -1.d

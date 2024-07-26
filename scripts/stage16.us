@@ -555,7 +555,7 @@ sub_116:
 sub_463:
 	attach	49.d, *sub_233
 	sfx	589830.d, 1.d
-	msg	voice(28.b),
+	/*msg	voice(28.b),
 		speed(6.b),
 		"All beds deployed!\n",
 		"All beds deployed!",
@@ -569,7 +569,7 @@ sub_463:
 	msg	voice(28.b),
 		speed(6.b),
 		"Color-code authorization required!",
-		wait(255.b)
+		wait(255.b)*/
 	sfx	589830.d, 2.d, 200.w
 	detach	49.d
 	wait	@time, 60.w
@@ -847,10 +847,10 @@ sub_135:
 	anim	20045.d, 21.d
 	anim	20046.d, 21.d
 	anim	20047.d, 21.d
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		"No, you mustn't!",
-		wait(254.b)
+		wait(254.b)*/
 	anim	20045.d, 13.d
 	anim	20046.d, 13.d
 	anim	20047.d, 13.d
@@ -1210,28 +1210,28 @@ loc_205:
 	anim	20047.d, 21.d
 	anim	20048.d, 21.d
 	if	eq(var(44.d), 0.w), else *loc_214
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		"Our technology is secret!",
-		wait(254.b)
+		wait(254.b)*/
 loc_214:
 	if	eq(var(44.d), 1.w), else *loc_213
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		"Do not match the colors!",
-		wait(254.b)
+		wait(254.b)*/
 loc_213:
 	if	eq(var(44.d), 2.w), else *loc_212
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		"Oh, no, he has formed the drive sphere!",
-		wait(254.b)
+		wait(254.b)*/
 loc_212:
 	if	eq(var(44.d), 3.w), else *loc_211
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		"Oh...no...",
-		wait(254.b)
+		wait(254.b)*/
 loc_211:
 	anim	20045.d, 13.d
 	anim	20046.d, 13.d
@@ -1268,10 +1268,10 @@ loc_9:
 
 
 sub_198:
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(6.b),
 		"You mustn't! No!",
-		wait(254.b)
+		wait(254.b)*/
 	return
 
 
@@ -1314,7 +1314,7 @@ loc_197:
 	lib	38.w
 	attach	49.d, *sub_233
 	sfx	589830.d, 1.d
-	msg	voice(28.b),
+	/*msg	voice(28.b),
 		speed(6.b),
 		"Color-code authorization accepted!\n",
 		"Color-code authorization accepted!",
@@ -1328,7 +1328,7 @@ loc_197:
 	msg	voice(28.b),
 		speed(6.b),
 		"Warp vessel ready for boarding!",
-		wait(255.b)
+		wait(255.b)*/
 	sfx	589830.d, 2.d, 200.w
 	detach	49.d
 	wait	@time, 60.w
@@ -2568,7 +2568,7 @@ sub_92:
 	anim	20048.d, 12.d
 	wait	@anim, 20048.d, -1.d
 	anim	20048.d, 13.d
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		anim(0.b, 20048.w, 14.d),
 		"Earth. Bad air... Processed food...\n",
@@ -2578,21 +2578,21 @@ sub_92:
 	mdir	20045.d, @obj, 20000.d, 30.w, 10.d
 	wait	@dir, 20045.d
 	anim	20045.d, 9.d
-	wait	@time, 40.w
+	wait	@time, 40.w*/
 	disp	20000.d, 1.d
 	pos	20000.d, 0.w, 0.w, 5460.w
 	dir	20000.d, 0.w
 	mdir	20000.d, @dir, 180.w, 300.w, -1.d
 	anim1	20000.d, 1312.d
 	sfx	589829.d, 1.d
-	camera	@pos, 4946.w, 1728.w, 6050.w, 3.d, 0.w
+	/*camera	@pos, 4946.w, 1728.w, 6050.w, 3.d, 0.w
 	camera	@unk227, -2975.d, -520.d, 4702.w, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
 	camera	@distance, 83.w, 3.d, 0.w
 	camera	@pos, 8464.w, 5645.w, 12011.w, 2.d, 600.w
 	camera	@unk227, 3977.w, 2638.w, 5651.w, 2.d, 600.w
 	camera	@unk229, 25.w, 2.d, 600.w
-	camera	@distance, 83.w, 2.d, 600.w
+	camera	@distance, 83.w, 2.d, 600.w*/
 	wait	@anim, 20000.d, -1.d
 	sfx	589829.d, 2.d, 100.w
 	anim	20000.d, 17.d
@@ -2602,7 +2602,7 @@ sub_92:
 	disp	10000.d, 1.d
 	call	20000.d, 700.d
 	wait	@move, 20047.d
-	mdir	20047.d, @pos, -1200.d, 3850.w, 30.w, 10.d
+	/*mdir	20047.d, @pos, -1200.d, 3850.w, 30.w, 10.d
 	wait	@dir, 20047.d
 	moveto	20047.d, -1200.d, 0.w, 3850.w, 240.w, 10.d, -2.d
 	wait	@cam
@@ -2652,7 +2652,7 @@ sub_92:
 		anim(0.b, 20045.w, 11.d),
 		"Thank you for helping Ganymede.",
 		anim(0.b, 20045.w, 9.d),
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 	pushbp
 	setsp	20045.d
@@ -2662,7 +2662,7 @@ sub_92:
 	setsp	0.w
 	lib	210.w
 	popbp
-	mdir	20045.d, @dir, 340.w, 30.w, 10.d
+	/*mdir	20045.d, @dir, 340.w, 30.w, 10.d
 	wait	@dir, 20045.d
 	camera	@pos, -1541.d, 2267.w, 8370.w, 1.d, 400.w
 	camera	@unk227, -140.d, -558.d, 646.w, 1.d, 400.w
@@ -2720,7 +2720,7 @@ sub_92:
 	camera	@unk229, 26.w, 1.d, 300.w
 	camera	@distance, 74.w, 1.d, 300.w
 	mdir	20000.d, @obj, 20048.d, 30.w, 3.d
-	attach	20047.d, *sub_305
+	attach	20047.d, *sub_305*/
 	moveto	20045.d, -2092.d, 0.w, 932.w, 250.w, 10.d, -1.d
 	wait	@move, 20045.d
 	mdir	20000.d, @obj, 20045.d, 30.w, 3.d
@@ -2749,7 +2749,7 @@ sub_92:
 	anim	20045.d, 29.d, 29.d, 30.d
 	wait	@anim, 20045.d, -1.d
 	anim	20045.d, 9.d
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		anim(0.b, 20045.w, 11.d),
 		"Weak, sick, hot, dizzy...\n",
@@ -2765,7 +2765,7 @@ sub_92:
 		"Want to sleep on bed...\n",
 		"Comfy bed... Must open bed...",
 		anim(0.b, 20045.w, 13.d),
-		wait(254.b)
+		wait(254.b)*/
 	call	-26.d, 20045.d, 18.d
 	call	-26.d, 20046.d, 18.d
 	call	-26.d, 20047.d, 18.d
@@ -2821,18 +2821,18 @@ evt_fx_warpzone_53:
 	anim	20048.d, 22.d, 13.d
 	run	*sub_198
 	if	eq(flag(595.d), 1.d), else *loc_454
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Chibi-Robo!",
-		wait(255.b)
+		wait(255.b)*/
 	if	eq(flag(657.d), 0.d), else *loc_453
 	set	flag(657.d), 1.d
-	mdir	20000.d, @obj, 20005.d, 30.w, 3.d
+	/*mdir	20000.d, @obj, 20005.d, 30.w, 3.d
 	disp	20005.d, 1.d
 	moveto	20005.d, 200.w, 1000.w, -2000.d, 150.w, 1.d, -1.d
 	wait	@move, 20005.d
 	msg	voice(0.b),
 		"I've never seen anything like this!",
-		wait(254.b)
+		wait(254.b)*/
 	msg	voice(0.b),
 		"Can I go with you?",
 		wait(254.b),
@@ -2850,9 +2850,9 @@ loc_453:
 loc_449:
 	lib	3.w
 	if	eq(result, 0.w), else *loc_452
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I'll just squeeze in then! Don't worry, I'll fit!",
-		wait(254.b)
+		wait(254.b)*/
 	endif	*loc_451
 loc_452:
 	msg	voice(0.b),
@@ -2863,7 +2863,7 @@ loc_452:
 		wait(254.b)
 loc_451:
 	detach	53.d
-	call	20005.d, 1.d, 0.d
+	/*call	20005.d, 1.d, 0.d
 	call	-27.d, 20005.d, 57.d
 	moveto	20005.d, 230.w, 1000.w, -2900.d, 60.w, 1.d, -2.d
 	moveto	20000.d, -230.d, 200.w, -2900.d, 60.w, 3.d, -2.d
@@ -2911,7 +2911,7 @@ loc_451:
 	popbp
 	scrn	@wipe, 0.d, 1.d, 320.w, 240.w, 0.w, 0.w, 255.w, 255.w, 255.w, 0.w, 0.w, 0.w, 255.w, 255.w, 255.w, 255.w, 0.w
 	wait	@time, 30.w
-	camera	@unk232, -1.d
+	camera	@unk232, -1.d*/
 	warp	18.d, 1.w
 loc_454:
 	lib	39.w
