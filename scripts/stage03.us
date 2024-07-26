@@ -8248,7 +8248,7 @@ sub_920:
 	sfx	327713.d, 1.d
 	wait	@time, 1.w
 	sfx	327713.d, 4.d, 0.w, 100.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		"Heh. Another sucker...",
 		anim(0.b, 20011.w, 9.d),
@@ -8263,7 +8263,7 @@ sub_920:
 		anim(0.b, 20011.w, 1013.d),
 		"Dear me... Your soul is unclean.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		"Will you cleanse your soul?",
@@ -8272,12 +8272,12 @@ sub_920:
 	lib	306.w
 	case	eq(result, 0.w), else *loc_1024
 	lib	105.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		"Your desire to achieve enlightenment\n",
 		"is quite admirable.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_922
 loc_1024:
 	lib	105.w
@@ -8325,7 +8325,7 @@ loc_1023:
 	wait	@time, 1.w
 	wait	@cam
 	lib	13.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		"Moolah corrupts the soul.",
 		anim(0.b, 20011.w, 9.d),
@@ -8335,15 +8335,15 @@ loc_1023:
 		"But if you use your Moolah,\n",
 		"then your soul is gradually purified.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 loc_964:
 	set	var(1087.d), 0.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		"Now then, allow me to take your Moolah\n",
 		"as ablution for your dirty soul.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	if	ge(money, 10.w), else *loc_1022
 	sfx	327709.d, 1.d
 	set	money, sub(money, 10.w)
@@ -8370,7 +8370,7 @@ loc_1022:
 	goto	*loc_944
 loc_925:
 	wait	@time, 100.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		"Let the cleansing begin...",
 		anim(0.b, 20011.w, 9.d),
@@ -8387,7 +8387,7 @@ loc_925:
 		"This is the one true way to abandon worldly\n",
 		"desires and become one with a higher plane.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	if	ge(money, 100.w), else *loc_1021
 loc_926:
 	pushbp
@@ -8442,7 +8442,7 @@ loc_930:
 	set	money, sub(money, var(1087.d))
 	pushbp
 	setsp	var(1087.d)
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 20011.w, 1013.d),
 		icon(14.b),
 		format("%d"),
@@ -8455,7 +8455,7 @@ loc_930:
 		"Now let us begin the process of cleansing\n",
 		"your Moolah and your soul.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	endif	*loc_931
 loc_1021:
 	attach	188.d, *sub_1081
@@ -8561,7 +8561,7 @@ loc_1020:
 	break	*loc_933
 loc_933:
 	wait	@time, 100.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		speed(4.b),
 		anim(0.b, 20011.w, 1013.d),
 		speed(7.b),
@@ -8581,28 +8581,28 @@ loc_933:
 		speed(7.b),
 		"Abandonment is friendship...",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	if	eq(flag(306.d), 0.w), else *loc_1009
 	pushbp
 	setsp	0.d
 	run	*sub_1007
 	popbp
-	sfx	327714.d, 2.d, 100.w
+	;sfx	327714.d, 2.d, 100.w
 	color	159.d, @modulate, 200.w, 200.w, 250.w, 300.w
 	wait	@time, 200.w
-	sfx	-65442.d, 1.d
+	;sfx	-65442.d, 1.d
 	wait	@time, 1.w
-	sfx	-65442.d, 4.d, 0.w, 210.w
+	;sfx	-65442.d, 4.d, 0.w, 210.w
 loc_1009:
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		speed(4.b),
 		anim(0.b, 20011.w, 1013.d),
 		speed(7.b),
 		"The cosmos embraces you with loooooove...",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	sfx	-65442.d, 4.d, 100.w, 150.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		speed(4.b),
 		anim(0.b, 20011.w, 1013.d),
 		speed(7.b),
@@ -8615,18 +8615,18 @@ loc_1009:
 		speed(7.b),
 		"Doubt corrupts the soul.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	34.w
 	run	*sub_1008
 	popbp
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		speed(4.b),
 		anim(0.b, 20011.w, 1013.d),
 		size(20.b),
 		"Release. Release your Moolah.",
 		anim(0.b, 20011.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	if	eq(flag(306.d), 0.w), else *loc_1006
 	disp	249.d, 1.d
 	anim	249.d, 1.w
@@ -8650,15 +8650,15 @@ loc_1006:
 	run	*sub_1005
 	popbp
 	wait	@time, 100.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 158.w, 10.d),
 		speed(7.b),
 		"We return to a new beginning...",
 		anim(0.b, 158.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 	if	eq(flag(1668.d), 0.w), else *loc_1004
 	set	flag(1668.d), 1.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 158.w, 10.d),
 		speed(7.b),
 		"Do not let your lack of experience\n",
@@ -8676,13 +8676,13 @@ loc_1006:
 		speed(7.b),
 		"Let us begin, O wanderer...",
 		anim(0.b, 158.w, 9.d),
-		wait(255.b)
+		wait(255.b)*/
 loc_1004:
 	anim	158.d, 11.d
 	wait	@anim, 158.d, -1.d
 	anim	158.d, 1.d
 	wait	@time, 50.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 158.w, 6.d),
 		speed(7.b),
 		"Reach with your soul. FEEL with your soul.",
@@ -8724,7 +8724,7 @@ loc_1004:
 		speed(7.b),
 		"Well?",
 		anim(0.b, 158.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	msg	voice(10.b),
 		anim(0.b, 158.w, 6.d),
 		speed(7.b),
@@ -8740,23 +8740,23 @@ loc_1004:
 	lib	3.w
 	case	eq(result, 0.w), else *loc_1002
 	wait	@time, 1.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 158.w, 6.d),
 		speed(7.b),
 		"You believe it will open, yes?",
 		anim(0.b, 158.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	set	var(1086.d), 0.w
 	break	*loc_938
 loc_1002:
 	case	eq(result, 1.w), else *loc_938
 	wait	@time, 1.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 158.w, 6.d),
 		speed(7.b),
 		"You believe it will remain closed, yes?",
 		anim(0.b, 158.w, 1.d),
-		wait(255.b)
+		wait(255.b)*/
 	set	var(1086.d), 1.w
 	break	*loc_938
 loc_938:
@@ -8770,18 +8770,18 @@ loc_938:
 	camera	@distance, 67.w, 3.d, 0.w
 	wait	@time, 1.w
 	wait	@cam
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(0.b, 158.w, 6.d),
 		"I am ready...",
 		anim(0.b, 158.w, 1.d),
-		wait(10.b)
+		wait(10.b)*/
 	set	var(30.d), rand(1.w)
 	case	eq(var(30.d), 0.w), else *loc_1001
 	msg	voice(10.b),
 		anim(0.b, 158.w, 6.d),
 		speed(7.b),
 		"Please do not be staring at me so much.\n",
-		"You will disrupt the cosmic balance.",
+		"You will disrupt the bad rng you got.",
 		anim(0.b, 158.w, 1.d),
 		wait(255.b)
 	msg	voice(10.b),
@@ -8906,7 +8906,7 @@ loc_951:
 sub_956:
 	set	var(30.d), rand(1.w)
 	case	eq(var(30.d), 0.w), else *loc_979
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		size(28.b),
 		"Ah!",
@@ -8916,11 +8916,11 @@ sub_956:
 		anim(1.b, 158.w, 43.d),
 		"Something wonderful has occurred.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_958
 loc_979:
 	case	eq(var(30.d), 1.w), else *loc_958
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		size(28.b),
 		"Ah! How wonderful.",
@@ -8930,44 +8930,44 @@ loc_979:
 		anim(1.b, 158.w, 43.d),
 		"Your noble intentions have birthed a miracle!",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_958
 loc_958:
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"You are correct.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	set	var(30.d), rand(3.w)
 	case	eq(var(30.d), 0.w), else *loc_973
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Men and women alike will rejoice\n",
 		"in the presence of your soul.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_960
 loc_973:
 	case	eq(var(30.d), 1.w), else *loc_975
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Boys and girls will embrace you\n",
 		"and your beautiful soul.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_960
 loc_975:
 	case	eq(var(30.d), 2.w), else *loc_977
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"The rich and famous will flock to you\n",
 		"and your remarkable soul.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_960
 loc_977:
 	case	eq(var(30.d), 3.w), else *loc_960
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"I bow down in amazement in the presence\n",
 		"of your glorious soul.",
@@ -8978,7 +8978,7 @@ loc_977:
 		anim(1.b, 158.w, 43.d),
 		"In. Amazement.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_960
 loc_960:
 	set	var(1084.d), mul(var(1087.d), 2.w)
@@ -9004,7 +9004,7 @@ loc_960:
 	sfx	-65442.d, 1.d
 	wait	@time, 1.w
 	sfx	-65442.d, 4.d, 0.w, 210.w
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Your noble intentions and trusting soul\n",
 		"have birthed a miracle!",
@@ -9018,7 +9018,7 @@ loc_960:
 		"I must share this joy with others!",
 		anim(1.b, 158.w, 44.d),
 		wait(255.b)
-	msg
+	msg*/
 	msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Will you continue to cleanse?",
@@ -9076,19 +9076,20 @@ loc_968:
 	wait	@time, 1.w
 	wait	@cam
 	run	*sub_971
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Your Moolah and soul have been cleansed\n",
 		"and now are returned to you.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	run	*sub_972
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Whenever you close your eyes,\n",
 		"please think of me.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
+	wait	@time, 750
 	break	*loc_970
 loc_970:
 	return
@@ -9109,7 +9110,7 @@ sub_965:
 
 
 sub_971:
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Oh my. This is not part of the plan.\n",
 		"You are going to stop?",
@@ -9119,7 +9120,7 @@ sub_971:
 		anim(1.b, 158.w, 43.d),
 		"How unfortunate.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	return
 
 
@@ -9265,11 +9266,11 @@ loc_992:
 
 
 sub_972:
-	msg	voice(10.b),
+	/*msg	voice(10.b),
 		anim(1.b, 158.w, 43.d),
 		"Please come again.",
 		anim(1.b, 158.w, 44.d),
-		wait(255.b)
+		wait(255.b)*/
 	return
 
 
@@ -9294,7 +9295,7 @@ loc_1088:
 sub_1089:
 	sfx	327713.d, 2.d, 400.w
 	wait	@time, 250.w
-	sfx	327714.d, 3.d, 400.w
+	;sfx	327714.d, 3.d, 400.w
 	return
 
 

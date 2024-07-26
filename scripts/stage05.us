@@ -1382,6 +1382,7 @@ sub_84:
 	anim	20005.d, 1015.d
 	wait	@time, 60.w*/
 	lib	349.w
+	;set	item(8), 0 ;failsafe for giga-battery removal
 	/*wait	@time, 30.w
 	camera	@pos, -891.d, 797.w, 1959.w, 1.d, 50.w
 	camera	@unk227, 3490.w, 977.w, -761.d, 1.d, 50.w
@@ -1430,9 +1431,9 @@ sub_55:
 		wait(255.b),
 		anim(0.b, 20005.w, 1.d)
 	popbp
-	camera	@unk211, 1.w, 0.w, 1.d, 200.w
+	camera	@unk211, 1.w, 0.w, 1.d, 200.w*/
 	pushbp
-	setsp	8.d*/
+	setsp	8.d
 	lib	65.w
 	popbp
 	anim	20005.d, 1002.d
@@ -3699,7 +3700,7 @@ loc_156:
 	sfx	196611.d, 1.d
 	wait	@sfx, 196611.d
 	lib	24.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"There's a new product available through\n",
 		"the online store.",
 		wait(255.b)
@@ -3710,14 +3711,14 @@ loc_156:
 	msg	voice(0.b),
 		"Oooo... With one of those, you'd be able to\n",
 		"find things NOT VISIBLE TO THE NAKED EYE!",
-		wait(255.b)
+		wait(255.b)*/
 	anim	9.d, 0.w
 	call	20005.d, 1.d, 1.d
 	attach	2.d, *sub_660
 	wait	@time, 50.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You have to buy it and see if it's true!",
-		wait(255.b)
+		wait(255.b)*/
 	lib	95.w
 	set	flag(601.d), 1.d
 	run	*sub_96
@@ -3962,25 +3963,25 @@ loc_838:
 	if	eq(flag(658.d), 0.d), else *loc_905
 	set	flag(658.d), 1.d
 	;lib	254.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I think you can probably charge it if\n",
 		"you're willing to shell out the Moolah.",
-		wait(255.b)
+		wait(255.b)*/
 loc_905:
 	if	lt(var(136.d), 10000.w), else *loc_903
 	if	eq(var(136.d), 0.w), else *loc_902
 	pushbp
 	setsp	item_name(8.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"It looks like the Giga-Battery doesn't\n",
 		"have any energy stored up at all.",
 		wait(255.b)
-	popbp
+	popbp*/
 	if	eq(flag(972.d), 0.d), else *loc_901
 	set	flag(972.d), 1.d
 	pushbp
 	setsp	item_name(8.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"I think it's gonna take a whole lotta juice to\n",
 		"charge that Giga-Battery up, Chibi-Robo.",
 		wait(255.b)
@@ -3993,7 +3994,7 @@ loc_905:
 	msg	voice(0.b),
 		"So what say we do our best to save up some\n",
 		"Moolah and pay for it from our own pockets?",
-		wait(255.b)
+		wait(255.b)*/
 loc_901:
 	endif	*loc_843
 loc_902:
@@ -4014,12 +4015,12 @@ loc_843:
 	lib	3.w
 	if	eq(result, 0.w), else *loc_846
 loc_844:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"1,000 kilowatts equals ",
 		icon(14.b),
 		"1,000.\n",
 		"How many kilowatts will you charge?",
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	var(136.d)
 	msg	speed(0.b),
@@ -4047,11 +4048,11 @@ loc_850:
 	elif	ge(money, var(30.d)), else *loc_900
 	pushbp
 	setsp	var(30.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"We'll give it ",
 		format("%d"),
 		" kilowatts!!",
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 	anim	20000.d, 1330.d, 1.d
 	wait	@time, 50.w
@@ -4122,10 +4123,10 @@ loc_897:
 	elif	ge(var(136.d), 10000.w), else *loc_878
 	pushbp
 	setsp	item_name(8.d)
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"You've filled up the Giga-Battery! It's got\n",
 		"10,000 kilowatts, and it's ready to go!",
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 	pushbp
 	setsp	0.w
@@ -4136,7 +4137,7 @@ loc_897:
 	lib	132.w
 	popbp
 	wait	@time, 100.w
-	camera	@pos, 41.w, 1122.w, 1925.w, 3.d, 0.w
+	/*camera	@pos, 41.w, 1122.w, 1925.w, 3.d, 0.w
 	camera	@unk227, -4294.d, 396.w, -1240.d, 3.d, 0.w
 	camera	@unk229, 40.w, 3.d, 0.w
 	camera	@distance, 54.w, 3.d, 0.w
@@ -4147,7 +4148,7 @@ loc_897:
 	msg	voice(0.b),
 		"Congratulations, Chibi-Robo!\n",
 		"You've done a-- Hmm?",
-		wait(254.b)
+		wait(254.b)*/
 	anim1	64.d, 8.w
 	sfx	196640.d, 2.d, 100.w
 	sfx	196637.d, 1.d
@@ -4178,7 +4179,7 @@ loc_897:
 	wait	@time, 1.w
 	lib	67.w
 	wait	@time, 1.w
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"Wait a minute... According to my data files,",
 		wait(254.b)
 	pushbp
@@ -4186,7 +4187,7 @@ loc_897:
 	msg	voice(0.b),
 		"there should be a control panel\n",
 		"somewhere on Giga-Robo's body.",
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 	pushbp
 	setsp	100.w
@@ -4399,9 +4400,9 @@ loc_894:
 	run	*sub_883
 	endif	*loc_881
 loc_896:
-	msg	voice(0.b),
+	/*msg	voice(0.b),
 		"More, Chibi-Robo! More!",
-		wait(254.b)
+		wait(254.b)*/
 loc_881:
 	return
 

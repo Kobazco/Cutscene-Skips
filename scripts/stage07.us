@@ -16888,13 +16888,13 @@ sub_1805:
 
 
 sub_404:
-	wait	@time, 1.w
-	camera	@unk230
+	;wait	@time, 1.w
+	;camera	@unk230
 	set	flag(493.d), 1.d
-	read	@anim, 20001.d, *loc_1086
+	;read	@anim, 20001.d, *loc_1086
 	lib	12.w
 	lib	38.w
-	pos	20001.d, 6065.w, 1000.w, -2836.d
+	/*pos	20001.d, 6065.w, 1000.w, -2836.d
 	dir	20001.d, -38.d
 	camera	@pos, -36094.d, 11407.w, 31071.w, 3.d, 0.w
 	camera	@unk227, -22498.d, 8742.w, 21777.w, 3.d, 0.w
@@ -16927,7 +16927,7 @@ sub_404:
 		size(18.b),
 		speed(5.b),
 		"This should be a safe place!",
-		wait(5.b)
+		wait(5.b)*/
 	if	eq(time(0.d), 0.d), else *loc_437
 	run	*sub_407
 	endif	*loc_406

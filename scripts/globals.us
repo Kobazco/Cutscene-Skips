@@ -12232,30 +12232,30 @@ lib_338:
 
 	.lib	335.w, *lib_335
 lib_335:
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		"Let's see here...",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	return
 
 
 	.lib	336.w, *lib_336
 lib_336:
-	pushbp
+	/*pushbp
 	setsp	actor_name(20008.d)
 	msg	voice(4.b),
 		anim(0.b, 20002.w, 68551689.d),
 		"WHAT?! ANOTHER Redcrest toy?!",
 		anim(0.b, 20002.w, 68551688.d),
 		wait(255.b)
-	popbp
+	popbp*/
 	return
 
 
 	.lib	337.w, *lib_337
 lib_337:
-	pushbp
+	/*pushbp
 	setsp	actor_name(20002.d)
 	msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
@@ -12273,7 +12273,7 @@ lib_337:
 		anim(0.b, 20002.w, 1033.d),
 		"Forget this! I'm going to lock myself in my room!",
 		anim(0.b, 20002.w, 1032.d),
-		wait(254.b)
+		wait(254.b)*/
 	return
 
 

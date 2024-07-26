@@ -2092,10 +2092,10 @@ loc_1094:
 sub_1100:
 	read	@anim, 20001.d, *loc_1058
 	lib	38.w
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		"Well?! How'd it go?!",
 		wait(254.b)
-	wait	@read, 20001.d
+	wait	@read, 20001.d*/
 	pushbp
 	setsp	0.d
 	setsp	0.w
@@ -2120,12 +2120,12 @@ sub_1101:
 	lib	152.w
 	pushbp
 	setsp	actor_name(20002.d)
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		anim(0.b, 20001.w, 1017.d),
 		"What'd she say?",
 		anim(0.b, 20001.w, -1.d),
 		anim(0.b, 20001.w, 1016.d),
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 loc_1114:
 	menu	2.d
@@ -2136,7 +2136,7 @@ loc_1114:
 	lib	65.w
 	popbp
 	wait	@time, 1.w
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		anim(0.b, 20001.w, 1018.d),
 		"Hey, is that what I think it is? It is,\n",
 		"isn't it? A love letter? Say it is!",
@@ -2148,7 +2148,7 @@ loc_1114:
 		"Thanks, little buddy!",
 		anim(0.b, 20001.w, -1.d),
 		anim(0.b, 20001.w, 1016.d),
-		wait(254.b)
+		wait(254.b)*/
 	lib	75.w
 	wait	@time, 1.w
 	pushbp
@@ -2189,7 +2189,7 @@ loc_1114:
 	set	flag(522.d), 0.w
 	sfx	-65517.d, 4.d, 700.w, 180.w
 	lib	13.w
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		size(28.b),
 		anim(0.b, 20001.w, 1017.d),
 		"Ahem...",
@@ -2303,9 +2303,9 @@ loc_1114:
 	color	-2.d, @modulate, 0.w, 0.w, 0.w, 100.w
 	color	20001.d, @modulate, 255.w, 255.w, 255.w, 100.w
 	color	299.d, @modulate, 255.w, 255.w, 255.w, 100.w
-	wait	@time, 130.w
+	wait	@time, 130.w*/
 	sfx	-65517.d, 4.d, 400.w, 60.w
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		speed(6.b),
 		"The only option I've got left is...divorce.",
 		wait(254.b)
@@ -2314,7 +2314,7 @@ loc_1114:
 	color	-2.d, @modulate, 255.w, 255.w, 255.w, 100.w
 	wait	@time, 100.w
 	moveto	299.d, -14694.d, 41006.d, -43861.d, 50.w, -1.d, -1.d
-	wait	@time, 1.w
+	wait	@time, 1.w*/
 	camera	@pos, -14605.d, 36197.d, -22714.d, 1.d, 50.w
 	camera	@unk227, -11516.d, 35796.d, -26587.d, 1.d, 50.w
 	camera	@unk229, 60.w, 1.d, 50.w
@@ -2334,7 +2334,7 @@ loc_1114:
 		anim(0.b, 20001.w, 1018.d),
 		"Huh? Divorce?",
 		wait(10.b)
-	disp	20001.d, 0.d
+	/*disp	20001.d, 0.d
 	camera	@pos, -13774.d, 32275.w, -28648.d, 3.d, 0.w
 	camera	@unk227, -14269.d, 31928.w, -23714.d, 3.d, 0.w
 	camera	@unk229, 41.w, 3.d, 0.w
@@ -2412,7 +2412,7 @@ loc_1114:
 		"Arrrrfff!",
 		wait(5.b),
 		anim(0.b, 20004.w, 34.d),
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	30.w
 	lib	64.w
@@ -4912,13 +4912,13 @@ loc_3208:
 	pushbp
 	setsp	actor_name(20001.d)
 	setsp	actor_name(20002.d)
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		anim(0.b, 20001.w, 1017.d),
 		"Go check on my wife and see what she's\n",
 		"up to! Say you'll do it! I'm begging you here!",
 		anim(0.b, 20001.w, -1.d),
 		anim(0.b, 20001.w, 1016.d),
-		wait(254.b)
+		wait(254.b)*/
 	popbp
 	pushbp
 	setsp	0.d
@@ -4938,9 +4938,9 @@ loc_3208:
 	setsp	100.w
 	lib	63.w
 	popbp
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		"You gotta help me out!",
-		wait(254.b)
+		wait(254.b)*/
 	anim	20001.d, 36.d
 	lib	39.w
 	read	@anim, 20001.d, 0.d
@@ -11943,7 +11943,7 @@ sub_1739:
 	read	@anim, 20003.d, *loc_1119
 	pos	20000.d, 2242.w, 26970.w, -26000.d
 	dir	20000.d, 270.w
-	dir	20003.d, 155.w
+	/*dir	20003.d, 155.w
 	camera	@pos, 1089.w, 27304.w, -23026.d, 3.d, 0.w
 	camera	@unk227, -6179.d, 27968.w, -23114.d, 3.d, 0.w
 	camera	@unk229, 40.w, 3.d, 0.w
@@ -12150,7 +12150,7 @@ sub_1739:
 		"Can ya help me out?",
 		anim(0.b, 20001.w, -1.d),
 		anim(0.b, 20001.w, 6.d),
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	30.w
 	lib	14.w
@@ -21378,7 +21378,7 @@ sub_541:
 	wait	@time, 170.w
 	pushbp
 	setsp	actor_name(20003.d)
-	msg	voice(3.b),
+	/*msg	voice(3.b),
 		"Jenny! What are we gonna do?!",
 		wait(255.b)
 	popbp
@@ -21388,7 +21388,7 @@ sub_541:
 	msg	voice(3.b),
 		"Your mom is...",
 		wait(254.b)
-	popbp
+	popbp*/
 	lib	39.w
 	return
 

@@ -2111,7 +2111,7 @@ loc_156:
 
 sub_147:
 	wait	@time, 1.w
-	camera	@unk230
+	;camera	@unk230
 	set	flag(526.d), 1.w
 	set	flag(169.d), 1.w
 	call	20000.d, 701.d
@@ -2121,7 +2121,7 @@ sub_147:
 	disp	53.d, 0.d
 	disp	54.d, 0.d
 	lib	38.w
-	camera	@pos, -14061.d, 16591.w, 26510.w, 3.d, 0.w
+	/*camera	@pos, -14061.d, 16591.w, 26510.w, 3.d, 0.w
 	camera	@unk227, -16062.d, 12501.w, -15370.d, 3.d, 0.w
 	camera	@unk229, 18.w, 3.d, 0.w
 	camera	@distance, 421.w, 3.d, 0.w
@@ -2171,7 +2171,7 @@ sub_147:
 	pos	20000.d, -19639.d, 12247.w, 28201.w
 	dir	20000.d, 180.w
 	camera	@unk227, -19639.d, 12247.w, 28201.w, 3.d, 0.w
-	wait	@time, 1.w
+	wait	@time, 1.w*/
 	lib	45.w
 	disp	48.d, 1.d
 	disp	53.d, 1.d
@@ -2691,18 +2691,18 @@ loc_2085:
 
 
 sub_1292:
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		"Hmm?",
-		wait(255.b)
+		wait(255.b)*/
 	return
 
 
 sub_1310:
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1028.d),
 		"I see you've delivered my letter.",
 		anim(0.b, 20002.w, 26.d),
-		wait(255.b)
+		wait(255.b)*/
 	return
 
 
@@ -2855,12 +2855,12 @@ loc_1130:
 	wait	@cam
 	pushbp
 	setsp	actor_name(20063.d)
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1028.d),
 		"What is it, Cheebo?\n",
 		"Is something wrong?",
 		anim(0.b, 20002.w, 26.d),
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 	pushbp
 	setsp	20.w
@@ -3492,12 +3492,12 @@ loc_1203:
 	lib	86.w
 	popbp
 loc_1212:
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1013.d),
 		"Hi there, Cheebo.\n",
 		"How'd you get in here?",
 		anim(0.b, 20002.w, 68551688.d),
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	actor_name(20002.d)
 	msg	voice(4.b),
@@ -3520,7 +3520,7 @@ loc_1212:
 	lib	210.w
 	popbp
 	pushbp
-	setsp	actor_name(20001.d)
+	/*setsp	actor_name(20001.d)
 	setsp	actor_name(20003.d)
 	msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
@@ -3534,11 +3534,11 @@ loc_1212:
 		"Well, since you're here, would you\n",
 		"mind keeping me company?",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_1207
 loc_1210:
 	case	eq(result, 1.w), else *loc_1207
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 66585609.d),
 		"Oh... That's not why you're\n",
 		"here? That's a little sad.",
@@ -3549,10 +3549,10 @@ loc_1210:
 		"Well, since you're already here,\n",
 		"would you mind chatting with me?",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_1207
 loc_1207:
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 67109897.d),
 		"I'm balancing our checkbook,\n",
 		"but something just doesn't add up.",
@@ -3614,7 +3614,7 @@ loc_1207:
 		"some explaining to do!",
 		anim(0.b, 20002.w, 1032.d),
 		wait(255.b)
-	popbp
+	popbp*/
 	set	var(111.d), 31.d
 	if	ne(hit, -1.d), else *loc_1209
 	call	20000.d, 500.d, 56.d
@@ -3759,7 +3759,7 @@ loc_1253:
 loc_1255:
 	goto	*loc_1256
 loc_1233:
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		"Oh, that'll work nicely.",
 		anim(0.b, 20002.w, 1032.d),
@@ -3769,7 +3769,7 @@ loc_1233:
 		"But you know, I'm pretty sure there are\n",
 		"three pieces of old cloth around here.",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		"Is this material all right with you?",
@@ -3779,11 +3779,11 @@ loc_1233:
 	lib	3.w
 	case	eq(result, 0.w), else *loc_1243
 	lib	75.w
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		"Let's get your measurements!",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	set	flag(1656.d), 1.w
 	run	*sub_1235
 	return
@@ -3866,7 +3866,7 @@ loc_1259:
 loc_1261:
 	pushbp
 	setsp	actor_name(20063.d)
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1016.d),
 		"I wanted to make you something,\n",
 		"but there aren't any old clothes.",
@@ -3892,7 +3892,7 @@ loc_1261:
 		"But make sure you tell me if you\n",
 		"find anything we can use, Cheebo!",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 	disp	175.d, 1.d
 	disp	202.d, 1.d
@@ -3917,12 +3917,12 @@ loc_1272:
 loc_1267:
 	pushbp
 	setsp	actor_name(20063.d)
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1016.d),
 		"I think you deserve a reward for being\n",
 		"just the smartest little robot ever.",
 		anim(0.b, 20002.w, 1015.d),
-		wait(255.b)
+		wait(255.b)*/
 	popbp
 	pushbp
 	setsp	20002.d
@@ -3932,7 +3932,7 @@ loc_1267:
 	setsp	0.w
 	lib	210.w
 	popbp
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		"I never thought boycotting all of\n",
 		"my housework would be this boring.",
@@ -3968,13 +3968,13 @@ loc_1267:
 		anim(0.b, 20002.w, 1033.d),
 		"I'll make something nice 'n cozy just for you!",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	if	eq(time(0.d), 0.d), else *loc_1271
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		"Just give me a little time, OK?",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	endif	*loc_1269
 loc_1271:
 	msg	voice(4.b),
@@ -4044,7 +4044,7 @@ loc_1278:
 	disp	20001.d, 1.d
 	pos	20001.d, -19683.d, 0.w, 33518.d
 	wait	@time, 100.w
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1033.d),
 		size(28.b),
 		"Oh!",
@@ -4099,7 +4099,7 @@ loc_1278:
 		"He's not getting off the hook\n",
 		"until he's sorry for what he did!",
 		anim(0.b, 20002.w, 1032.d),
-		wait(255.b)
+		wait(255.b)*/
 	pushbp
 	setsp	actor_name(20063.d)
 	msg	voice(4.b),
@@ -4125,11 +4125,11 @@ loc_1283:
 	lib	67.w
 	wait	@time, 1.w
 	lib	289.w
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		anim(0.b, 20002.w, 1016.d),
 		"He has to understand!",
 		anim(0.b, 20002.w, 1015.d),
-		wait(255.b)
+		wait(255.b)*/
 	break	*loc_1281
 loc_1282:
 	pushbp
@@ -4449,7 +4449,7 @@ loc_1189:
 	sfx	-65516.d, 4.d, 0.w, 130.w
 	wait	@time, 100.w
 	pushbp
-	setsp	actor_name(20001.d)
+	/*setsp	actor_name(20001.d)
 	msg	voice(4.b),
 		anim(0.b, 20002.w, 4.d),
 		"I told him it's a waste of Moolah to buy toys!\n",
@@ -4486,7 +4486,7 @@ loc_1189:
 		"Good work, Cheebo.",
 		anim(0.b, 20002.w, 1032.d),
 		wait(255.b)
-	popbp
+	popbp*/
 	lib	289.w
 	pushbp
 	setsp	20002.d
@@ -4516,7 +4516,7 @@ loc_1189:
 	set	var(112.d), 41.d
 	set	var(75.d), 12.d
 	set	flag(2000.d), 1.w
-	camera	@unk236, 3.w
+	/*camera	@unk236, 3.w
 	disp	20002.d, 1.d
 	pos	20002.d, -19253.d, 521.w, 26583.w
 	dir	20002.d, 0.w
@@ -4526,12 +4526,12 @@ loc_1189:
 	camera	@unk229, 45.w, 3.d, 0.w
 	camera	@distance, 274.w, 3.d, 0.w
 	wait	@cam
-	pushbp
+	pushbp/**/
 	setsp	50.w
 	lib	103.w
 	popbp
 	pushbp
-	setsp	item_name(55.d)
+	/*setsp	item_name(55.d)
 	setsp	actor_name(20001.d)
 	msg	voice(4.b),
 		anim(0.b, 20002.w, 1.d),
@@ -4574,15 +4574,15 @@ loc_1189:
 	msg	"Woof?!",
 		wait(5.b)
 	scrn	@fade, 0.w, 0.w, 0.w, 0.w, 255.w, 255.w, 255.w, 255.w, 600.w
-	wait	@time, 30.w
+	wait	@time, 30.w*/
 	pushbp
 	setsp	1.w
 	lib	259.w
 	popbp
-	call	20001.d, 4.d, 0.w, 10.w, 0.w, 100.w
+	/*call	20001.d, 4.d, 0.w, 10.w, 0.w, 100.w
 	msg	sfx(79.d, 1.b),
 		"Oh, boy... I'm in trouble now!",
-		wait(30.b)
+		wait(30.b)*/
 	scrn	@fade, 0.w, 0.w, 0.w, 0.w, 255.w, 255.w, 255.w, 255.w, 0.w
 	wait	@fade
 	set	flag(484.d), 1.w
@@ -4665,7 +4665,7 @@ sub_1235:
 	sfx	-65455.d, 1.d
 	pushbp
 	setsp	actor_name(20063.d)
-	msg	voice(4.b),
+	/*msg	voice(4.b),
 		speed(5.b),
 		anim(0.b, 20002.w, 1012.d),
 		"You know, Cheebo, for a little fellow,\n",
@@ -4793,7 +4793,7 @@ sub_1235:
 		"I think it'll be done by tomorrow, so go\n",
 		"play with Papa for the time being, OK?",
 		anim(0.b, 20002.w, 1009.d),
-		wait(255.b)
+		wait(255.b)*/
 	set	var(685.d), var(107.d)
 	set	var(76.d), 44.d
 	pushbp
