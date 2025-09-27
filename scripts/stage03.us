@@ -3543,7 +3543,7 @@ loc_1212:
 
 	.interact  247.d, *evt_map_jump_box_247
 evt_map_jump_box_247:
-	run	*evt_souko_shelf_dami_120
+	run	*evt_souko_shelf_dami_120 /*Not this*/
 	return
 
 
@@ -3626,12 +3626,12 @@ evt_item_deka_denchi_6:
 		"Huh. What IS it?",
 		wait(254.b)
 	anim	20005.d, 1.d
-	wait	@time, 50.w
+	wait	@time, 50.w*/
 	detach	20009.d
 	pos	20009.d, 6991.w, 0.w, -7701.d
 	dir	20009.d, 30.w
 	disp	20009.d, 1.d
-	call	20005.d, 1.d, 0.d
+	/*call	20005.d, 1.d, 0.d
 	sfx	-65450.d, 3.d, 200.w
 	msg	voice(8.b),
 		size(28.b),
@@ -4131,13 +4131,14 @@ evt_item_deka_denchi_6:
 	setsp	1.w
 	lib	93.w
 	popbp
-	sfx	-65450.d, 2.d, 200.w
+	sfx	-65450.d, 2.d, 200.w*/
 	mdir	20009.d, @pos, 2399.w, 3022.w, 60.w, 2.d
 	wait	@dir, 20009.d
-	moveto	20009.d, 6167.w, 0.w, 790.w, 800.w, 2.d, -2.d
-	wait	@time, 350.w
+	;moveto	20009.d, 6167.w, 0.w, 790.w, 800.w, 2.d, -2.d
+	pos	20009.d, 6167.w, 0.w, 790.w
+	;wait	@time, 350.w
 	anim	20009.d, 1.d
-	camera	@pos, 1050.w, 1721.w, -7554.d, 1.d, 200.w
+	/*camera	@pos, 1050.w, 1721.w, -7554.d, 1.d, 200.w
 	camera	@unk227, 11707.w, 113.w, -5287.d, 1.d, 200.w
 	camera	@unk229, 26.w, 1.d, 200.w
 	camera	@distance, 110.w, 1.d, 200.w
@@ -4789,21 +4790,21 @@ loc_374:
 	return
 
 
-sub_384:
+sub_384:	/*Giga-Robo first approach scene*/
 	set	flag(332.d), 1.d
 	disp	10000.d, 0.d
 	lib	14.w
 	lib	54.w
-	camera	@unk236, 3.w
+	/*camera	@unk236, 3.w
 	camera	@pos, 7860.w, 1061.w, -5158.d, 3.d, 0.w
 	camera	@unk227, 12269.w, 732.w, -10800.d, 3.d, 0.w
 	camera	@unk229, 61.w, 3.d, 0.w
 	camera	@distance, 71.w, 3.d, 0.w
 	wait	@time, 1.w
 	pushbp
-	setsp	300.w
+	setsp	300.w*/
 	lib	63.w
-	popbp
+	/*popbp
 	sfx	144.d, 1.d
 	camera	@pos, 7314.w, 1978.w, -5543.d, 1.d, 350.w
 	camera	@unk227, 11295.w, 2904.w, -11432.d, 1.d, 350.w
@@ -4821,9 +4822,9 @@ sub_384:
 	camera	@unk229, 40.w, 1.d, 500.w
 	wait	@time, 60.w
 	sfx	288.d, 1.d
-	wait	@time, 350.w
+	wait	@time, 350.w*/
 	lib	14.w
-	camera	@unk237, 3.w
+	/*camera	@unk237, 3.w*/
 	lib	13.w
 	lib	39.w
 	return
@@ -4841,9 +4842,9 @@ loc_1129:
 
 
 sub_1110:
-	/*read	@anim, 20000.d, *loc_1133
+	;read	@anim, 20000.d, *loc_1133
 	call	-26.d, 20007.d, 17.d
-	camera	@pos, 5824.w, 27.w, -9960.d, 3.d, 0.w
+	/*camera	@pos, 5824.w, 27.w, -9960.d, 3.d, 0.w
 	camera	@unk227, 16207.w, 2964.w, -6908.d, 3.d, 0.w
 	camera	@unk229, 36.w, 3.d, 0.w
 	camera	@distance, 112.w, 3.d, 0.w
@@ -4864,17 +4865,17 @@ sub_1110:
 	disp	26.d, 1.d
 	anim	26.d, 3.w
 	wait	@time, 400.w
-	anim	26.d, 1.w
+	anim	26.d, 1.w*/
 	attach	20007.d, *sub_1137
-	camera	@pos, 5824.w, 27.w, -9960.d, 1.d, 100.w
+	/*camera	@pos, 5824.w, 27.w, -9960.d, 1.d, 100.w
 	camera	@unk227, 15504.w, 4909.w, -7094.d, 1.d, 100.w
 	camera	@unk229, 15.w, 1.d, 100.w
 	camera	@distance, 112.w, 1.d, 100.w
 	wait	@cam
 	wait	@time, 250.w
-	anim	20000.d, 212.d
+	anim	20000.d, 212.d*/
 	detach	20007.d
-	wait	@time, 5.w
+	/*wait	@time, 5.w
 	scrn	@shake, 0.w, 50.w, 0.w, 0.w, 0.w, 0.w, 60.w
 	pushbp
 	setsp	3.w
@@ -5026,14 +5027,14 @@ loc_1115:
 	setsp	20000.d
 	lib	44.w
 	popbp*/
-	sfx	-65522.d, 0.d
-	sfx	-65521.d, 1.d
+	;sfx	-65522.d, 0.d
+	;sfx	-65521.d, 1.d
 	/*msg	voice(0.b),
 		speed(7.b),
 		size(40.b),
 		"Don't diiieee! NOOOOOO!",
 		wait(10.b)*/
-	wait	@fade
+	/*wait	@fade
 	anim	20005.d, 1.d
 	wait	@time, 1.w
 	camera	@pos, 22814.w, 2427.w, 4438.w, 3.d, 0.w
@@ -5041,9 +5042,9 @@ loc_1115:
 	camera	@unk229, 27.w, 3.d, 0.w
 	camera	@distance, 259.w, 3.d, 0.w
 	wait	@cam
-	wait	@time, 200.w
+	wait	@time, 200.w*/
 	;movie	*loc_1135, 320.w, 210.w, 640.w, 480.w, 2.d
-	wait	@time, 100.w
+	/*wait	@time, 100.w
 	scrn	@fade, 255.w, 255.w, 255.w, 255.w, 0.w, 0.w, 0.w, 0.w, 300.w
 	wait	@fade
 	wait	@unk246, -1.d
@@ -5066,7 +5067,7 @@ loc_1115:
 	camera	@unk229, 43.w, 3.d, 0.w
 	camera	@distance, 52.w, 3.d, 0.w
 	wait	@time, 80.w
-	anim	20005.d, 1016.d
+	anim	20005.d, 1016.d*/
 	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(10.b),
@@ -5098,21 +5099,21 @@ loc_1115:
 		"Huh?",
 		wait(254.b)
 	wait	@time, 100.w*/
-	camera	@pos, 6184.w, 1362.w, -6260.d, 2.d, 500.w
+	/*camera	@pos, 6184.w, 1362.w, -6260.d, 2.d, 500.w
 	camera	@unk227, 9564.w, 2917.w, -9900.d, 2.d, 500.w
 	camera	@unk229, 43.w, 2.d, 500.w
 	camera	@distance, 52.w, 2.d, 500.w
 	anim	20005.d, 1017.d
 	wait	@time, 600.w
-	pushbp
+	pushbp*/
 	setsp	3.w
 	lib	259.w
 	popbp
-	camera	@pos, 6195.w, 461.w, -5138.d, 2.d, 500.w
+	/*camera	@pos, 6195.w, 461.w, -5138.d, 2.d, 500.w
 	camera	@unk227, 9405.w, 2154.w, -8869.d, 2.d, 500.w
 	camera	@unk229, 59.w, 2.d, 500.w
 	camera	@distance, 52.w, 2.d, 500.w
-	wait	@time, 200.w
+	wait	@time, 200.w*/
 	/*msg	voice(0.b),
 		shake(35.b, 1.b, 1.b),
 		speed(7.b),
@@ -5121,8 +5122,8 @@ loc_1115:
 		wait(10.b)*/
 	pushbp
 	setsp	0.w
-	lib	244.w
-	popbp
+	;lib	244.w ;Phone Call for Telly!
+	/*popbp
 	moveto	20005.d, 3952.w, 1100.w, -524.d, 100.w, 1011.d, -2.d
 	wait	@anim, 20007.d, -1.d
 	wait	@anim, 12.d, -1.d
@@ -5131,25 +5132,26 @@ loc_1115:
 	anim	20007.d, 1003.d
 	anim	12.d, 2.w
 	wait	@time, 300.w
-	pushbp
+	pushbp*/
 	setsp	3.w
 	lib	259.w
 	popbp
-	anim	20007.d, 1004.d
+	; Giga-Robo get up anim?
+	/*anim	20007.d, 1004.d
 	anim	12.d, 3.w
 	wait	@time, 125.w
 	sfx	327680.d, 1.d
 	wait	@time, 50.w
-	pushbp
+	pushbp*/
 	setsp	0.w
 	lib	259.w
 	popbp
-	scrn	@shake, 10.w, 10.w, 10.w, 0.w, 0.w, 0.w, 300.w
+	/*scrn	@shake, 10.w, 10.w, 10.w, 0.w, 0.w, 0.w, 300.w
 	wait	@anim, 20007.d, -1.d
 	wait	@anim, 12.d, -1.d
-	anim	12.d, 4.w
+	anim	12.d, 4.w*/
 	anim	20007.d, 1.d
-	moveto	20005.d, 6676.w, 1100.w, -7615.d, 150.w, 1004.d, -2.d
+	/*moveto	20005.d, 6676.w, 1100.w, -7615.d, 150.w, 1004.d, -2.d
 	camera	@pos, 14120.w, 8586.w, -11827.d, 3.d, 0.w
 	camera	@unk227, 10908.w, 4861.w, -10125.d, 3.d, 0.w
 	camera	@unk229, 24.w, 3.d, 0.w
@@ -5159,7 +5161,7 @@ loc_1115:
 	anim	20005.d, 1005.d
 	wait	@move, 20005.d
 	anim	20005.d, 1.d
-	wait	@time, 30.w
+	wait	@time, 30.w*/
 	anim	20005.d, 1017.d
 	/*msg	voice(0.b),
 		"Whew...",
