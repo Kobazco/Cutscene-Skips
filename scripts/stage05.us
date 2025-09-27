@@ -1298,10 +1298,12 @@ loc_50:
 	setsp	100.w
 	run	*sub_51
 	popbp
+	set	item(8), 0 ;failsafe for giga-battery removal
+	set	item(48), 0 ;failsafe for giga-charger removal
 	return
 
 
-sub_84:
+sub_84:	; Giga-Battery Placement
 	if	ge(item(8.d), 1.w), else *loc_86
 	/*anim	20005.d, 1006.d
 	msg	voice(0.b),
@@ -1381,7 +1383,7 @@ sub_84:
 		wait(255.b)
 	anim	20005.d, 1015.d
 	wait	@time, 60.w*/
-	lib	349.w
+	;lib	349.w
 	;set	item(8), 0 ;failsafe for giga-battery removal
 	/*wait	@time, 30.w
 	camera	@pos, -891.d, 797.w, 1959.w, 1.d, 50.w
@@ -1418,7 +1420,7 @@ sub_64:
 	return
 
 
-sub_55:
+sub_55:	; Giga-Battery & Charger
 	set	flag(29.d), 1.d
 	set	flag(30.d), 1.d
 	pushbp
@@ -1431,7 +1433,7 @@ sub_55:
 		wait(255.b),
 		anim(0.b, 20005.w, 1.d)
 	popbp
-	camera	@unk211, 1.w, 0.w, 1.d, 200.w*/
+	camera	@unk211, 1.w, 0.w, 1.d, 200.w
 	pushbp
 	setsp	8.d
 	lib	65.w
@@ -1453,15 +1455,15 @@ sub_55:
 	setsp	3.w
 	lib	259.w
 	popbp
-	scrn	@zblur, 40.w, 0.w, 10.w, 10.w, 100.w
+	/*scrn	@zblur, 40.w, 0.w, 10.w, 10.w, 100.w
 	scrn	@shake, 0.w, 60.w, 0.w, 0.w, 0.w, 0.w, 100.w
 	sfx	196622.d, 1.d
-	ptcl	6.d, @pos, -1500.d, 439.w, 900.w, 100.w, 100.w, 100.w, 0.w
+	ptcl	6.d, @pos, -1500.d, 439.w, 900.w, 100.w, 100.w, 100.w, 0.w*/
 	disp	7.d, 1.d
 	if	not(flag(30.d)), else *loc_63
 	pos	7.d, -1500.d, 0.w, 900.w
 loc_63:
-	wait	@time, 60.w
+	/*wait	@time, 60.w
 	pushbp
 	setsp	0.w
 	run	*sub_58
@@ -1472,7 +1474,7 @@ loc_63:
 	camera	@unk229, 40.w, 1.d, 300.w
 	camera	@distance, 52.w, 1.d, 300.w
 	wait	@cam
-	wait	@time, 100.w
+	wait	@time, 100.w*
 	pushbp
 	setsp	100.w
 	run	*sub_51
@@ -1482,11 +1484,11 @@ loc_63:
 	lib	65.w
 	popbp
 	anim	20005.d, 1002.d
-	/*msg	voice(0.b),
+	msg	voice(0.b),
 		anim(0.b, 20005.w, 1002.d),
 		"Yeah, that's the way.",
 		wait(255.b),
-		anim(0.b, 20005.w, 1.d)*/
+		anim(0.b, 20005.w, 1.d)
 	anim	20005.d, 1.d
 	lib	75.w
 	pushbp
@@ -1496,7 +1498,7 @@ loc_63:
 	scrn	@zblur, 40.w, 0.w, 10.w, 10.w, 100.w
 	scrn	@shake, 0.w, 100.w, 0.w, 0.w, 0.w, 0.w, 100.w
 	sfx	196622.d, 1.d
-	ptcl	6.d, @pos, -1500.d, 439.w, 900.w, 100.w, 100.w, 100.w, 0.w
+	ptcl	6.d, @pos, -1500.d, 439.w, 900.w, 100.w, 100.w, 100.w, 0.w*/
 	scale	63.d, 100.w, 0.w, 100.w
 	disp	63.d, 1.d
 	disp	8.d, 1.d
@@ -1507,12 +1509,12 @@ loc_63:
 	pos	7.d, 0.w, 439.w, 0.w
 	call	8.d, 100.d, 7.d, 1.w, 0.w
 loc_62:
-	wait	@time, 60.w
+	;wait	@time, 60.w
 	pushbp
 	setsp	1.w
 	run	*sub_58
 	popbp
-	wait	@time, 40.w
+	/*wait	@time, 40.w
 	sfx	-65518.d, 4.d, 0.w, 180.w
 	camera	@pos, 661.w, 917.w, 2287.w, 3.d, 0.w
 	camera	@unk227, -2982.d, 2515.w, -632.d, 3.d, 0.w
@@ -1523,7 +1525,7 @@ loc_62:
 	camera	@unk227, -3154.d, 787.w, -840.d, 1.d, 800.w
 	camera	@unk229, 40.w, 1.d, 800.w
 	camera	@distance, 49.w, 1.d, 800.w
-	wait	@sfx, -65518.d
+	wait	@sfx, -65518.d*/
 	pushbp
 	setsp	100.w
 	run	*sub_51
