@@ -3643,12 +3643,12 @@ sub_160:
 loc_164:
 	if	eq(flag(37.d), 0.d), else *loc_163
 	move	20000.d, 1000.w, 80.w, 119.d, 180.w
-	run	*sub_95
+	;run	*sub_95
 	set	flag(37.d), 1.d
 loc_163:
 	anim	9.d, 2.w
 	;lib	254.w
-	call	20005.d, 1.d, 0.d
+	/*call	20005.d, 1.d, 0.d
 	moveto	20005.d, 0.w, 900.w, -500.d, 100.w, 1004.d, -2.d
 	wait	@move, 20005.d
 	mdir	20005.d, @dir, 180.w, 20.w, 1.d
@@ -3669,7 +3669,7 @@ loc_163:
 	anim	9.d, 0.w
 	call	20005.d, 1.d, 1.d
 	attach	2.d, *sub_660
-	wait	@time, 50.w
+	wait	@time, 50.w*/
 	lib	95.w
 	set	flag(950.d), 1.d
 	set	flag(950.d), 1.d
