@@ -9110,7 +9110,7 @@ loc_1515:
 	return
 
 
-sub_1494:
+sub_1494: /*Sophie eeep!*/
 	anim	20012.d, 1009.d
 	wait	@anim, 20012.d, -1.d
 	anim	280.d, 2.w
@@ -9194,8 +9194,8 @@ loc_1523:
 		anim(0.b, 20012.w, -1.d),
 		wait(255.b)*/
 	wait	@read, 20012.d
-	run	*sub_1494
-	run	*sub_1522
+	/*run	*sub_1494*/
+	/*run	*sub_1522*/
 	pushbp
 	setsp	actor_name(20012.d)
 	/*msg	voice(11.b),
@@ -9210,7 +9210,7 @@ loc_1523:
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 61.w, 3.d, 0.w
 	wait	@cam
-	if	eq(cur_suit, 1.d), else *loc_1521
+	if	eq(cur_suit, 1.d), else *loc_1521 /*If Drake suit*/
 	pushbp
 	setsp	actor_name(20008.d)
 	msg	voice(11.b),
@@ -9255,7 +9255,7 @@ loc_1503:
 	setsp	1.w
 	lib	93.w
 	popbp*/
-	if	not(flag(358.d)), else *loc_1520
+	if	not(flag(358.d)), else *loc_1520	/*Have you already talked to a toy? If not, speech explaining*/
 	msg	voice(0.b),
 		anim(0.b, 20005.w, 1014.d),
 		"Whoa! What in the...?\n",
@@ -9421,10 +9421,10 @@ loc_1519:
 		wait(255.b)*/
 	sfx	-65478.d, 2.d, 400.w
 	set	flag(161.d), 1.w
-	run	*sub_1513
+	/*run	*sub_1513*/ /*Reopen book?*/
 	set	flag(161.d), 0.w
-	mdir	20005.d, @obj, 20000.d, 80.w, -1.d
-	wait	@dir, 20005.d
+	/*mdir	20005.d, @obj, 20000.d, 80.w, -1.d
+	wait	@dir, 20005.d*/
 	pushbp
 	setsp	20005.d
 	setsp	1.w
@@ -9462,7 +9462,7 @@ sub_1493:
 	wait	@cam
 	lib	13.w
 	sfx	-65477.d, 3.d, 200.w
-	run	*sub_1494
+	/*run	*sub_1494*/
 	pushbp
 	setsp	actor_name(20008.d)
 	/*msg	voice(11.b),
@@ -9484,18 +9484,19 @@ sub_1493:
 		anim(16.b, 20012.w, 1023.d),
 		"Aw, Sophie, no! That was SOOO stupid! Waaaah!",
 		wait(15.b)*/
-	camera	@pos, 11088.w, 3756.w, -36820.d, 0.d, 50.w
+	/*camera	@pos, 11088.w, 3756.w, -36820.d, 0.d, 50.w
 	camera	@unk227, 7285.w, 634.w, -40342.d, 0.d, 50.w
 	camera	@unk229, 26.w, 0.d, 50.w
 	camera	@distance, 60.w, 0.d, 50.w
 	wait	@anim, 20012.d, -1.d
 	sfx	-65477.d, 2.d, 200.w
 	ptcl	70.d, @obj, 20012.d, 0.w, 0.w, 0.w, 100.w, 100.w, 100.w, 0.w
-	sfx	917511.d, 1.d
-	disp	20012.d, 0.d
+	sfx	917511.d, 1.d*/
+	disp	20012.d, 0.d		/*Hide Sophie and invis wall?*/
 	disp	33.d, 0.d
+	disp	280.d, 0.d		/*Need to hide sophie's book since that's handled in a sub*/
 	call	-11.d, 31.d, -2147483648.d
-	wait	@sfx, 917511.d
+	/*wait	@sfx, 917511.d
 	camera	@pos, 15627.w, 7311.w, -32385.d, 1.d, 400.w
 	camera	@unk227, 7370.w, 649.w, -40266.d, 1.d, 400.w
 	camera	@unk229, 26.w, 1.d, 400.w
@@ -9504,7 +9505,7 @@ sub_1493:
 	wait	@time, 1.w
 	wait	@sfx, 288.d
 	sfx	138.d, 1.d
-	wait	@sfx, 138.d
+	wait	@sfx, 138.d*/
 	/*pushbp
 	setsp	actor_name(20012.d)
 	msg	voice(0.b),
