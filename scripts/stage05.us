@@ -2350,14 +2350,15 @@ loc_208:
 sub_383:
 	run	*sub_429
 	if	eq(result, 0.d), else *loc_492
-	set	var(0.d), rand(20.w)
+	set	var(0.d), 0			; Overwrite
+	;set	var(0.d), rand(20.w)		; Super chibi-robo
 	endif	*loc_385
 loc_492:
 	elif	eq(flag(976.d), 0.d), else *loc_494
-	set	var(0.d), rand(1.w)
+	;set	var(0.d), rand(1.w)
 	endif	*loc_385
 loc_494:
-	set	var(0.d), rand(4.w)
+	;set	var(0.d), rand(4.w)
 loc_385:
 	if	eq(flag(19.d), 0.d), else *loc_486
 	if	and(eq(sp(0.b), 1.d), eq(var(0.d), 0.w)), else *loc_482
