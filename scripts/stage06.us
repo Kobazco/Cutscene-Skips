@@ -4431,23 +4431,23 @@ loc_1189:
 	popbp
 	disp	20000.d, 0.d
 	anim	20002.d, 4.d
-	wait	@anim, 20002.d, -1.d
+	;wait	@anim, 20002.d, -1.d
 	dir	20002.d, -120.d
-	camera	@unk236, 3.w
-	camera	@pos, 10864.w, 16775.w, 11252.w, 3.d, 0.w
-	camera	@unk227, 9725.w, 8147.w, -347.d, 3.d, 0.w
-	camera	@unk229, 14.w, 3.d, 0.w
-	camera	@distance, 145.w, 3.d, 0.w
+	;camera	@unk236, 3.w
+	;camera	@pos, 10864.w, 16775.w, 11252.w, 3.d, 0.w
+	;camera	@unk227, 9725.w, 8147.w, -347.d, 3.d, 0.w
+	;camera	@unk229, 14.w, 3.d, 0.w
+	;camera	@distance, 145.w, 3.d, 0.w
 	disp	193.d, 1.d
-	wait	@cam
+	;wait	@cam
 	pushbp
 	setsp	50.w
 	lib	63.w
 	popbp
-	wait	@time, 50.w
+	;wait	@time, 50.w
 	sfx	-65516.d, 1.d
 	sfx	-65516.d, 4.d, 0.w, 130.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	pushbp
 	/*setsp	actor_name(20001.d)
 	msg	voice(4.b),
