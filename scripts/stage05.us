@@ -4062,12 +4062,12 @@ loc_850:
 	sfx	196642.d, 1.d
 	set	money, sub(money, var(30.d))
 	set	var(28.d), div(var(30.d), 1000.w)
-	wait	@time, 150.w
+	;wait	@time, 150.w
 	anim	8.d, 4.w, 0.w
 	anim	20000.d, 1329.d
-	wait	@time, 80.w
+	;wait	@time, 80.w
 	sfx	196641.d, 1.d
-	wait	@anim, 20000.d, -1.d
+	;wait	@anim, 20000.d, -1.d
 	anim	20000.d, 1.d
 	set	var(136.d), add(var(136.d), var(30.d))
 	if	ge(var(136.d), 10000.w), else *loc_899
@@ -4084,20 +4084,20 @@ loc_854:
 	sfx	196620.d, 1.d
 	disp	64.d, 1.d
 	anim1	64.d, 1.w
-	wait	@anim, 64.d, -1.d
+	;wait	@anim, 64.d, -1.d
 	run	*sub_855
 	sfx	196619.d, 1.d
 	anim1	64.d, 3.w
-	wait	@anim, 64.d, -1.d
+	;wait	@anim, 64.d, -1.d
 	anim1	64.d, 4.w
-	wait	@anim, 64.d, -1.d
+	;wait	@anim, 64.d, -1.d
 	sfx	196618.d, 1.d
 	anim1	64.d, 5.w
-	wait	@anim, 64.d, -1.d
+	;wait	@anim, 64.d, -1.d
 	anim1	64.d, 0.w
 	disp	64.d, 0.d
 	mscale	63.d, 100.w, var(841.d), 100.w, 100.w
-	wait	@time, 130.w
+	;wait	@time, 130.w
 	set	var(28.d), sub(var(28.d), 1.w)
 	goto	*loc_854
 loc_876:
@@ -4120,7 +4120,7 @@ loc_876:
 	setsp	23.d
 	lib	132.w
 	popbp
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	endif	*loc_878
 loc_897:
 	elif	ge(var(136.d), 10000.w), else *loc_878

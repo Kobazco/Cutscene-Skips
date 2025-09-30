@@ -7292,7 +7292,7 @@ loc_817:
 loc_803:
 	if	le(battery(0.d), 0.w), else *loc_805
 	return
-loc_805:
+loc_805:	; Aliens come down from their UFO
 	lib	12.w
 	lib	38.w
 	color	-2.d, @modulate, 50.w, 50.w, 100.w, 700.w
@@ -7300,13 +7300,13 @@ loc_805:
 	setsp	700.w
 	run	*sub_188
 	popbp
-	wait	@time, 200.w
+	;wait	@time, 200.w
 	set	cur_atc, 0.d
-	wait	@time, 100.w
+	/*wait	@time, 100.w
 	camera	@pos, 35342.d, 19986.w, -41271.d, 3.d, 0.w
 	camera	@unk227, 35379.d, 19953.w, -41184.d, 3.d, 0.w
 	camera	@unk229, 29.w, 3.d, 0.w
-	camera	@distance, 1.w, 3.d, 0.w
+	camera	@distance, 1.w, 3.d, 0.w*/
 	pos	8.d, add(53594.d, 1042.w), 7439.w, add(-16740.d, 19157.w)
 	scale	8.d, 0.w, 0.w, 0.w
 	disp	8.d, 1.d
@@ -7318,19 +7318,19 @@ loc_805:
 	camera	@distance, 400.w, 3.d, 0.w
 	camera	@unk229, 28.w, 1.d, 1500.w
 	lib	105.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	sfx	-65528.d, 3.d, 300.w
-	scrn	@zblur, 0.w, 96.w, 10.w, 10.w, 1000.w
+	;scrn	@zblur, 0.w, 96.w, 10.w, 10.w, 1000.w
 	anim	8.d, 1004.d, 1007.d, 1008.d
 	scale	8.d, 0.w, 0.w, 0.w
 	mscale	8.d, 100.w, 100.w, 100.w, 400.w
-	wait	@time, 400.w
-	camera	@pos, 51955.d, -2379.d, -2621.d, 3.d, 0.w
+	;wait	@time, 400.w
+	/*camera	@pos, 51955.d, -2379.d, -2621.d, 3.d, 0.w
 	camera	@unk227, 62220.d, 29430.w, 19524.w, 3.d, 0.w
 	camera	@unk229, 22.w, 3.d, 0.w
 	camera	@distance, 400.w, 3.d, 0.w
 	camera	@unk229, 36.w, 1.d, 500.w
-	wait	@move, 8.d
+	wait	@move, 8.d*/
 	scrn	@zblur, 96.w, 0.w, 10.w, 10.w, 300.w
 	disp	20045.d, 1.d
 	disp	20046.d, 1.d
@@ -7352,16 +7352,16 @@ loc_805:
 	moveto	20046.d, add(52782.d, 1042.w), 0.w, add(-16458.d, 19157.w), 720.w, -1.d, -1.d
 	moveto	20047.d, add(54263.d, 1042.w), 0.w, add(-17406.d, 19157.w), 810.w, -1.d, -1.d
 	moveto	20048.d, add(54427.d, 1042.w), 0.w, add(-16453.d, 19157.w), 860.w, -1.d, -1.d
-	wait	@time, 500.w
+	;wait	@time, 500.w
 	camera	@pos, 50183.d, 2133.w, -6616.d, 3.d, 0.w
 	camera	@unk227, 65900.d, -4201.d, 29725.w, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 400.w, 3.d, 0.w
 	lib	106.w
-	wait	@time, 200.w
+	;wait	@time, 200.w
 	sfx	-65528.d, 2.d, 300.w
-	wait	@move, 20048.d
-	wait	@time, 100.w
+	;wait	@move, 20048.d
+	;wait	@time, 100.w
 	if	ge(item(62.d), 1.w), else *loc_815
 	run	*sub_808
 	endif	*loc_807
@@ -7419,7 +7419,7 @@ sub_816:
 
 sub_808:
 	set	flag(472.d), 1.d
-	wait	@read, 20005.d
+	/*wait	@read, 20005.d
 	pos	20005.d, 46471.d, 800.w, 1488.w
 	disp	20005.d, 1.d
 	call	20005.d, 1.d, 0.d
@@ -7430,25 +7430,25 @@ sub_808:
 	camera	@pos, 46404.d, 3831.w, -12899.d, 3.d, 0.w
 	camera	@unk227, 54665.d, 300.w, 2967.w, 3.d, 0.w
 	camera	@unk229, 25.w, 3.d, 0.w
-	camera	@distance, 182.w, 3.d, 0.w
+	camera	@distance, 182.w, 3.d, 0.w*/
 	moveto	20005.d, 52699.d, 800.w, 2186.w, 200.w, 1011.d, -2.d
 	pushbp
 	setsp	20005.d
 	setsp	1.w
 	lib	93.w
 	popbp
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	mdir	20045.d, @obj, 20005.d, 30.w, 0.w
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	anim	20045.d, 1.d
 	mdir	20046.d, @obj, 20005.d, 30.w, 0.w
 	mdir	20047.d, @obj, 20005.d, 30.w, 0.w
 	mdir	20048.d, @obj, 20005.d, 30.w, 0.w
-	wait	@dir, 20046.d
+	;wait	@dir, 20046.d
 	anim	20046.d, 1.d
 	anim	20047.d, 1.d
 	anim	20048.d, 1.d
-	wait	@move, 20005.d
+	;wait	@move, 20005.d
 	anim	20005.d, 1014.d, 1.d
 	/*msg	voice(0.b),
 		size(32.b),
@@ -7550,12 +7550,12 @@ loc_814:
 	lib	93.w
 	popbp
 	mdir	20045.d, @obj, 20000.d, 30.w, 0.w
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	anim	20045.d, 1.d
 	mdir	20046.d, @obj, 20000.d, 30.w, 0.w
 	mdir	20047.d, @obj, 20000.d, 30.w, 0.w
 	mdir	20048.d, @obj, 20000.d, 30.w, 0.w
-	wait	@dir, 20046.d
+	;wait	@dir, 20046.d
 	anim	20046.d, 1.d
 	anim	20047.d, 1.d
 	anim	20048.d, 1.d
@@ -7591,16 +7591,16 @@ loc_814:
 		wait(255.b)*/
 	color	8.d, @modulate, 255.w, 255.w, 255.w, 300.w
 	anim	20048.d, 7.d
-	wait	@anim, 20048.d, -1.d
+	;wait	@anim, 20048.d, -1.d
 	anim	20048.d, 8.d
 	moveto	20048.d, add(54427.d, 1042.w), 6439.w, add(-16453.d, 19157.w), 1460.w, -1.d, -1.d
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	mdir	20045.d, @obj, 20000.d, 30.w, 0.w
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	anim	20045.d, 1.d
 	mdir	20046.d, @obj, 20000.d, 30.w, 0.w
 	mdir	20047.d, @obj, 20000.d, 30.w, 0.w
-	wait	@dir, 20045.d
+	;wait	@dir, 20045.d
 	anim	20046.d, 1.d
 	anim	20047.d, 1.d
 	/*msg	voice(17.b),
