@@ -7017,7 +7017,7 @@ loc_786:
 	wait	@time, 100.w
 	wait	@anim, 36.d, -1.d
 	disp	36.d, 0.d*/
-	camera	@pos, add(44394.d, 1042.w), 1553.w, add(-37126.d, 19157.w), 1.d, 1400.w
+	/*camera	@pos, add(44394.d, 1042.w), 1553.w, add(-37126.d, 19157.w), 1.d, 1400.w
 	camera	@unk227, add(59603.d, 1042.w), 2095.w, add(-26.d, 19157.w), 1.d, 1400.w
 	camera	@unk229, 21.w, 1.d, 1400.w
 	camera	@distance, 401.w, 1.d, 1400.w
@@ -7050,7 +7050,7 @@ loc_786:
 	dir	20047.d, 225.w
 	pos	20048.d, add(54427.d, 1042.w), 6439.w, add(-16453.d, 19157.w)
 	dir	20048.d, 220.w
-	wait	@read, 20005.d
+	wait	@read, 20005.d*/
 	pos	20005.d, 37375.d, 1100.w, 23005.w
 	dir	20005.d, 151.w
 	anim	20005.d, 1020.d
@@ -7059,11 +7059,11 @@ loc_786:
 	camera	@unk227, 43359.d, 747.w, 17571.w, 3.d, 0.w
 	camera	@unk229, 40.w, 3.d, 0.w
 	camera	@distance, 88.w, 3.d, 0.w
-	moveto	20045.d, add(53594.d, 1042.w), 0.w, add(-16740.d, 19157.w), 800.w, -1.d, -1.d
+	moveto	20045.d, add(53594.d, 1042.w), 0.w, add(-16740.d, 19157.w), 800.w, -1.d, -1.d		;Move aliens down
 	moveto	20046.d, add(52782.d, 1042.w), 0.w, add(-16458.d, 19157.w), 920.w, -1.d, -1.d
 	moveto	20047.d, add(54263.d, 1042.w), 0.w, add(-17406.d, 19157.w), 1010.w, -1.d, -1.d
 	moveto	20048.d, add(54427.d, 1042.w), 0.w, add(-16453.d, 19157.w), 1060.w, -1.d, -1.d
-	wait	@time, 200.w
+	;wait	@time, 200.w
 	camera	@pos, 50183.d, 5133.w, -6616.d, 3.d, 0.w
 	camera	@unk227, 65900.d, -1201.d, 29725.w, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
@@ -7072,11 +7072,11 @@ loc_786:
 	camera	@unk227, 65900.d, -4201.d, 29725.w, 1.d, 800.w
 	camera	@unk229, 26.w, 1.d, 800.w
 	camera	@distance, 400.w, 1.d, 800.w
-	wait	@time, 300.w
+	;wait	@time, 300.w
 	lib	106.w
 	sfx	-65528.d, 2.d, 300.w
-	wait	@move, 20048.d
-	wait	@time, 100.w
+	;wait	@move, 20048.d
+	;wait	@time, 100.w
 	run	*sub_796
 	lib	3.w
 	pushbp
@@ -7096,7 +7096,7 @@ loc_786:
 	anim	20046.d, 7.d, 8.d
 	anim	20047.d, 7.d, 8.d
 	anim	20048.d, 7.d, 8.d
-	wait	@time, 200.w*/
+	wait	@time, 200.w
 	color	8.d, @modulate, 255.w, 255.w, 255.w, 300.w
 	sfx	-65528.d, 3.d, 10.w
 	moveto	20045.d, add(53594.d, 1042.w), 6439.w, add(-16740.d, 19157.w), 1200.w, -1.d, -1.d
@@ -7109,11 +7109,11 @@ loc_786:
 	camera	@distance, 401.w, 1.d, 1200.w
 	wait	@time, 200.w
 	lib	105.w
-	wait	@cam
+	wait	@cam*/
 	moveto	8.d, add(53594.d, 1042.w), 10439.w, add(-16740.d, 19157.w), 500.w, -1.d, -2.d
-	wait	@time, 500.w
+	;wait	@time, 500.w
 	mscale	8.d, 0.w, 0.w, 0.w, 300.w
-	wait	@time, 300.w
+	;wait	@time, 300.w
 	read	@anim, 8.d, 0.d
 	color	-2.d, @modulate, 150.w, 150.w, 230.w, 500.w
 	pushbp
@@ -7121,9 +7121,9 @@ loc_786:
 	run	*sub_188
 	popbp
 	sfx	-65528.d, 2.d, 500.w
-	wait	@time, 400.w
+	;wait	@time, 400.w
 	disp	8.d, 0.d
-	disp	20045.d, 0.d
+	disp	20045.d, 0.d	; Remove aliens + spaceship
 	disp	20046.d, 0.d
 	disp	20047.d, 0.d
 	disp	20048.d, 0.d
@@ -7246,14 +7246,14 @@ loc_788:
 		wait(255.b)*/
 	disp	95.d, 1.d
 	anim	95.d, 1.w
-	mdir	20005.d, @pos, 46471.d, 1488.w, 30.w, 1.d
+	/*mdir	20005.d, @pos, 46471.d, 1488.w, 30.w, 1.d
 	wait	@dir, 20005.d
 	moveto	20005.d, 46471.d, 800.w, 1488.w, 120.w, 1004.d, -2.d
-	wait	@time, 120.w
+	wait	@time, 120.w*/
 	disp	20005.d, 0.d
-	wait	@anim, 95.d, -1.d
+	/*wait	@anim, 95.d, -1.d
 	anim	95.d, 0.w
-	wait	@time, 60.w
+	wait	@time, 60.w*/
 	lib	95.w
 	set	var(113.d), 32.d
 	if	le(var(123.d), 3.d), else *loc_791

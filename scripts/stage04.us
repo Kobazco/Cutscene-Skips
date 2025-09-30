@@ -13559,7 +13559,7 @@ loc_1974:
 	elif	and(eq(flag(499.d), 0.d), eq(flag(970.d), 0.d)), else *loc_1987
 	pushbp
 	setsp	actor_name(20016.d)
-	msg	voice(20.b),
+	/*msg	voice(20.b),
 		size(17.b),
 		"Hello? This is Princess Pitts!",
 		wait(254.b)
@@ -13572,7 +13572,7 @@ loc_1974:
 		size(17.b),
 		"The castle guards are a little...er...wooden in the\n",
 		"personality department, so I'm a bit bored...",
-		wait(254.b)
+		wait(254.b)*/
 	msg	voice(20.b),
 		size(17.b),
 		"I love chatting though.\n",
@@ -13589,7 +13589,7 @@ loc_1974:
 	goto	*loc_1971
 loc_1977:
 	set	flag(970.d), 1.d
-	msg	voice(20.b),
+	/*msg	voice(20.b),
 		size(17.b),
 		"Oh, wonderful!",
 		wait(254.b)
@@ -13659,11 +13659,11 @@ loc_1977:
 	win	@pos, 320.w, 220.w
 	msg	speed(8.b),
 		"The long phone conversation continues...",
-		wait(8.b)
+		wait(8.b)*/
 	if	eq(time(0.d), 0.d), else *loc_1986
-	msg	speed(8.b),
+	/*msg	speed(8.b),
 		"into the night.",
-		wait(8.b)
+		wait(8.b)*/
 	pushbp
 	setsp	1.d
 	setsp	1.d
@@ -13680,7 +13680,7 @@ loc_1977:
 	scrn	@wipe, 0.d, 1.d, 320.w, 240.w, 0.w, 0.w, 20.w, 0.w, 49.w, 255.w, 0.w, 0.w, 20.w, 0.w, 49.w, 255.w, 1.w
 	endif	*loc_1979
 loc_1986:
-	msg	speed(8.b),
+	/*msg	speed(8.b),
 		"into the day.",
 		wait(8.b)
 	pushbp
@@ -13695,7 +13695,7 @@ loc_1986:
 	wait	@fade
 	wait	@time, 50.w
 	sfx	-65487.d, 1.d
-	wait	@time, 150.w
+	wait	@time, 150.w*/
 	scrn	@wipe, 0.d, 1.d, 320.w, 240.w, 0.w, 0.w, 230.w, 210.w, 130.w, 255.w, 0.w, 0.w, 230.w, 210.w, 130.w, 255.w, 1.w
 loc_1979:
 	win	@reset
