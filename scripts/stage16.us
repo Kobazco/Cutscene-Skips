@@ -2523,23 +2523,23 @@ sub_92:
 	setsp	150.w
 	lib	185.w
 	popbp
-	wait	@time, 350.w
+	;wait	@time, 350.w
 	pushbp
 	setsp	20045.d
 	run	*sub_93
 	popbp
 	anim	60.d, 2.w
 	anim	20045.d, 26.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	60.d, 3.w
 	anim	20045.d, 27.d
 	sfx	589841.d, 1.d
 	anim	60.d, 4.w
 	anim	20045.d, 28.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	60.d, 5.w, 6.w, 0.w
 	anim	20045.d, 29.d, 30.d, 9.d
-	wait	@time, 50.w
+	;wait	@time, 50.w
 	sfx	589841.d, 2.d, 300.w
 	pushbp
 	setsp	1.w
@@ -2553,20 +2553,20 @@ sub_92:
 	anim	50.d, 1.w, 2.w
 	sfx	589839.d, 1.d
 	anim	57.d, 3.w
-	wait	@anim, 57.d, -1.d
+	;wait	@anim, 57.d, -1.d
 	disp	57.d, 0.d
 	anim	20048.d, 15.d
-	wait	@anim, 20048.d, -1.d
+	;wait	@anim, 20048.d, -1.d
 	anim	20048.d, 9.d
 	mdir	20048.d, @pos, 2670.w, -2670.d, 40.w, 10.d
-	wait	@dir, 20048.d
+	;wait	@dir, 20048.d
 	anim	50.d, 3.w, 2.w
-	moveto	20048.d, 2670.w, 200.w, -2670.d, 500.w, 10.d, -1.d
-	wait	@move, 20048.d
+	moveto	20048.d, 2670.w, 200.w, -2670.d, 1.w, 10.d, -1.d
+	;wait	@move, 20048.d
 	mdir	20048.d, @dir, 320.w, 40.w, 10.d
-	wait	@dir, 20048.d
+	;wait	@dir, 20048.d
 	anim	20048.d, 12.d
-	wait	@anim, 20048.d, -1.d
+	;wait	@anim, 20048.d, -1.d
 	anim	20048.d, 13.d
 	/*msg	voice(17.b),
 		speed(4.b),
@@ -2574,11 +2574,11 @@ sub_92:
 		"Earth. Bad air... Processed food...\n",
 		"Too much soda... Sickness. Sickness...",
 		anim(0.b, 20048.w, 13.d),
-		wait(254.b)
+		wait(254.b)*/
 	mdir	20045.d, @obj, 20000.d, 30.w, 10.d
-	wait	@dir, 20045.d
+	;wait	@dir, 20045.d
 	anim	20045.d, 9.d
-	wait	@time, 40.w*/
+	;wait	@time, 40.w
 	disp	20000.d, 1.d
 	pos	20000.d, 0.w, 0.w, 5460.w
 	dir	20000.d, 0.w
@@ -2593,19 +2593,19 @@ sub_92:
 	camera	@unk227, 3977.w, 2638.w, 5651.w, 2.d, 600.w
 	camera	@unk229, 25.w, 2.d, 600.w
 	camera	@distance, 83.w, 2.d, 600.w*/
-	wait	@anim, 20000.d, -1.d
+	;wait	@anim, 20000.d, -1.d
 	sfx	589829.d, 2.d, 100.w
 	anim	20000.d, 17.d
-	move	20000.d, 1300.w, 250.w, 3.d, -1.d
-	moveto	20047.d, 0.w, 0.w, 5400.w, 400.w, 9.d, -1.d
+	move	20000.d, 1300.w, 1.w, 3.d, -1.d
+	moveto	20047.d, 0.w, 0.w, 5400.w, 1.w, 9.d, -1.d
 	wait	@move, 20000.d
 	disp	10000.d, 1.d
 	call	20000.d, 700.d
-	wait	@move, 20047.d
-	/*mdir	20047.d, @pos, -1200.d, 3850.w, 30.w, 10.d
-	wait	@dir, 20047.d
-	moveto	20047.d, -1200.d, 0.w, 3850.w, 240.w, 10.d, -2.d
-	wait	@cam
+	;wait	@move, 20047.d
+	mdir	20047.d, @pos, -1200.d, 3850.w, 30.w, 10.d
+	;wait	@dir, 20047.d
+	moveto	20047.d, -1200.d, 0.w, 3850.w, 1.w, 10.d, -2.d
+	/*wait	@cam
 	wait	@move, 20047.d
 	mdir	20047.d, @dir, 180.w, 60.w, -1.d
 	anim	20047.d, 12.d
@@ -2638,13 +2638,13 @@ sub_92:
 	camera	@pos, 619.w, 1018.w, 5308.w, 1.d, 400.w
 	camera	@unk227, -1920.d, 180.w, -2586.d, 1.d, 400.w
 	camera	@unk229, 28.w, 1.d, 400.w
-	camera	@distance, 83.w, 1.d, 400.w
-	moveto	20045.d, 296.w, 0.w, 2371.w, 300.w, 10.d, -2.d
-	wait	@move, 20045.d
-	wait	@cam
+	camera	@distance, 83.w, 1.d, 400.w/**/
+	moveto	20045.d, 296.w, 0.w, 2371.w, 1.w, 10.d, -2.d
+	/*wait	@move, 20045.d
+	wait	@cam*/
 	mdir	20045.d, @obj, 20000.d, 20.w, 10.d
 	mdir	20000.d, @obj, 20045.d, 30.w, 3.d
-	wait	@dir, 20045.d
+	/*wait	@dir, 20045.d
 	pushbp
 	setsp	actor_name(20047.d)
 	msg	voice(17.b),
@@ -2667,12 +2667,12 @@ sub_92:
 	camera	@pos, -1541.d, 2267.w, 8370.w, 1.d, 400.w
 	camera	@unk227, -140.d, -558.d, 646.w, 1.d, 400.w
 	camera	@unk229, 28.w, 1.d, 400.w
-	camera	@distance, 83.w, 1.d, 400.w
-	moveto	20045.d, -413.d, 0.w, 3017.w, 300.w, 10.d, -2.d
+	camera	@distance, 83.w, 1.d, 400.w*/
+	moveto	20045.d, -413.d, 0.w, 3017.w, 1.w, 10.d, -2.d
 	wait	@move, 20045.d
 	mdir	20000.d, @obj, 20045.d, 40.w, 3.d
 	mdir	20045.d, @dir, 350.w, 30.w, 10.d
-	wait	@dir, 20045.d
+	/*wait	@dir, 20045.d
 	anim	20045.d, 9.d
 	wait	@cam
 	wait	@time, 30.w
@@ -2707,27 +2707,27 @@ sub_92:
 		anim(0.b, 20047.w, 14.d),
 		"Yes...",
 		anim(0.b, 20047.w, 13.d),
-		wait(254.b)
-	anim	20047.d, 15.d
+		wait(254.b)*/
+	;anim	20047.d, 15.d
 	wait	@anim, 20047.d, -1.d
-	anim	20047.d, 9.d
+	;anim	20047.d, 9.d
 	mdir	20045.d, @pos, -2092.d, 932.w, 40.w, 10.d
 	mdir	20047.d, @pos, 1025.w, 1281.w, 40.w, 10.d
-	wait	@dir, 20045.d
+	/*wait	@dir, 20045.d
 	wait	@dir, 20047.d
 	camera	@pos, 4.w, 3005.w, 10707.w, 1.d, 300.w
 	camera	@unk227, -860.d, 1354.w, 3498.w, 1.d, 300.w
 	camera	@unk229, 26.w, 1.d, 300.w
-	camera	@distance, 74.w, 1.d, 300.w
+	camera	@distance, 74.w, 1.d, 300.w*/
 	mdir	20000.d, @obj, 20048.d, 30.w, 3.d
-	attach	20047.d, *sub_305*/
-	moveto	20045.d, -2092.d, 0.w, 932.w, 250.w, 10.d, -1.d
-	wait	@move, 20045.d
+	attach	20047.d, *sub_305
+	moveto	20045.d, -2092.d, 0.w, 932.w, 1.w, 10.d, -1.d
+	;wait	@move, 20045.d
 	mdir	20000.d, @obj, 20045.d, 30.w, 3.d
 	mdir	20045.d, @pos, -2670.d, -2670.d, 40.w, 10.d
-	wait	@dir, 20045.d
+	;wait	@dir, 20045.d
 	anim	20045.d, 9.d
-	wait	@time, 40.w
+	;wait	@time, 40.w
 	camera	@pos, -7036.d, 2472.w, 4684.w, 3.d, 0.w
 	camera	@unk227, -2372.d, 376.w, -725.d, 3.d, 0.w
 	camera	@unk229, 26.w, 3.d, 0.w
@@ -2738,16 +2738,16 @@ sub_92:
 	popbp
 	anim	60.d, 2.w
 	anim	20045.d, 26.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	60.d, 3.w
 	anim	20045.d, 27.d
 	sfx	589842.d, 1.d
 	anim	60.d, 4.w
 	anim	20045.d, 28.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	60.d, 7.w, 0.w
 	anim	20045.d, 29.d, 29.d, 30.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	20045.d, 9.d
 	/*msg	voice(17.b),
 		speed(4.b),
@@ -2755,17 +2755,18 @@ sub_92:
 		"Weak, sick, hot, dizzy...\n",
 		"No energy for blaster...",
 		anim(0.b, 20045.w, 9.d),
-		wait(254.b)
+		wait(254.b)*/
 	anim	20045.d, 12.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	20045.d, 13.d
-	msg	voice(17.b),
+	/*msg	voice(17.b),
 		speed(4.b),
 		anim(0.b, 20045.w, 14.d),
 		"Want to sleep on bed...\n",
 		"Comfy bed... Must open bed...",
 		anim(0.b, 20045.w, 13.d),
 		wait(254.b)*/
+	moveto	20000.d, -413.d, 0.w, 3017.w, 1.w, 10.d, -2.d
 	call	-26.d, 20045.d, 18.d
 	call	-26.d, 20046.d, 18.d
 	call	-26.d, 20047.d, 18.d
@@ -2942,25 +2943,25 @@ loc_457:
 	anim	49.d, 1.w, 2.w
 	sfx	589839.d, 1.d
 	anim	54.d, 3.w
-	wait	@anim, 54.d, -1.d
+	;wait	@anim, 54.d, -1.d
 	disp	54.d, 0.d
 	set	var(0.d), obj(@pos_x, 20045.d)
 	set	var(1.d), obj(@pos_z, 20045.d)
 	camera	@unk227, var(0.d), 600.w, var(1.d), 1.d, 200.w
-	wait	@cam
+	;wait	@cam
 	anim	20045.d, 15.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	20045.d, 9.d
 	mdir	20045.d, @pos, -2670.d, -2670.d, 40.w, 10.d
-	wait	@dir, 20045.d
+	;wait	@dir, 20045.d
 	camera	@unk227, -2670.d, 600.w, -2670.d, 1.d, 400.w
 	anim	49.d, 3.w, 2.w
-	moveto	20045.d, -2670.d, 200.w, -2670.d, 400.w, 10.d, -1.d
-	wait	@move, 20045.d
+	moveto	20045.d, -2670.d, 200.w, -2670.d, 1.w, 10.d, -1.d
+	;wait	@move, 20045.d
 	mdir	20045.d, @dir, 40.w, 40.w, 10.d
-	wait	@dir, 20045.d
+	;wait	@dir, 20045.d
 	anim	20045.d, 12.d
-	wait	@anim, 20045.d, -1.d
+	;wait	@anim, 20045.d, -1.d
 	anim	20045.d, 13.d
 	msg	voice(17.b),
 		speed(4.b),
@@ -3024,25 +3025,25 @@ loc_468:
 	anim	51.d, 1.w, 2.w
 	sfx	589839.d, 1.d
 	anim	55.d, 3.w
-	wait	@anim, 55.d, -1.d
+	;wait	@anim, 55.d, -1.d
 	disp	55.d, 0.d
 	set	var(0.d), obj(@pos_x, 20046.d)
 	set	var(1.d), obj(@pos_z, 20046.d)
 	camera	@unk227, var(0.d), 600.w, var(1.d), 1.d, 200.w
-	wait	@cam
+	;wait	@cam
 	anim	20046.d, 15.d
-	wait	@anim, 20046.d, -1.d
+	;wait	@anim, 20046.d, -1.d
 	anim	20046.d, 9.d
 	mdir	20046.d, @pos, -900.d, -3620.d, 40.w, 10.d
-	wait	@dir, 20046.d
+	;wait	@dir, 20046.d
 	camera	@unk227, -900.d, 600.w, -3620.d, 1.d, 150.w
 	anim	51.d, 3.w, 2.w
-	moveto	20046.d, -900.d, 200.w, -3620.d, 150.w, 10.d, -1.d
-	wait	@move, 20046.d
+	moveto	20046.d, -900.d, 200.w, -3620.d, 1.w, 10.d, -1.d
+	;wait	@move, 20046.d
 	mdir	20046.d, @dir, 15.w, 40.w, 10.d
-	wait	@dir, 20046.d
+	;wait	@dir, 20046.d
 	anim	20046.d, 12.d
-	wait	@anim, 20046.d, -1.d
+	;wait	@anim, 20046.d, -1.d
 	anim	20046.d, 13.d
 	msg	voice(17.b),
 		speed(4.b),
@@ -3106,25 +3107,25 @@ loc_475:
 	anim	52.d, 1.w, 2.w
 	sfx	589839.d, 1.d
 	anim	56.d, 3.w
-	wait	@anim, 56.d, -1.d
+	;wait	@anim, 56.d, -1.d
 	disp	56.d, 0.d
 	set	var(0.d), obj(@pos_x, 20047.d)
 	set	var(1.d), obj(@pos_z, 20047.d)
 	camera	@unk227, var(0.d), 600.w, var(1.d), 1.d, 200.w
-	wait	@cam
+	;wait	@cam
 	anim	20047.d, 15.d
-	wait	@anim, 20047.d, -1.d
+	;wait	@anim, 20047.d, -1.d
 	anim	20047.d, 9.d
 	mdir	20047.d, @pos, 960.w, -3620.d, 40.w, 10.d
-	wait	@dir, 20047.d
+	;wait	@dir, 20047.d
 	camera	@unk227, 960.w, 600.w, -3620.d, 1.d, 500.w
 	anim	52.d, 3.w, 2.w
-	moveto	20047.d, 960.w, 150.w, -3620.d, 300.w, 10.d, -1.d
-	wait	@move, 20047.d
+	moveto	20047.d, 960.w, 150.w, -3620.d, 1.w, 10.d, -1.d
+	;wait	@move, 20047.d
 	mdir	20047.d, @dir, 345.w, 40.w, 10.d
-	wait	@dir, 20047.d
+	;wait	@dir, 20047.d
 	anim	20047.d, 12.d
-	wait	@anim, 20047.d, -1.d
+	;wait	@anim, 20047.d, -1.d
 	anim	20047.d, 13.d
 	msg	voice(17.b),
 		speed(4.b),
@@ -3184,25 +3185,25 @@ loc_482:
 	anim	50.d, 1.w, 2.w
 	sfx	589839.d, 1.d
 	anim	57.d, 3.w
-	wait	@anim, 57.d, -1.d
+	;wait	@anim, 57.d, -1.d
 	disp	57.d, 0.d
 	set	var(0.d), obj(@pos_x, 20048.d)
 	set	var(1.d), obj(@pos_z, 20048.d)
 	camera	@unk227, var(0.d), 600.w, var(1.d), 1.d, 100.w
-	wait	@cam
+	;wait	@cam
 	anim	20048.d, 15.d
-	wait	@anim, 20048.d, -1.d
+	;wait	@anim, 20048.d, -1.d
 	anim	20048.d, 9.d
 	mdir	20048.d, @pos, 2670.w, -2670.d, 40.w, 10.d
-	wait	@dir, 20048.d
+	;wait	@dir, 20048.d
 	camera	@unk227, 2670.w, 600.w, -2670.d, 1.d, 500.w
 	anim	50.d, 3.w, 2.w
-	moveto	20048.d, 2670.w, 200.w, -2670.d, 500.w, 10.d, -1.d
-	wait	@move, 20048.d
+	moveto	20048.d, 2670.w, 200.w, -2670.d, 1.w, 10.d, -1.d
+	;wait	@move, 20048.d
 	mdir	20048.d, @dir, 320.w, 40.w, 10.d
-	wait	@dir, 20048.d
+	;wait	@dir, 20048.d
 	anim	20048.d, 12.d
-	wait	@anim, 20048.d, -1.d
+	;wait	@anim, 20048.d, -1.d
 	anim	20048.d, 13.d
 	msg	voice(17.b),
 		speed(4.b),

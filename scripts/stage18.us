@@ -486,8 +486,8 @@ sub_23:
 	camera	@unk229, 26.w, 3.d, 0.w
 	camera	@distance, 60.w, 3.d, 0.w
 	sfx	-65482.d, 1.d
-	wait	@time, 1.w
-	wait	@cam
+	;wait	@time, 1.w
+	;wait	@cam
 	pushbp
 	setsp	0.d
 	setsp	1.d
@@ -496,37 +496,37 @@ sub_23:
 	popbp
 	camera	@pos, 506.w, 23697.w, 15565.w, 2.d, 4000.w
 	camera	@unk227, 5407.w, 20283.w, 14154.w, 2.d, 4000.w
-	wait	@time, 70.w
+	;wait	@time, 70.w
 	call	-26.d, 121.d, 53.d
 	scale	121.d, 100.w, 100.w, 100.w
 	anim2	121.d, 9.d, 30.w, 10.w
-	wait	@time, 1.w
+	;wait	@time, 1.w
 	call	-27.d, 121.d, 53.d
 	pushbp
 	setsp	20.w
 	lib	189.w
 	popbp
 	color	-2.d, @blend, 0.w, 0.w, 0.w, 100.w
-	wait	@time, 530.w
+	;wait	@time, 530.w
 	camera	@pos, 18037.w, -1923.d, 8729.w, 3.d, 0.w
 	camera	@unk227, 21280.w, 3074.w, 8737.w, 3.d, 0.w
 	camera	@unk229, 33.w, 3.d, 0.w
 	camera	@distance, 59.w, 3.d, 0.w
 	scale	121.d, 80.w, 80.w, 80.w
 	anim2	121.d, 9.d, 220.w, 40.w
-	wait	@time, 1.w
-	wait	@cam
+	;wait	@time, 1.w
+	;wait	@cam
 	camera	@pos, 15855.w, 1080.w, 8776.w, 2.d, 700.w
 	camera	@unk227, 21537.w, 1101.w, 8735.w, 2.d, 700.w
 	camera	@unk229, 33.w, 2.d, 700.w
 	camera	@distance, 56.w, 2.d, 700.w
-	wait	@time, 500.w
+	;wait	@time, 500.w
 	ptcl	153.d, @pos, 23006.w, 0.w, 8704.w, 100.w, 100.w, 100.w, 0.w
-	wait	@time, 214.w
+	;wait	@time, 214.w
 	sfx	589834.d, 1.d
-	wait	@cam
+	;wait	@cam
 	ptcl	153.d, @unk210
-	wait	@anim, 121.d, -1.d
+	;wait	@anim, 121.d, -1.d
 	call	20000.d, 701.d
 	disp	20000.d, 1.d
 	disp	20005.d, 1.d
@@ -540,19 +540,19 @@ sub_23:
 	anim	20000.d, 17.d
 	pos	20005.d, 22994.w, 1300.w, 8966.w
 	dir	20005.d, 270.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	anim	121.d, 5.d
 	sfx	589835.d, 1.d
-	wait	@time, 140.w
-	moveto	20000.d, 22994.w, 200.w, 8455.w, 70.w, -1.d, 270.w
-	moveto	20005.d, 22993.w, 1000.w, 8966.w, 70.w, -1.d, 270.w
-	moveto	116.d, 23169.w, 700.w, 8764.w, 70.w, -1.d, 270.w
+	;wait	@time, 140.w
+	moveto	20000.d, 22994.w, 200.w, 8455.w, 1.w, -1.d, 270.w
+	moveto	20005.d, 22993.w, 1000.w, 8966.w, 1.w, -1.d, 270.w
+	moveto	116.d, 23169.w, 700.w, 8764.w, 1.w, -1.d, 270.w
 	camera	@pos, 15778.w, 2758.w, 8781.w, 2.d, 50.w
 	camera	@unk227, 21294.w, 1303.w, 8709.w, 2.d, 50.w
 	camera	@unk229, 33.w, 2.d, 50.w
 	camera	@distance, 57.w, 2.d, 50.w
-	wait	@anim, 121.d, -1.d
-	wait	@time, 1.w
+	;wait	@anim, 121.d, -1.d
+	;wait	@time, 1.w
 	wait	@cam
 	return
 
@@ -568,8 +568,8 @@ sub_20:
 	camera	@unk227, 25088.w, 265.w, 8668.w, 2.d, 300.w
 	camera	@unk229, 33.w, 2.d, 300.w
 	camera	@distance, 57.w, 2.d, 300.w
-	wait	@time, 1.w
-	wait	@cam
+	;wait	@time, 1.w
+	;wait	@cam
 	/*msg	voice(0.b),
 		anim(0.b, 20005.w, 1013.d),
 		speed(13.b),
@@ -587,17 +587,17 @@ sub_20:
 		wait(255.b)*/
 	mdir	20005.d, @dir, 270.w, 50.w, 1.d
 	call	20000.d, 201.d
-	wait	@dir, 20005.d
+	;wait	@dir, 20005.d
 	camera	@pos, 16501.w, 297.w, 6944.w, 2.d, 500.w
 	camera	@unk227, 21979.w, 633.w, 8498.w, 2.d, 500.w
 	camera	@unk229, 26.w, 2.d, 500.w
 	camera	@distance, 57.w, 2.d, 500.w
-	moveto	20005.d, 20765.w, 1000.w, 8688.w, 200.w, 1011.d, -2.d
-	wait	@time, 70.w
-	moveto	20000.d, 22156.w, 150.w, 8688.w, 100.w, 3.d, -2.d
-	wait	@move, 20000.d
-	moveto	20000.d, 20891.w, 0.w, 7765.w, 100.w, 3.d, -2.d
-	wait	@time, 70.w
+	moveto	20005.d, 20765.w, 1000.w, 8688.w, 1.w, 1011.d, -2.d
+	;wait	@time, 70.w
+	moveto	20000.d, 22156.w, 150.w, 8688.w, 1.w, 3.d, -2.d
+	;wait	@move, 20000.d
+	moveto	20000.d, 20891.w, 0.w, 7765.w, 1.w, 3.d, -2.d
+	;wait	@time, 70.w
 	/*camera	@pos, 23009.w, 568.w, 8425.w, 3.d, 0.w
 	camera	@unk227, 16722.w, 1270.w, 7937.w, 3.d, 0.w
 	camera	@unk229, 36.w, 3.d, 0.w
