@@ -10324,7 +10324,7 @@ loc_608:
 	return
 
 
-sub_629:
+sub_629: ; Giga Robo give leg/battery
 	lib	14.w
 	lib	152.w
 	lib	54.w
@@ -10336,7 +10336,7 @@ sub_629:
 	camera	@unk229, 30.w, 3.d, 0.w
 	camera	@distance, 67.w, 3.d, 0.w
 	disp	10003.d, 0.d
-	wait	@time, 20.w
+	;wait	@time, 20.w
 	lib	13.w
 	if	ge(item(111.d), 1.w), else *loc_656
 	set	flag(27.d), 1.d
@@ -10344,9 +10344,9 @@ sub_629:
 	setsp	111.d
 	lib	65.w
 	popbp
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	lib	75.w
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	pushbp
 	setsp	0.w
 	lib	259.w
@@ -10355,7 +10355,7 @@ sub_629:
 	sfx	327702.d, 1.d
 	call	20007.d, 4.d, 111.d
 	anim	111.d, 1.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 loc_656:
 	if	ge(item(109.d), 1.w), else *loc_655
 	set	flag(28.d), 1.d
@@ -10363,9 +10363,9 @@ loc_656:
 	setsp	109.d
 	lib	65.w
 	popbp
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	lib	75.w
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	pushbp
 	setsp	0.w
 	lib	259.w
@@ -10374,14 +10374,14 @@ loc_656:
 	sfx	327702.d, 1.d
 	call	20007.d, 2.d, 1.d
 	born	10015.d, 3.d, 10495.w, 0.w, -7530.d, 156.w, 1000.w, 2000.w, 2400.w, 0.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 loc_655:
 	camera	@pos, 5498.w, 2381.w, -49.d, 1.d, 800.w
 	camera	@unk227, 8489.w, 3075.w, -6101.d, 1.d, 800.w
 	camera	@unk229, 30.w, 1.d, 800.w
 	camera	@distance, 67.w, 1.d, 800.w
 	sfx	-65518.d, 4.d, 0.w, 180.w
-	wait	@sfx, -65518.d
+	;wait	@sfx, -65518.d
 	run	*sub_632
 	lib	39.w
 	return

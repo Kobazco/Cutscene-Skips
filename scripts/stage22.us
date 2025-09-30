@@ -192,7 +192,7 @@ loc_17:
 loc_13:
 	return
 
-
+; Queen Spydor fight
 sub_14:
 	set	flag(961.d), 1.d
 	read	@anim, 20005.d, *loc_21
@@ -210,22 +210,22 @@ sub_14:
 	camera	@unk227, -2406.d, 1224.w, 10471.w, 3.d, 0.w
 	camera	@unk229, 44.w, 3.d, 0.w
 	camera	@distance, 63.w, 3.d, 0.w
-	wait	@time, 1.w
+	;wait	@time, 1.w
 	camera	@unk240, 5.d, 181.w, 1.d, 0.w
-	wait	@time, 1.w
+	;wait	@time, 1.w
 	scrn	@zblur, 255.w, 0.w, 100.w, 100.w, 200.w
 	camera	@unk240, 5.d, 360.w, 1.d, 200.w
 	pushbp
 	setsp	100.w
 	lib	63.w
 	popbp
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	camera	@pos, -4636.d, 658.w, 15672.w, 1.d, 400.w
 	camera	@unk227, -3335.d, 911.w, 10172.w, 1.d, 400.w
 	camera	@unk229, 36.w, 1.d, 400.w
 	camera	@distance, 56.w, 1.d, 400.w
 	color	42.d, @modulate, 87.w, 106.w, 153.w, 400.w
-	wait	@cam
+	;wait	@cam
 	anim	20005.d, 1020.d
 	pushbp
 	setsp	20005.d
@@ -237,7 +237,7 @@ sub_14:
 	camera	@unk229, 32.w, 3.d, 0.w
 	camera	@distance, 32.w, 3.d, 0.w
 	mdir	20005.d, @dir, 50.w, 20.w, -1.d
-	wait	@dir, 20005.d
+	;wait	@dir, 20005.d
 	move	20005.d, 2000.w, 60.w, -1.d, -1.d
 	disp	10.d, 0.d
 	disp	21.d, 0.d
@@ -253,19 +253,19 @@ sub_14:
 	camera	@unk227, -3154.d, 888.w, 8054.w, 1.d, 100.w
 	camera	@unk229, 32.w, 1.d, 100.w
 	camera	@distance, 32.w, 1.d, 100.w
-	wait	@move, 20005.d
+	;wait	@move, 20005.d
 	win	@letterbox
 	win	@color, 255.w, 255.w, 255.w, 0.w
 	anim2	20005.d, 1013.d, 0.w, 150.w
-	wait	@anim, 20005.d, -1.d
+	;wait	@anim, 20005.d, -1.d
 	anim	20005.d, 1020.d
 	camera	@pos, -2010.d, 1582.w, 5117.w, 1.d, 600.w
 	camera	@unk227, -294.d, 3230.w, 7297.w, 1.d, 600.w
 	camera	@unk229, 44.w, 1.d, 600.w
 	camera	@distance, 32.w, 1.d, 600.w
-	lib	363.w
-	wait	@cam
-	wait	@time, 60.w
+	;lib	363.w
+	;wait	@cam
+	;wait	@time, 60.w
 	pos	20000.d, 0.w, 0.w, 5000.w
 	dir	20000.d, 180.w
 	pos	20005.d, 1000.w, 1000.w, 5000.w
@@ -287,10 +287,10 @@ sub_14:
 	camera	@unk227, 498.w, 1325.w, -3221.d, 3.d, 0.w
 	camera	@unk229, 60.w, 3.d, 0.w
 	camera	@distance, 73.w, 3.d, 0.w
-	wait	@time, 30.w
+	;wait	@time, 30.w
 	camera	@unk240, 5.d, 20.w, 1.d, 100.w
 	anim2	9.d, 6.d, 0.w, 40.w, 1.d, 0.w, 100.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	pushbp
 	setsp	3.w
 	lib	259.w
@@ -300,8 +300,8 @@ sub_14:
 	camera	@unk227, 498.w, 1325.w, -3221.d, 2.d, 100.w
 	camera	@unk229, 60.w, 2.d, 100.w
 	camera	@distance, 121.w, 2.d, 100.w
-	wait	@cam
-	wait	@time, 10.w
+	;wait	@cam
+	;wait	@time, 10.w
 	pushbp
 	setsp	2.w
 	lib	259.w
@@ -311,8 +311,8 @@ sub_14:
 	camera	@unk227, 498.w, 1325.w, -3221.d, 2.d, 150.w
 	camera	@unk229, 60.w, 2.d, 150.w
 	camera	@distance, 241.w, 2.d, 150.w
-	wait	@cam
-	wait	@time, 5.w
+	;wait	@cam
+	;wait	@time, 5.w
 	pushbp
 	setsp	1.w
 	lib	259.w
@@ -322,7 +322,7 @@ sub_14:
 	camera	@unk227, 498.w, 1325.w, -3221.d, 2.d, 200.w
 	camera	@unk229, 94.w, 2.d, 200.w
 	camera	@distance, 361.w, 2.d, 200.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	sfx	-65469.d, 2.d, 100.w
 	pushbp
 	setsp	100.w
@@ -330,7 +330,7 @@ sub_14:
 	popbp
 	lib	95.w
 	camera	@unk240, 5.d, 0.w, 3.d, 0.w
-	wait	@time, 1.w
+	;wait	@time, 1.w
 	camera	@pos, -206.d, 48.w, 4533.w, 3.d, 0.w
 	camera	@unk227, 4694.w, 1312.w, 13138.w, 3.d, 0.w
 	camera	@unk229, 45.w, 3.d, 0.w
@@ -340,18 +340,18 @@ sub_14:
 	camera	@unk229, 45.w, 1.d, 800.w
 	camera	@distance, 99.w, 1.d, 800.w
 	scrn	@fade, 255.w, 255.w, 255.w, 255.w, 255.w, 255.w, 255.w, 0.w, 200.w
-	wait	@time, 100.w
+	;wait	@time, 100.w
 	sfx	-65468.d, 4.d, 400.w, 64.w
-	wait	@time, 550.w
+	;wait	@time, 550.w
 	set	cur_atc, 2.d
-	wait	@cam
+	;wait	@cam
 	camera	@pos, 776.w, 491.w, 7614.w, 3.d, 0.w
 	camera	@unk227, -740.d, 2051.w, -6981.d, 3.d, 0.w
 	camera	@unk229, 38.w, 3.d, 0.w
 	camera	@distance, 147.w, 3.d, 0.w
 	camera	@unk229, 42.w, 1.d, 600.w
-	wait	@time, 30.w
-	lib	364.w
+	;wait	@time, 30.w
+	;lib	364.w
 	run	*sub_15
 	return
 
