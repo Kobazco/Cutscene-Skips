@@ -10355,7 +10355,7 @@ sub_629: ; Giga Robo give leg/battery
 	sfx	327702.d, 1.d
 	call	20007.d, 4.d, 111.d
 	anim	111.d, 1.w
-	;wait	@time, 100.w
+	wait	@time, 100.w
 loc_656:
 	if	ge(item(109.d), 1.w), else *loc_655
 	set	flag(28.d), 1.d
