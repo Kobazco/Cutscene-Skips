@@ -681,6 +681,13 @@ loc_4:
 	if	eq(flag(313.d), 1.w), else *loc_7
 	goto	*loc_6
 loc_7:
+	; Game START
+	; Set up IGT timer
+	scrn	@hud, 4.d, -3.d, 0.d	; Reset IGT
+	scrn	@hud, 4.d, -2.d		; Pause IGT
+	scrn	@hud, 4.d, 3.d		; Fade In IGT
+	wait	@time, 30.d
+	scrn	@hud, 4.d, -1.d		; Play IGT
 	/*wait	@time, 1.w
 	wait	@cam
 	camera	@unk229, 30.w, 1.d, 2000.w

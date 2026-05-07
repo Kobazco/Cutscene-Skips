@@ -4049,6 +4049,7 @@ lib_54:
 	return
 
 
+; Letterbox close i think
 	.lib	55.w, *lib_55
 lib_55:
 	scrn	@letterbox, 0.d, 0.w, 0.w, 0.w, 255.w, 0.w, 0.w, 0.w, 0.w, 60.w
@@ -4057,6 +4058,8 @@ lib_55:
 	run	*lib_37
 	popbp
 	win	@reset
+	; Restore Stuff
+	run	*debug_resume_timer	; Resume IGT if applicable
 	if	eq(map(0.d), 5.w), else *loc_1057
 	win	@color, 0.w, 0.w, 0.w, 255.w
 loc_1057:
@@ -10308,9 +10311,42 @@ lib_146:
 	run	*lib_41
 	run	*lib_12
 	wait	@time, 60.w
+	; Opening Save Menu
+	run	*debug_save_igt_func	; stores in var 420
+	if	and(pad(0.d), 4.d),	else *normal_save_menu	; open debug save menu if holding down on dpad
+	menu	6.d
+	run	*lib_96
+	return
+normal_save_menu:
 	menu	4.d
 	run	*lib_96
 loc_104:
+	return
+
+debug_save_igt_func:
+	scrn	@hud, 4.d, -2.d		; Pause IGT
+	scrn	@hud,	4.d,	-4.d	; Get Timer Value
+	scrn	@hud, 4.d, -1.d		; Play IGT
+	set	var(420.d), result	; Save IGT
+	return
+
+debug_resume_timer:
+	; Do a few checks to make sure the timer isn't already running/we don't have a stored time
+	scrn	@hud,	4.d,	-4.d	; Get Timer Value
+	if	eq(result, 0.d), else *debug_resume_timer_return
+	; if timer is 0, its empty. Next check var 420
+	if	eq(var(420.d), 0.d), else *debug_reload_timer
+	; var is also empty. We have no timer saved at ALL. Return.
+	return
+
+debug_reload_timer:
+	; Timer detected in var. Reload & Resume
+	scrn	@hud, 4.d, -3.d, var(420.d)	; Set timer
+	scrn	@hud, 4.d, 1.d		; Show IGT
+	scrn	@hud, 4.d, -1.d		; Play IGT
+	return
+
+debug_resume_timer_return:
 	return
 
 
